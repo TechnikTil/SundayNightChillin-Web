@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "gf idle",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "gf idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-26,
+				-8
+			],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "coffee",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				-7
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "dunkin",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ooh scary larry/Untitled-2",
+	"position": [
+		210,
+		270
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

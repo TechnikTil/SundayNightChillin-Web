@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sancicexe.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down pose0000" x="0" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0001" x="785" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0002" x="1570" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0003" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0004" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0005" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0006" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0007" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0008" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="down pose0009" x="2355" y="0" width="785" height="785"/>
+	<SubTexture name="idle pose0000" x="3140" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0001" x="3899" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0002" x="4658" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0003" x="5417" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0004" x="6176" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0005" x="6935" y="0" width="759" height="785"/>
+	<SubTexture name="idle pose0006" x="0" y="785" width="759" height="785"/>
+	<SubTexture name="idle pose0007" x="0" y="785" width="759" height="785"/>
+	<SubTexture name="idle pose0008" x="0" y="785" width="759" height="785"/>
+	<SubTexture name="idle pose0009" x="0" y="785" width="759" height="785"/>
+	<SubTexture name="idle pose0010" x="0" y="785" width="759" height="785"/>
+	<SubTexture name="left pose0000" x="759" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0001" x="1537" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0002" x="2315" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0003" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0004" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0005" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0006" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0007" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0008" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="left pose0009" x="3093" y="785" width="778" height="786"/>
+	<SubTexture name="right0000" x="3871" y="785" width="890" height="926"/>
+	<SubTexture name="right0001" x="4761" y="785" width="890" height="926"/>
+	<SubTexture name="right0002" x="5651" y="785" width="890" height="926"/>
+	<SubTexture name="right0003" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0004" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0005" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0006" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0007" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0008" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="right0009" x="6541" y="785" width="890" height="926"/>
+	<SubTexture name="up0000" x="0" y="1711" width="914" height="890"/>
+	<SubTexture name="up0001" x="914" y="1711" width="914" height="890"/>
+	<SubTexture name="up0002" x="1828" y="1711" width="914" height="890"/>
+	<SubTexture name="up0003" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0004" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0005" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0006" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0007" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0008" x="2742" y="1711" width="914" height="890"/>
+	<SubTexture name="up0009" x="2742" y="1711" width="914" height="890"/>
+</TextureAtlas>

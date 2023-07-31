@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle0"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				50,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				10,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-fake",
+			"indices": [],
+			"name": "idle fakk"
+		},
+		{
+			"offsets": [
+				-10,
+				147
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "mic thoreww"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/ooh scary larry/Untitled-3",
+	"position": [
+		130,
+		470
+	],
+	"healthicon": "gb-peak",
+	"flip_x": false,
+	"healthbar_colors": [
+		163,
+		73,
+		164
+	],
+	"camera_position": [
+		60,
+		-120
+	],
+	"sing_duration": 6.1,
+	"scale": 3
+}
