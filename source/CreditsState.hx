@@ -90,7 +90,7 @@ class CreditsState extends MusicBeatState
 			['carterishappy',		'carter',			'Logo, and emotional support',									'https://youtube.com/@carterscorner1301',			'8f00ff'],
 			['shadE64',				'shade',			'mid musician (directly taken from bio)',						'https://twitter.com/shadE64YT',					'aa00ff'],	
 			['sand1lefan',			'sand1le',			'Being .json\'s friend :D',										'',													'ccb800'],			
-			[''],
+			['CrusherNotDrip',		'crusher',			'The Nerd who also knew haxe',									'https://twitter.com/CrusherNotDrip',				'0000ff'],
 			[''],
 			[''],
 			[''],
