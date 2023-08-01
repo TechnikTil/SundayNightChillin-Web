@@ -2294,7 +2294,7 @@ class PlayState extends MusicBeatState
 						countdownReady.scrollFactor.set();
 						countdownReady.updateHitbox();
 
-						if (PlayState.isPixelStage)
+						if (isPixelStage)
 							countdownReady.setGraphicSize(Std.int(countdownReady.width * daPixelZoom));
 
 						countdownReady.screenCenter();
@@ -2314,7 +2314,7 @@ class PlayState extends MusicBeatState
 						countdownSet.cameras = [camHUD];
 						countdownSet.scrollFactor.set();
 
-						if (PlayState.isPixelStage)
+						if (isPixelStage)
 							countdownSet.setGraphicSize(Std.int(countdownSet.width * daPixelZoom));
 
 						countdownSet.screenCenter();
@@ -2334,7 +2334,7 @@ class PlayState extends MusicBeatState
 						countdownGo.cameras = [camHUD];
 						countdownGo.scrollFactor.set();
 
-						if (PlayState.isPixelStage)
+						if (isPixelStage)
 							countdownGo.setGraphicSize(Std.int(countdownGo.width * daPixelZoom));
 
 						countdownGo.updateHitbox();
@@ -2484,7 +2484,7 @@ class PlayState extends MusicBeatState
 		previousFrameTime = FlxG.game.ticks;
 		lastReportedPlayheadPosition = 0;
 
-		FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 1, false);
+		FlxG.sound.playMusic(Paths.inst(SONG.song), 1, false);
 		FlxG.sound.music.pitch = playbackRate;
 		FlxG.sound.music.onComplete = finishSong.bind();
 		vocals.play();
@@ -2552,13 +2552,13 @@ class PlayState extends MusicBeatState
 		curSong = songData.song;
 
 		if (SONG.needsVoices)
-			vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
+			vocals = new FlxSound().loadEmbedded(Paths.voices(SONG.song));
 		else
 			vocals = new FlxSound();
 
 		vocals.pitch = playbackRate;
 		FlxG.sound.list.add(vocals);
-		FlxG.sound.list.add(new FlxSound().loadEmbedded(Paths.inst(PlayState.SONG.song)));
+		FlxG.sound.list.add(new FlxSound().loadEmbedded(Paths.inst(SONG.song)));
 
 		notes = new FlxTypedGroup<Note>();
 		add(notes);
@@ -3369,8 +3369,8 @@ class PlayState extends MusicBeatState
 							if (daNote.animation.curAnim.name.endsWith('end')) {
 								daNote.y += 10.5 * (fakeCrochet / 400) * 1.5 * songSpeed + (46 * (songSpeed - 1));
 								daNote.y -= 46 * (1 - (fakeCrochet / 600)) * songSpeed;
-								if(PlayState.isPixelStage) {
-									daNote.y += 8 + (6 - daNote.originalHeightForCalcs) * PlayState.daPixelZoom;
+								if(isPixelStage) {
+									daNote.y += 8 + (6 - daNote.originalHeightForCalcs) * daPixelZoom;
 								} else {
 									daNote.y -= 19;
 								}
@@ -4042,8 +4042,8 @@ class PlayState extends MusicBeatState
 				}
 
 				for (note in notes) {
-					if (PlayState.isPixelStage) note.offsetX += 30;
-					if (!PlayState.isPixelStage) note.offsetX -= 30;
+					if (isPixelStage) note.offsetX += 30;
+					if (!isPixelStage) note.offsetX -= 30;
 					note.reloadNote();
 					if(isPixelStage && note.isSustainNote) {
 						note.scale.y *= daPixelZoom; //unfuck sustain notes
@@ -4253,7 +4253,7 @@ class PlayState extends MusicBeatState
 					var difficulty:String = CoolUtil.getDifficultyFilePath();
 
 					trace('LOADING NEXT SONG');
-					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+					trace(Paths.formatToSongPath(storyPlaylist[0]) + difficulty);
 
 					var winterHorrorlandNext = (Paths.formatToSongPath(SONG.song) == "eggnog");
 					if (winterHorrorlandNext)
@@ -4273,7 +4273,7 @@ class PlayState extends MusicBeatState
 					prevCamFollow = camFollow;
 					prevCamFollowPos = camFollowPos;
 
-					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+					SONG = Song.loadFromJson(storyPlaylist[0] + difficulty, storyPlaylist[0]);
 					FlxG.sound.music.stop();
 
 					if(winterHorrorlandNext) {
@@ -4451,7 +4451,7 @@ class PlayState extends MusicBeatState
 			lastRating = rating;
 		}
 
-		if (!PlayState.isPixelStage)
+		if (!isPixelStage)
 		{
 			rating.setGraphicSize(Std.int(rating.width * 0.7));
 			rating.antialiasing = ClientPrefs.globalAntialiasing;
@@ -4509,7 +4509,7 @@ class PlayState extends MusicBeatState
 			if (!ClientPrefs.comboStacking)
 				lastScore.push(numScore);
 
-			if (!PlayState.isPixelStage)
+			if (!isPixelStage)
 			{
 				numScore.antialiasing = ClientPrefs.globalAntialiasing;
 				numScore.setGraphicSize(Std.int(numScore.width * 0.5));
@@ -5027,7 +5027,7 @@ class PlayState extends MusicBeatState
 
 	public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null) {
 		var skin:String = 'noteSplashes';
-		if(SONG.splashSkin != null && SONG.splashSkin.length > 0) skin = PlayState.SONG.splashSkin;
+		if(SONG.splashSkin != null && SONG.splashSkin.length > 0) skin = SONG.splashSkin;
 		if(isPixelStage) skin = 'pixelUI/' + skin;
 
 		var hue:Float = 0;
