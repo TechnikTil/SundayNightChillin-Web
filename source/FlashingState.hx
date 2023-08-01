@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import flixel.effects.FlxFlicker;
 import lime.app.Application;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.system.FlxSplash;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 
@@ -73,7 +74,8 @@ class FlashingState extends MusicBeatState
 				FlxTween.tween(bg, {y: bg.y + 1000, x: bg.x + 30, angle: bg.angle + 5}, 2.5, {ease: FlxEase.backIn});
 				FlxTween.tween(daText, {y: daText.y + 1000, x: daText.x - 30}, 3, { ease: FlxEase.backIn,
 					onComplete: function (twn:FlxTween) {
-						MusicBeatState.switchState(new TitleState());
+						FlxSplash.nextState = TitleState;
+						MusicBeatState.switchState(new FlxSplash());
 					}
 				});
 			} else if(controls.RESET) {
