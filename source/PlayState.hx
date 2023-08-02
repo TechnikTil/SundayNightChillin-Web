@@ -354,6 +354,29 @@ class PlayState extends MusicBeatState
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
 
+	var cameraMovement:Map<String, Map<String, Array<Float>>> = [
+		'bf' => [ //customization to the brim
+			'singLEFT' => [-40, 0],
+			'singDOWN' => [0, 40],
+			'singUP' => [0, -40],
+			'singRIGHT' => [40, 0]
+		],
+		'dad' => [
+			'singLEFT' => [-40, 0],
+			'singDOWN' => [0, 40],
+			'singUP' => [0, -40],
+			'singRIGHT' => [40, 0]
+		],
+		'gf' => [
+			'singLEFT' => [-40, 0],
+			'singDOWN' => [0, 40],
+			'singUP' => [0, -40],
+			'singRIGHT' => [40, 0]
+		]
+	];
+
+	var camFollower:Array<FlxPoint> = [new FlxPoint(), new FlxPoint(), new FlxPoint()];
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -514,6 +537,23 @@ class PlayState extends MusicBeatState
 		} else {
 			isPaintStage = false;
 			useJokeRatings = false;
+		}
+
+		switch(SONG.player2) {
+			case 'gb':
+				cameraMovement.set('dad', [
+					'singLEFT' => [-20, 0],
+					'singDOWN' => [0, 5],
+					'singUP' => [0, -5],
+					'singRIGHT' => [20, 0]
+				]);
+			case 'cooler-gb':
+				cameraMovement.set('dad', [
+					'singLEFT' => [-80, 0],
+					'singDOWN' => [0, 80],
+					'singUP' => [0, -80],
+					'singRIGHT' => [80, 0]
+				]);
 		}
 
 		defaultCamZoom = stageData.defaultZoom;
@@ -998,6 +1038,7 @@ class PlayState extends MusicBeatState
 			gf.scrollFactor.set(0.95, 0.95);
 			gfGroup.add(gf);
 			startCharacterLua(gf.curCharacter);
+			startCameraPos(gf.curCharacter, 'gf');
 
 			if(gfVersion == 'pico-speaker')
 			{
@@ -1025,11 +1066,13 @@ class PlayState extends MusicBeatState
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
+		startCameraPos(dad.curCharacter, 'dad');
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
+		startCameraPos(boyfriend.curCharacter, 'bf');
 
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
@@ -1578,6 +1621,26 @@ class PlayState extends MusicBeatState
 			luaArray.push(new FunkinLua(luaFile));
 		}
 		#end
+	}
+
+	function startCameraPos(name:String, charType:String) {
+		switch(name) {
+			case 'gb':
+				cameraMovement.set(charType, [
+					'singLEFT' => [-20, 0],
+					'singDOWN' => [0, 5],
+					'singUP' => [0, -5],
+					'singRIGHT' => [20, 0]
+				]);
+			case 'cooler-gb':
+				cameraMovement.set(charType, [
+					'singLEFT' => [-80, 0],
+					'singDOWN' => [0, 80],
+					'singUP' => [0, -80],
+					'singRIGHT' => [80, 0]
+				]);
+		}
+		trace(cameraMovement);
 	}
 
 	public function getLuaObject(tag:String, text:Bool=true):FlxSprite {
@@ -2254,14 +2317,17 @@ class PlayState extends MusicBeatState
 				if (gf != null && tmr.loopsLeft % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 				{
 					gf.dance();
+					camFollower[2].set(0, 0);
 				}
 				if (tmr.loopsLeft % boyfriend.danceEveryNumBeats == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
 				{
 					boyfriend.dance();
+					camFollower[1].set(0, 0);
 				}
 				if (tmr.loopsLeft % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 				{
 					dad.dance();
+					camFollower[0].set(0, 0);
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -3282,6 +3348,7 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("secShit", curSection);
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
+		FlxG.watch.addQuick("camShit", cameraMovement.toString() + '\n' + camFollower.toString());
 
 		// RESET = Quick Game Over Screen
 		if (!ClientPrefs.noReset && controls.RESET && canReset && !inCutscene && startedCountdown && !endingSong)
@@ -3881,6 +3948,10 @@ class PlayState extends MusicBeatState
 						if(Math.isNaN(charType)) charType = 0;
 				}
 
+				var charTypeName:String = charType == 1 ? 'dad' : charType == 2 ? 'gf' : 'bf';
+
+				startCameraPos(value2, charTypeName);
+
 				switch(charType) {
 					case 0:
 						if(boyfriend.curCharacter != value2) {
@@ -4092,18 +4163,22 @@ class PlayState extends MusicBeatState
 				camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 				camFollow.x += dad.cameraPosition[0] + opponentCameraOffset[0];
 				camFollow.y += dad.cameraPosition[1] + opponentCameraOffset[1];
+				camFollow += camFollower[0];
 				tweenCam(true);
 
 			case 'bf':
 				camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
 				camFollow.x -= boyfriend.cameraPosition[0] - boyfriendCameraOffset[0];
 				camFollow.y += boyfriend.cameraPosition[1] + boyfriendCameraOffset[1];
+				camFollow += camFollower[1];
 				tweenCam(false);
 
 			case 'gf':
 				camFollow.set(gf.getMidpoint().x, gf.getMidpoint().y);
 				camFollow.x += gf.cameraPosition[0] + girlfriendCameraOffset[0];
 				camFollow.y += gf.cameraPosition[1] + girlfriendCameraOffset[1];
+				camFollow += camFollower[2];
+				
 				tweenCam(true);
 
 
@@ -4877,9 +4952,15 @@ class PlayState extends MusicBeatState
 
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
+
 			if(note.gfNote) {
 				char = gf;
 			}
+
+			var arrayCamera = cameraMovement.get(char != dad ? 'gf' : 'dad');
+			var arrayCamera2 = arrayCamera.get(animToPlay.replace(altAnim, ""));
+
+			char != dad ? camFollower[2].set(arrayCamera2[0], arrayCamera2[1]) : camFollower[0].set(arrayCamera2[0], arrayCamera2[1]);
 
 			if(char != null)
 			{
@@ -4919,6 +5000,10 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('hitsound'), ClientPrefs.hitsoundVolume);
 			}
 
+			var char:Character = boyfriend;
+
+			if(note.gfNote) char = gf;
+
 			if(note.hitCausesMiss) {
 				noteMiss(note);
 				if(!note.noteSplashDisabled && !note.isSustainNote) {
@@ -4929,9 +5014,9 @@ class PlayState extends MusicBeatState
 				{
 					switch(note.noteType) {
 						case 'Hurt Note': //Hurt note
-							if(boyfriend.animation.getByName('hurt') != null) {
-								boyfriend.playAnim('hurt', true);
-								boyfriend.specialAnim = true;
+							if(char.animation.getByName('hurt') != null) {
+								char.playAnim('hurt', true);
+								char.specialAnim = true;
 							}
 					}
 				}
@@ -4957,25 +5042,21 @@ class PlayState extends MusicBeatState
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
 
-				if(note.gfNote)
-				{
-					if(gf != null)
-					{
-						gf.playAnim(animToPlay + note.animSuffix, true);
-						gf.holdTimer = 0;
-					}
-				}
-				else
-				{
-					boyfriend.playAnim(animToPlay + note.animSuffix, true);
-					boyfriend.holdTimer = 0;
-				}
+				var arrayCamera = cameraMovement.get(char != boyfriend ? 'gf' : 'bf');
+				var arrayCamera2 = arrayCamera.get(animToPlay);
+
+				char != boyfriend ? camFollower[2].set(arrayCamera2[0], arrayCamera2[1]) : camFollower[1].set(arrayCamera2[0], arrayCamera2[1]);
+
+				
+				char.playAnim(animToPlay + note.animSuffix, true);
+				char.holdTimer = 0;
+				
 
 				if(note.noteType == 'Hey!') {
-					if(boyfriend.animOffsets.exists('hey')) {
-						boyfriend.playAnim('hey', true);
-						boyfriend.specialAnim = true;
-						boyfriend.heyTimer = 0.6;
+					if(char.animOffsets.exists('hey')) {
+						char.playAnim('hey', true);
+						char.specialAnim = true;
+						char.heyTimer = 0.6;
 					}
 
 					if(gf != null && gf.animOffsets.exists('cheer')) {
@@ -5302,14 +5383,17 @@ class PlayState extends MusicBeatState
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 		{
 			gf.dance();
+			camFollower[2].set(0, 0);
 		}
 		if (curBeat % boyfriend.danceEveryNumBeats == 0 && boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.stunned)
 		{
 			boyfriend.dance();
+			camFollower[1].set(0, 0);
 		}
 		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 		{
 			dad.dance();
+			camFollower[0].set(0, 0);
 		}
 
 		switch (curStage)
