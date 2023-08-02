@@ -118,6 +118,11 @@
 						"Set Property",
 						"cameraSpeed",
 						"1.5"
+					],
+					[
+						"Change Character",
+						"dad",
+						"cooler-gb"
 					]
 				]
 			],
@@ -240,6 +245,11 @@
 				54000,
 				[
 					[
+						"Set Property",
+						"cameraSpeed",
+						"5"
+					],
+					[
 						"Camera Zoom",
 						"1.1",
 						"0.3"
@@ -283,16 +293,6 @@
 						"Camera Zoom",
 						"0.9",
 						"0.28"
-					]
-				]
-			],
-			[
-				60000,
-				[
-					[
-						"Set Property",
-						"cameraSpeed",
-						"5"
 					]
 				]
 			],
