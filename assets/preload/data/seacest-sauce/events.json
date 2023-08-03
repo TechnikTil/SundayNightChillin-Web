@@ -2,43 +2,18 @@
 	"song": {
 		"events": [
 			[
-				0,
-				[
-					[
-						"Alt Idle Animation",
-						"dad",
-						"-fake"
-					]
-				]
-			],
-			[
-				21942.8571428571,
-				[
-					[
-						"Set Property",
-						"cameraSpeed",
-						"5"
-					]
-				]
-			],
-			[
 				22028.5714285714,
 				[
 					[
 						"Play Animation",
-						"hey",
+						"mic",
 						"dad"
 					],
 					[
-						"Alt Idle Animation",
-						"dad",
-						""
-					]
-				]
-			],
-			[
-				22628.5714285714,
-				[
+						"Set Property",
+						"cameraSpeed",
+						"0.7"
+					],
 					[
 						"Camera Follow Pos",
 						"dad",
@@ -90,20 +65,60 @@
 				24685.7142857143,
 				[
 					[
-						"Set Property",
-						"cameraSpeed",
-						"1"
+						"Alt Idle Animation",
+						"dad",
+						""
 					],
 					[
 						"Camera Follow Pos",
 						"",
 						""
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					]
+				]
+			],
+			[
+				51428.5714285714,
+				[
+					[
+						"Camera Zoom",
+						"1.15",
+						"1"
+					]
+				]
+			],
+			[
+				52114.2857142857,
+				[
+					[
+						"Camera Zoom",
+						"1.05",
+						"0.5"
+					]
+				]
+			],
+			[
+				56914.2857142857,
+				[
+					[
+						"Camera Zoom",
+						"1.15",
+						"1"
 					]
 				]
 			],
 			[
 				57600,
 				[
+					[
+						"Camera Zoom",
+						"1.05",
+						"0.5"
+					],
 					[
 						"Philly Glow",
 						"1",
@@ -232,7 +247,7 @@
 				]
 			],
 			[
-				63428.5714285714,
+				63428.5714285715,
 				[
 					[
 						"Philly Glow",
@@ -308,6 +323,11 @@
 						"Philly Glow",
 						"1",
 						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -317,6 +337,11 @@
 					[
 						"Philly Glow",
 						"1",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
 						""
 					]
 				]
@@ -328,6 +353,21 @@
 						"Philly Glow",
 						"1",
 						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				68057.1428571429,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
 					]
 				]
 			],
@@ -335,8 +375,23 @@
 				68228.5714285714,
 				[
 					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				68314.2857142857,
+				[
+					[
 						"Philly Glow",
 						"1",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
 						""
 					]
 				]
@@ -345,8 +400,13 @@
 				68400,
 				[
 					[
-						"Philly Glow",
-						"0",
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Hey!",
+						"BF",
 						""
 					],
 					[
@@ -355,18 +415,33 @@
 						"-alt"
 					],
 					[
-						"Hey!",
-						"BF",
+						"Play Animation",
+						"cheer",
+						"gf"
+					]
+				]
+			],
+			[
+				68485.7142857143,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				68571.4285714286,
+				[
+					[
+						"Add Camera Zoom",
+						"",
 						""
 					],
 					[
-						"Hey!",
-						"GF",
-						"2"
-					],
-					[
-						"Set GF Speed",
-						"4",
+						"Philly Glow",
+						"0",
 						""
 					]
 				]

@@ -321,8 +321,7 @@ class Note extends FlxSprite
 			antialiasing = false;
 
 			if(isSustainNote) {
-				offsetX += 30;
-				
+				offsetX += 25;
 			}
 		} else {
 			frames = Paths.getSparrowAtlas(blahblah);

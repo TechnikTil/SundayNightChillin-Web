@@ -547,7 +547,7 @@ class PlayState extends MusicBeatState
 					'singUP' => [0, -5],
 					'singRIGHT' => [20, 0]
 				]);
-			case 'cooler-gb':
+			case 'cooler-gb', 'peaker-bf':
 				cameraMovement.set('dad', [
 					'singLEFT' => [-80, 0],
 					'singDOWN' => [0, 80],
@@ -1067,6 +1067,10 @@ class PlayState extends MusicBeatState
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
 		startCameraPos(dad.curCharacter, 'dad');
+
+		if(['seacest-sauce'].contains(Paths.formatToSongPath(SONG.song))) {
+			dad.idleSuffix = '-fake';
+		}
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -5178,7 +5182,7 @@ class PlayState extends MusicBeatState
 		if (trainSound.time >= 4700)
 		{
 			startedMoving = true;
-			if (gf != null)
+			if (gf != null && gf.animOffsets.exists('hairBlow'))
 			{
 				gf.playAnim('hairBlow');
 				gf.specialAnim = true;
@@ -5205,9 +5209,10 @@ class PlayState extends MusicBeatState
 
 	function trainReset():Void
 	{
-		if(gf != null)
+		if(gf != null && gf.animOffsets.exists('hairFall'))
 		{
 			gf.danced = false; //Sets head to the correct position once the animation ends
+			
 			gf.playAnim('hairFall');
 			gf.specialAnim = true;
 		}
