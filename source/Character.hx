@@ -92,6 +92,10 @@ class Character extends FlxSprite
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
 		var library:String = null;
+
+
+		if(!isPlayer) DEFAULT_CHARACTER = 'cooler-gb';
+		
 		switch (curCharacter)
 		{
 			//case 'your character name in case you want to hardcode them instead':

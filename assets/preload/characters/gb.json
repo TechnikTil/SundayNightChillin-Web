@@ -1,110 +1,126 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				90,
-				5
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-5,
-				-7
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-9,
-				2
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-3,
+				16,
 				-4
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-5,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-37,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "idle",
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-10,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-15
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "bd",
 			"indices": []
 		},
 		{
-			"offsets": [
-				95,
-				5
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT-alt",
 			"loop": false,
-			"name": "bl"
-		},
-		{
-			"offsets": [
-				6,
-				-25
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN-alt",
-			"loop": false,
-			"name": "bd"
-		},
-		{
 			"offsets": [
 				-20,
 				13
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP-alt",
-			"loop": false,
-			"name": "bu"
+			"fps": 24,
+			"name": "bu",
+			"indices": []
 		},
 		{
 			"offsets": [
-				-6,
+				0,
 				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-28,
+				-7
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT-alt",
 			"loop": false,
-			"name": "br"
+			"name": "Bright"
+		},
+		{
+			"offsets": [
+				-20,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Bleft"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4
+			],
+			"fps": 24,
+			"anim": "whar",
+			"loop": true,
+			"name": "whar"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/gb",
+	"image": "characters/finally_jsom",
 	"position": [
-		40,
-		210
+		20,
+		170
 	],
 	"healthicon": "gb",
 	"flip_x": false,

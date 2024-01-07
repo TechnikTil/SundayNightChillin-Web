@@ -116,7 +116,7 @@ class Paths
 	static public var currentLevel:String;
 	static public function setCurrentLevel(name:String)
 	{
-		currentLevel = name.toLowerCase();
+		currentLevel = name;
 	}
 
 	public static function getPath(file:String, type:AssetType, ?library:Null<String> = null)
@@ -509,36 +509,17 @@ class Paths
 		return list;
 	}
 
-	static public function cockunitygaymeBreakRule() {
-		var existence:Bool = false;
-		if(currentModDirectory != null && currentModDirectory.length > 0) {
-			var fileToCheck:String = mods(currentModDirectory + '/' + 'images/characters/BOYFRIEND');
-			existence = FileSystem.exists(fileToCheck);
+	static public function cockunitygaymeBreakRule() { //so bad coding lmao
+
+		if(fileExists(modFolders('images/characters/BOYFRIEND.xml'), TEXT)) {
+			return true;
 		}
-
-		for(mod in getGlobalMods()){
-			var fileToCheck:String = mods(mod + '/' + 'images/characters/BOYFRIEND');
-			if(FileSystem.exists(fileToCheck))
-				existence = FileSystem.exists(fileToCheck);
-
-		}
-		existence = FileSystem.exists('mods/' + 'images/characters/BOYFRIEND');
-
 		
-		if(currentModDirectory != null && currentModDirectory.length > 0) {
-			var fileToCheck:String = mods(currentModDirectory + '/' + 'images/characters/GF_assets');
-			existence = FileSystem.exists(fileToCheck);
+		if(fileExists(modFolders('images/characters/GF_assets.xml'), TEXT)) {
+			return true;
 		}
 
-		for(mod in getGlobalMods()){
-			var fileToCheck:String = mods(mod + '/' + 'images/characters/GF_assets');
-			if(FileSystem.exists(fileToCheck))
-				existence = FileSystem.exists(fileToCheck);
-
-		}
-		existence = FileSystem.exists('mods/' + 'images/characters/GF_assets');
-
-		return existence;
+		return false;
 	}
 	#end
 }

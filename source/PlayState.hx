@@ -540,20 +540,7 @@ class PlayState extends MusicBeatState
 		}
 
 		switch(SONG.player2) {
-			case 'gb':
-				cameraMovement.set('dad', [
-					'singLEFT' => [-20, 0],
-					'singDOWN' => [0, 5],
-					'singUP' => [0, -5],
-					'singRIGHT' => [20, 0]
-				]);
-			case 'cooler-gb', 'peaker-bf':
-				cameraMovement.set('dad', [
-					'singLEFT' => [-80, 0],
-					'singDOWN' => [0, 80],
-					'singUP' => [0, -80],
-					'singRIGHT' => [80, 0]
-				]);
+			
 		}
 
 		defaultCamZoom = stageData.defaultZoom;
@@ -909,6 +896,44 @@ class PlayState extends MusicBeatState
 				foregroundSprites.add(new BGSprite('tank5', 1620, 700, 1.5, 1.5, ['fg']));
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
 
+			case 'jsonCanButtFuckMeAlright': //Week 1
+				var bg:BGSprite = new BGSprite('BG', -1700, -700);
+				bg.scale.set(2.5, 2);
+				bg.updateHitbox();
+				add(bg);
+
+				var sun:BGSprite = new BGSprite('Sun', 1600, -200);
+				sun.scale.set(1.2, 1.2);
+				sun.updateHitbox();
+				add(sun);
+
+				var clouds:BGSprite = new BGSprite('Clouds', 900, 0);
+				clouds.velocity.x = -10;
+				clouds.scale.set(1.4, 1.4);
+				clouds.updateHitbox();
+				add(clouds);
+
+				var mountain:BGSprite = new BGSprite('Mountain', -1500, 100);
+				mountain.scale.set(1.2, 1.2);
+				mountain.updateHitbox();
+				add(mountain);
+
+				var grass:BGSprite = new BGSprite('Grass', -1600, 600);
+				grass.scale.set(3.7, 3.7);
+				grass.updateHitbox();
+				add(grass);
+
+				var tree:BGSprite = new BGSprite('Tree', -350, 350);
+				tree.scale.set(1.9, 1.9);
+				tree.updateHitbox();
+				add(tree);
+
+				var sign:BGSprite = new BGSprite('Sign', 1200, 700);
+				sign.scale.set(1.9, 1.9);
+				sign.updateHitbox();
+				add(sign);
+
+
 			case 'infinite background test': //run
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.2, 0.2);
 				add(bg);
@@ -1071,6 +1096,11 @@ class PlayState extends MusicBeatState
 		if(['seacest-sauce'].contains(Paths.formatToSongPath(SONG.song))) {
 			dad.idleSuffix = '-fake';
 		}
+
+		if(dad.curCharacter.indexOf('angry') != -1)
+			openfl.Lib.application.window.title = "Sunday Night Pissin': Demo";
+		else
+			openfl.Lib.application.window.title = "Sunday Night Chillin': Demo";
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -1629,15 +1659,8 @@ class PlayState extends MusicBeatState
 
 	function startCameraPos(name:String, charType:String) {
 		switch(name) {
-			case 'gb':
-				cameraMovement.set(charType, [
-					'singLEFT' => [-20, 0],
-					'singDOWN' => [0, 5],
-					'singUP' => [0, -5],
-					'singRIGHT' => [20, 0]
-				]);
-			case 'cooler-gb':
-				cameraMovement.set(charType, [
+			case 'cooler-gb', 'peaker-bf':
+				cameraMovement.set('dad', [
 					'singLEFT' => [-80, 0],
 					'singDOWN' => [0, 80],
 					'singUP' => [0, -80],
@@ -4011,6 +4034,12 @@ class PlayState extends MusicBeatState
 							setOnLuas('gfName', gf.curCharacter);
 						}
 				}
+
+				if(value2.indexOf('angry') != -1)
+					openfl.Lib.application.window.title = "Sunday Night Pissin': Demo";
+				else
+					openfl.Lib.application.window.title = "Sunday Night Chillin': Demo";
+
 				reloadHealthBarColors();
 
 			case 'BG Freaks Expression':
@@ -4261,6 +4290,8 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
+
+		openfl.Lib.application.window.title = "Sunday Night Chillin': Demo";
 
 		#if ACHIEVEMENTS_ALLOWED
 		if(achievementObj != null) {
