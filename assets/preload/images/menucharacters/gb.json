@@ -1,0 +1,11 @@
+{
+	"idle_anim": "gbv",
+	"image": "Menu_GB",
+	"position": [
+		-27,
+		-20
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "gbv"
+}

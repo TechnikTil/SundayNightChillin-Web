@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_Sign.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="yes please0000" x="0" y="0" width="211" height="110" frameX="0" frameY="-40" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0001" x="0" y="0" width="211" height="110" frameX="0" frameY="-40" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0002" x="211" y="0" width="168" height="131" frameX="-21" frameY="-19" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0003" x="211" y="0" width="168" height="131" frameX="-21" frameY="-19" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0004" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0005" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0006" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0007" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0008" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0009" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0010" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0011" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0012" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+	<SubTexture name="yes please0013" x="0" y="131" width="140" height="150" frameX="-35" frameY="0" frameWidth="211" frameHeight="150"/>
+</TextureAtlas>

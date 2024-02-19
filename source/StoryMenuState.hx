@@ -92,6 +92,8 @@ class StoryMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+		
+		Conductor.changeBPM(102);
 
 		var num:Int = 0;
 		for (i in 0...WeekData.weeksList.length)
@@ -484,5 +486,16 @@ class StoryMenuState extends MusicBeatState
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
 		#end
+	}
+
+	override public function beatHit()
+	{
+		FlxG.log.add('beat');
+
+		for (i in 0...grpWeekCharacters.length) {
+			if(curBeat % 2 == 0)
+				grpWeekCharacters.members[i].animation.play('idle', false);
+		}
+		super.beatHit();
 	}
 }

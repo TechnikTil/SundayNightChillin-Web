@@ -128,4 +128,18 @@
 	<SubTexture name="up0011" x="329" y="3077" width="329" height="620" frameX="-3" frameY="-6" frameWidth="332" frameHeight="626"/>
 	<SubTexture name="up0012" x="329" y="3077" width="329" height="620" frameX="-3" frameY="-6" frameWidth="332" frameHeight="626"/>
 	<SubTexture name="up0013" x="329" y="3077" width="329" height="620" frameX="-3" frameY="-6" frameWidth="332" frameHeight="626"/>
+	<SubTexture name="whar0000" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0001" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0002" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0003" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0004" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0005" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0006" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0007" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0008" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0009" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0010" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0011" x="1041" y="3077" width="383" height="614" frameX="-2" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0012" x="658" y="3077" width="383" height="614" frameX="-1" frameY="0" frameWidth="385" frameHeight="614"/>
+	<SubTexture name="whar0013" x="1424" y="3077" width="384" height="614" frameX="0" frameY="0" frameWidth="385" frameHeight="614"/>
 </TextureAtlas>

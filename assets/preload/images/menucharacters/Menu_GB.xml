@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_GB.png">
+	<!-- Created with Adobe Animate version 24.0.0.305 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gbv0000" x="0" y="0" width="309" height="329" frameX="0" frameY="-24" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0001" x="0" y="0" width="309" height="329" frameX="0" frameY="-24" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0002" x="309" y="0" width="296" height="341" frameX="-6" frameY="-12" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0003" x="309" y="0" width="296" height="341" frameX="-6" frameY="-12" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0004" x="605" y="0" width="287" height="347" frameX="-11" frameY="-6" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0005" x="605" y="0" width="287" height="347" frameX="-11" frameY="-6" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0006" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0007" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0008" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0009" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0010" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0011" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0012" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+	<SubTexture name="gbv0013" x="0" y="347" width="282" height="353" frameX="-13" frameY="0" frameWidth="309" frameHeight="353"/>
+</TextureAtlas>

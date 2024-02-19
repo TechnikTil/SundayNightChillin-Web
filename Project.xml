@@ -127,6 +127,7 @@
 
 	<!-- Enables a terminal log prompt on debug builds -->
 
+	<haxelib name="hxcpp-debug-server" if="desktop debug"/>
 	<!-- <haxelib name="markdown" /> -->
 	<!-- <haxelib name="HtmlParser" /> -->
 

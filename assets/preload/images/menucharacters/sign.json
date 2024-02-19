@@ -1,0 +1,11 @@
+{
+	"idle_anim": "yes please",
+	"image": "Menu_Sign",
+	"position": [
+		41,
+		-93
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "yes please"
+}
