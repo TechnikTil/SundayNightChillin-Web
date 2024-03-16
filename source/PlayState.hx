@@ -620,6 +620,39 @@ class PlayState extends MusicBeatState
 				var sign:BGSprite = new BGSprite('Sign', 0, 0, 1, 1);
 				add(sign);
 
+			case 'jsonFinallyButtFuckedMe':
+				var bg:FlxSprite = new FlxSprite(-600, -500).loadGraphic(Paths.image('ididntgetaname/sky'));
+				bg.antialiasing = ClientPrefs.globalAntialiasing;
+				bg.scrollFactor.set(0.1, 0.1);
+				add(bg);
+			
+				var clouds:FlxSprite = new FlxSprite(-600, -400).loadGraphic(Paths.image('ididntgetaname/clouds'));
+				clouds.antialiasing = ClientPrefs.globalAntialiasing;
+				clouds.scrollFactor.set(0.3, 0.3);
+				clouds.velocity.x = 5;
+				add(clouds);
+			
+				var mountain3:FlxSprite = new FlxSprite(-600, -350).loadGraphic(Paths.image('ididntgetaname/mountainback3'));
+				mountain3.antialiasing = ClientPrefs.globalAntialiasing;
+				mountain3.scrollFactor.set(0.7, 0.4);
+				add(mountain3);
+			
+				var mountain2:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('ididntgetaname/mountainback2'));
+				mountain2.antialiasing = ClientPrefs.globalAntialiasing;
+				mountain2.scrollFactor.set(0.5, 0.4);
+				add(mountain2);
+			
+				var mountain1:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('ididntgetaname/mountainback1'));
+				mountain1.antialiasing = ClientPrefs.globalAntialiasing;
+				mountain1.scrollFactor.set(0.4, 0.4);
+				add(mountain1);
+			
+				var ground:FlxSprite = new FlxSprite(-500, -50).loadGraphic(Paths.image('ididntgetaname/ground'));
+				ground.antialiasing = ClientPrefs.globalAntialiasing;
+				ground.setGraphicSize(Std.int(ground.width * 1.2));
+				ground.scrollFactor.set(0.9, 0.9);
+				add(ground);
+
 			case 'infinite background test': //run
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.2, 0.2);
 				add(bg);
