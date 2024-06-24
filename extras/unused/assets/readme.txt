@@ -1,0 +1,1 @@
+This folder contains old assets or assets that weren't ready or never going to be used in the mod.

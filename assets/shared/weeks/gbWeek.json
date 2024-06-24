@@ -1,0 +1,45 @@
+{
+	"songs": [
+		[
+			"Chillin'",
+			"gb",
+			[
+				255,
+				0,
+				235
+			]
+		],
+		[
+			"Serenity",
+			"gb",
+			[
+				215,
+				0,
+				195
+			]
+		],
+		[
+			"Anger Issues",
+			"gb",
+			[
+				175,
+				0,
+				155
+			]
+		]
+	],
+	"weekCharacters": [
+		"gb",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "buttfuck",
+	"weekBefore": "",
+	"storyName": "Grassy Plains",
+	"weekName": "GB Week",
+	"startUnlocked": true,
+	"hiddenUntilUnlocked": false,
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"difficulties": "Chillin"
+}

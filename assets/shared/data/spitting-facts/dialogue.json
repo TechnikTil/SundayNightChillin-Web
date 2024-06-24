@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"expression": "pissed",
+			"text": "I am shiner than you :)",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "1",
+			"text": "Bro who asked. Just shut up.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "joke-gb"
+		},
+		{
+			"expression": "excited",
+			"text": "But I am :)",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "2",
+			"text": "Who gives a fuck.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "joke-gb"
+		},
+		{
+			"expression": "pissed",
+			"text": "I am shiner-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "3",
+			"text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.015,
+			"portrait": "joke-gb"
+		},
+		{
+			"expression": "confused",
+			"text": "the hell?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"songs": [
+		[
+			"Spitting Facts",
+			"gb-joke",
+			[
+				154,
+				0,
+				185
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekBackground": "",
+	"weekBefore": "jokegbWeek",
+	"storyName": "3d json moment",
+	"weekName": "Joke GB",
+	"startUnlocked": false,
+	"hiddenUntilUnlocked": true,
+	"hideStoryMode": true,
+	"hideFreeplay": false,
+	"difficulties": "Easy, Chillin"
+}

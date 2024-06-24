@@ -1,0 +1,33 @@
+{	
+	"bumpinData":{
+		"positions": [0, 0],
+		"prefix": "logo bumpin",
+		"screenCenter": "xy",
+		"rotating": true,
+		"rotatingProperties": {
+			"angle": 3,
+			"time": 2.5,
+			"ease": "sineinout"
+		}
+	},
+	"checkerData": {
+		"enabled": true,
+		"size": [80, 80],
+		"colors": ["FE62C1", "A14DD9"],
+		"speed": [40, 40],
+		"alpha": 0.8
+	},
+	"startData": {
+		"positions": [0, 576],
+		"prefixes": {
+			"idle": "ENTER IDLE",
+			"press": "ENTER PRESSED",
+			"freeze": "ENTER FREEZE"
+		},
+		"screenCenter": "x",
+		"colors": ["FF66FF", "A910FF", "FFFFFF"],
+		"alphas": [1, 0.64]
+	},
+	"backgroundSprite":"",
+	"bpm":106
+}

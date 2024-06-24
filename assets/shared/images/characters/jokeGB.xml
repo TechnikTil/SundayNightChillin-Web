@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="jokeGB.png">
+	<!-- Handmade by CrusherNotDrip -->
+	<SubTexture name="json is playing down now0000" x="0" y="0" width="415" height="701" frameX="-3" frameY="-10" frameWidth="470" frameHeight="735"/>
+	<SubTexture name="json is playing down now0001" x="0" y="0" width="415" height="701" frameX="-3" frameY="-10" frameWidth="470" frameHeight="735"/>
+	<SubTexture name="json is playing down now0002" x="415" y="0" width="415" height="701" frameX="-3" frameY="0" frameWidth="470" frameHeight="735"/>
+	<SubTexture name="json is playing down now0003" x="415" y="0" width="415" height="701" frameX="-3" frameY="0" frameWidth="470" frameHeight="735"/>
+	<SubTexture name="carter has no bitches left0000" x="830" y="0" width="432" height="701" frameX="0" frameY="0" frameWidth="383" frameHeight="777"/>
+	<SubTexture name="carter has no bitches left0001" x="830" y="0" width="432" height="701" frameX="0" frameY="0" frameWidth="383" frameHeight="777"/>
+	<SubTexture name="carter has no bitches left0002" x="1261" y="0" width="412" height="701" frameX="-41" frameY="0" frameWidth="412" frameHeight="701"/>
+	<SubTexture name="a0000" x="1673" y="0" width="467" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="a0001" x="1673" y="0" width="467" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="a0002" x="2140" y="0" width="443" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="a0003" x="2140" y="0" width="443" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="a0004" x="2583" y="0" width="427" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="a0005" x="2583" y="0" width="427" height="701" frameX="0" frameY="0" frameWidth="465" frameHeight="793"/>
+	<SubTexture name="my brain is gone0000" x="3019" y="0" width="415" height="744" frameX="0" frameY="0" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="my brain is gone0001" x="3019" y="0" width="415" height="744" frameX="0" frameY="0" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="my brain is gone0002" x="3435" y="0" width="415" height="729" frameX="0" frameY="-15" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="my brain is gone0003" x="3435" y="0" width="415" height="729" frameX="0" frameY="-15" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="my brain is gone0004" x="0" y="701" width="416" height="714" frameX="1" frameY="-30" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="my brain is gone0005" x="0" y="701" width="416" height="714" frameX="1" frameY="-30" frameWidth="409" frameHeight="818"/>
+	<SubTexture name="me mad >:(0000" x="415" y="701" width="416" height="701" frameX="1" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0001" x="415" y="701" width="416" height="701" frameX="1" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0002" x="831" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0003" x="831" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0004" x="1246" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0005" x="1246" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0006" x="1661" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0007" x="1661" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0008" x="2076" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0009" x="2076" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0010" x="2491" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+	<SubTexture name="me mad >:(0011" x="2491" y="701" width="415" height="701" frameX="0" frameY="0" frameWidth="429" frameHeight="767"/>
+</TextureAtlas>

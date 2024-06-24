@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				18,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-6,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-9,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-39,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-22,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "Bleft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-14,
+				-15
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "bdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				12
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "bup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-30,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Bright"
+		},
+		{
+			"offsets": [
+				-2,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "whar",
+			"indices": [
+				1,
+				2,
+				3,
+				4
+			],
+			"name": "whar"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gameboy",
+	"position": [
+		20,
+		170
+	],
+	"healthicon": "gb",
+	"flip_x": false,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

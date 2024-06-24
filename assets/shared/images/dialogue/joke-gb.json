@@ -1,0 +1,50 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		140,
+		200
+	],
+	"scale": 2.4,
+	"animations": [
+		{
+			"loop_name": "json 1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "json 1",
+			"anim": "1",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "json 2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "json 2",
+			"anim": "2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "json 3",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "json 3",
+			"anim": "3",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "json"
+}

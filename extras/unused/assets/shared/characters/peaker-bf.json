@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				210,
+				15
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "lefft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-112
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "downeer",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				262
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "urp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-100,
+				-130
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				47,
+				-21
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "bl",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-30
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "bd",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				49
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "bu",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-85,
+				-20
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "br",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				157,
+				49
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "pose beetbox yerp",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/ooh scary larry/Untitled-1",
+	"position": [
+		-30,
+		350
+	],
+	"healthicon": "bf-peak",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,25 @@
+{
+	"songs": [
+		[
+			"Seacest Sauce",
+			"gb-peak",
+			[
+				255,
+				255,
+				255
+			]
+		]
+	],
+	"hideFreeplay": true,
+	"weekBackground": "",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "vs .json dieman part real",
+	"weekName": "Seacest Sauce",
+	"hideStoryMode": true,
+	"weekBefore": "",
+	"startUnlocked": true
+}
