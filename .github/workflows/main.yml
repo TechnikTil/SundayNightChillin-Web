@@ -18,6 +18,8 @@ jobs:
         run: |
             cd ${{ github.workspace }}
             haxelib run hmm install
+      - name: Skip SScript setup mode
+        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Compile The Game
         run: haxelib run lime build windows
       - name: Upload Game Executable
@@ -43,6 +45,8 @@ jobs:
         run: |
             cd ${{ github.workspace }}
             haxelib run hmm install
+      - name: Skip SScript setup mode
+        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Compile The Game
         run: haxelib run lime build linux
       - name: Wait for 1.5 seconds
@@ -66,6 +70,8 @@ jobs:
         run: |
             cd ${{ github.workspace }}
             haxelib run hmm install
+      - name: Skip SScript setup mode
+        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Compile The Game
         run: haxelib run lime build mac
       - name: Wait for 1.5 seconds
