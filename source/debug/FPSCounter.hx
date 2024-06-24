@@ -21,6 +21,11 @@ class FPSCounter extends TextField
 	**/
 	public var memoryMegas(get, never):Float;
 
+	/**
+		The maximum memory used since game start.
+	**/
+	public var memoryMegasPeak:Float;
+
 	@:noCompletion private var times:Array<Float>;
 
 	public function new(x:Float = 10, y:Float = 10, color:Int = 0x000000)
@@ -54,14 +59,18 @@ class FPSCounter extends TextField
 		times.push(now);
 		while (times[0] < now - 1000) times.shift();
 
-		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;		
+		currentFPS = times.length < FlxG.updateFramerate ? times.length : FlxG.updateFramerate;
+
+		if (memoryMegas > memoryMegasPeak)
+			memoryMegasPeak = memoryMegas;
+
 		updateText();
 		deltaTimeout += deltaTime;
 	}
 
 	public dynamic function updateText():Void {
 		text = 'FPS: ${currentFPS}'
-		+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)}';
+		+ '\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)} / ${flixel.util.FlxStringUtil.formatBytes(memoryMegasPeak)}';
 
 		textColor = 0xFFFFFFFF;
 		if (currentFPS < FlxG.drawFramerate * 0.5)
