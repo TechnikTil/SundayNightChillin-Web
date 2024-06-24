@@ -30,7 +30,8 @@ class OutdatedState extends MusicBeatState
 		if(!leftState) {
 			if (controls.ACCEPT) {
 				leftState = true;
-				CoolUtil.browserLoad("https://github.com/TechnikTil/SNS-goofySource");
+				// TODO: replace this with gamebanana link when we get it
+				CoolUtil.browserLoad("https://github.com/TilNotDrip/SundayNightChillin/releases");
 			}
 			else if(controls.BACK) {
 				leftState = true;
