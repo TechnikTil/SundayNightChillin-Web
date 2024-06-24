@@ -1873,6 +1873,7 @@ class PlayState extends MusicBeatState
 		setOnScripts('botPlay', cpuControlled);
 		callOnScripts('onUpdatePost', [elapsed]);
 
+		// TODO: I forgot the modchart lmao
 		if (songName == 'spitting-facts')
 		{
 		}
@@ -2981,8 +2982,8 @@ class PlayState extends MusicBeatState
 		{
 			if (health - 0.013 * healthGain >= 0)
 				health -= 0.013 * healthGain;
-			else if (health - 0.013 * healthGain <= 0)
-				health = 0.001;
+			else
+				health = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
 		}
 
 		if (songName == 'spitting-facts' && !note.isSustainNote)
