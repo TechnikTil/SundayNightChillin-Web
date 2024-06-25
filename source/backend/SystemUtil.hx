@@ -14,20 +14,21 @@ class SystemUtil
     // This is here because I need to access it from a PlayState function so it doesn't stop even when a substate is opened.
     public static var windowOpacityTween:FlxTween;
 
-    #if (windows && cpp)
-	@:functionCode('
-		BOOL USE_DARK_MODE = isDark;
-		HWND WINDOW = GetActiveWindow();
+    @:functionCode('
+        int isDark = mode;
+        HWND window = GetActiveWindow();
+        if (S_OK != DwmSetWindowAttribute(window, 19, &isDark, sizeof(isDark))) {
+            DwmSetWindowAttribute(window, 20, &isDark, sizeof(isDark));
+        }
+        UpdateWindow(window);
+    ')
+	@:noCompletion
+	public static function _darkTitle(mode:Int) {}
 
-		BOOL SET_IMMERSIVE_DARK_MODE_SUCCESS = SUCCEEDED(DwmSetWindowAttribute(
-			WINDOW,
-			DWMWINDOWATTRIBUTE::DWMWA_USE_IMMERSIVE_DARK_MODE,
-			&USE_DARK_MODE,
-			sizeof(USE_DARK_MODE)
-		));
-	')
-    #end
-	public static function darkTitle(isDark:Bool) {}
+	public static function darkTitle(isDark:Bool) 
+    {
+        _darkTitle((isDark) ? 1 : 0);
+    }
 
     /**
      * Tweens the window opacity to 0 then closes the game.
