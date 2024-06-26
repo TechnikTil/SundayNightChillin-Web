@@ -1769,6 +1769,7 @@ class PlayState extends MusicBeatState
 
 		if (!ClientPrefs.data.noReset && controls.RESET && canReset && !inCutscene && startedCountdown && !endingSong)
 		{
+			GameOverSubstate.characterName = 'bf-dead-funny';
 			health = 0;
 			trace("RESET = True");
 		}
