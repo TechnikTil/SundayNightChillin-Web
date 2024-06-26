@@ -214,12 +214,14 @@ class ChartingState extends MusicBeatState
 			PlayState.SONG = _song;
 		}
 
+		#if !debug // my god this becomes so annoying
 		if (Paths.formatToSongPath(_song.song) == 'anger-issues' || Paths.formatToSongPath(_song.song) == 'spitting-facts')
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxG.mouse.visible = false;
 			PlayState.loadSpittingFacts();
 		}
+		#end
 
 		#if DISCORD_ALLOWED
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(_song.song, '-', ' '));
@@ -241,6 +243,7 @@ class ChartingState extends MusicBeatState
 				speed: TitleState.titleJSON.checkerData.speed,
 				alpha: 1
 			});
+			checkeredBG.velocity.y = 0;
 			add(checkeredBG);
 		}
 

@@ -25,14 +25,11 @@ class Achievements {
 	public static function init()
 	{
 		createAchievement('sunday_night_play',		{name: "Chillin' on a Sunday Night", description: "Play on a Sunday... Night.", hidden: true});
+		createAchievement('gbWeek_complete',		{name: "Congratulations!", description: "Beat the GB Week."});
 		createAchievement('gbWeek_nomiss',			{name: "Screw you!", description: "Beat GB Week with no Misses."});
 		createAchievement('jokegb',					{name: "Told you it was easy", description: "Beat the \"Joke GB\" song after trying to access the Anger Issues chart.", hidden: true});
-		createAchievement('ur_bad',					{name: "What a Funkin' Disaster!", description: "Complete a Song with a rating lower than 20%."});
-		createAchievement('ur_good',				{name: "Perfectionist", description: "Complete a Song with a rating of 100%."});
-		createAchievement('oversinging', 			{name: "Oversinging Much...?", description: "Sing for 10 seconds without going back to Idle."});
-		createAchievement('hype',					{name: "Hyperactive", description: "Finish a Song without going back to Idle."});
-		createAchievement('two_keys',				{name: "Just the Two of Us", description: "Finish a Song pressing only two keys."});
 		createAchievement('toastie',				{name: "Toaster Gamer", description: "Have you tried to run the game on a toaster?"});
+		createAchievement('black',					{name: " ", description: "	", hidden: true});
 
 		_originalLength = _sortID + 1;
 	}

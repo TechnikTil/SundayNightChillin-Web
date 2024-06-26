@@ -238,10 +238,6 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	var keysPressed:Array<Int> = [];
-	var boyfriendIdleTime:Float = 0.0;
-	var boyfriendIdled:Bool = false;
-
 	public static var instance:PlayState;
 	#if LUA_ALLOWED public var luaArray:Array<FunkinLua> = []; #end
 
@@ -1687,18 +1683,11 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if(!inCutscene && !paused && !freezeCamera) {
+		if(!inCutscene && !paused && !freezeCamera)
 			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
-			if(!startingSong && !endingSong && boyfriend.getAnimationName().startsWith('idle')) {
-				boyfriendIdleTime += elapsed;
-				if(boyfriendIdleTime >= 0.15) {
-					boyfriendIdled = true;
-				}
-			} else {
-				boyfriendIdleTime = 0;
-			}
-		}
-		else FlxG.camera.followLerp = 0;
+		else 
+			FlxG.camera.followLerp = 0;
+
 		callOnScripts('onUpdate', [elapsed]);
 
 		super.update(elapsed);
@@ -1719,17 +1708,15 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		if(!endingSong && !inCutscene && allowDebugKeys)
+		if(!endingSong && !inCutscene)
 		{
-			if (controls.justPressed('debug_1'))
+			if(allowDebugKeys)
 			{
-				if (songName == 'anger-issues' || songName == 'spitting-facts')
-					loadSpittingFacts();
-				else
+				if (controls.justPressed('debug_1'))
 					openChartEditor();
+				else if (controls.justPressed('debug_2'))
+					openCharacterEditor();
 			}
-			else if (controls.justPressed('debug_2'))
-				openCharacterEditor();
 		}
 
 		if (healthBar.bounds.max != null && health > healthBar.bounds.max)
@@ -2405,7 +2392,8 @@ class PlayState extends MusicBeatState
 
 		#if ACHIEVEMENTS_ALLOWED
 		var weekNoMiss:String = WeekData.getWeekFileName() + '_nomiss';
-		checkForAchievement([weekNoMiss, 'jokegb', 'ur_bad', 'ur_good', 'hype', 'two_keys', 'toastie']);
+		var weekComplete:String = WeekData.getWeekFileName() + '_complete';
+		checkForAchievement([weekComplete, weekNoMiss, 'jokegb', 'toastie']);
 		#end
 
 		var ret:Dynamic = callOnScripts('onEndSong', null, true);
@@ -2732,8 +2720,6 @@ class PlayState extends MusicBeatState
 			noteMissPress(key);
 		}
 
-		if(!keysPressed.contains(key)) keysPressed.push(key);
-
 		Conductor.songPosition = lastTime;
 
 		var spr:StrumNote = playerStrums.members[key];
@@ -2834,10 +2820,6 @@ class PlayState extends MusicBeatState
 
 			if (!holdArray.contains(true) || endingSong)
 				playerDance();
-
-			#if ACHIEVEMENTS_ALLOWED
-			else checkForAchievement(['oversinging']);
-			#end
 		}
 
 		if((controls.controllerMode || strumsBlocked.contains(true)) && releaseArray.contains(true))
@@ -3232,6 +3214,9 @@ class PlayState extends MusicBeatState
 		}
 		super.sectionHit();
 
+		if(!endingSong && !startingSong)
+			checkForAchievement(['black']);
+
 		setOnScripts('curSection', curSection);
 		callOnScripts('onSectionHit');
 	}
@@ -3522,31 +3507,25 @@ class PlayState extends MusicBeatState
 			if(!Achievements.exists(name)) continue;
 
 			var unlock:Bool = false;
-			if (name != WeekData.getWeekFileName() + '_nomiss')
+			if (name != WeekData.getWeekFileName() + '_nomiss' && name != WeekData.getWeekFileName() + '_complete')
 			{
 				switch(name)
 				{
 					case 'jokegb':
 						unlock = (songName == 'spitting-facts' && !usedPractice);
 
-					case 'ur_bad':
-						unlock = (ratingPercent < 0.2 && !practiceMode);
-
-					case 'ur_good':
-						unlock = (ratingPercent >= 1 && !usedPractice);
-
-					case 'oversinging':
-						unlock = (boyfriend.holdTimer >= 10 && !usedPractice);
-
-					case 'hype':
-						unlock = (!boyfriendIdled && !usedPractice);
-
-					case 'two_keys':
-						unlock = (!usedPractice && keysPressed.length <= 2);
+					case 'black':
+						unlock = FlxG.random.bool(1);
 
 					case 'toastie':
 						unlock = (!ClientPrefs.data.cacheOnGPU && !ClientPrefs.data.shaders && ClientPrefs.data.lowQuality && !ClientPrefs.data.antialiasing);
 				}
+			}
+			else if (name != WeekData.getWeekFileName() + '_complete')
+			{
+				if(isStoryMode && Difficulty.getString().toUpperCase() == 'CHILLIN'
+					&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					unlock = true;
 			}
 			else
 			{
