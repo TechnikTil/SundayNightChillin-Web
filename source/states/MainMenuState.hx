@@ -4,13 +4,14 @@ import flixel.FlxObject;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import lime.app.Application;
-import states.editors.MasterEditorMenu;
 import options.OptionsState;
+import macros.DevValues;
+import states.editors.MasterEditorMenu;
 
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.7.3';
-	public static var chillinVersion:String = '0.1.0 [DEV 3]';
+	public static var chillinVersion:String = '0.1.0';
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -93,17 +94,25 @@ class MainMenuState extends MusicBeatState
 		}
 
 		var chillinVer:FlxText = new FlxText(12, FlxG.height - 64, 0, "Sunday Night Chillin' v" + chillinVersion, 12);
+
+		#if SNC_DEV_BUILD
+		chillinVer.text += ' [DEV ${DevValues.buildNum()}]';
+		#end
+
 		chillinVer.scrollFactor.set();
 		chillinVer.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(chillinVer);
+
 		var psychVer:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		psychVer.scrollFactor.set();
 		psychVer.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(psychVer);
+
 		var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
 		fnfVer.scrollFactor.set();
 		fnfVer.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(fnfVer);
+
 		changeItem();
 
 		#if ACHIEVEMENTS_ALLOWED

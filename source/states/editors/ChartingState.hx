@@ -214,7 +214,7 @@ class ChartingState extends MusicBeatState
 			PlayState.SONG = _song;
 		}
 
-		#if !debug // my god this becomes so annoying
+		#if CHART_BLOCKS
 		if (Paths.formatToSongPath(_song.song) == 'anger-issues' || Paths.formatToSongPath(_song.song) == 'spitting-facts')
 		{
 			FlxTransitionableState.skipNextTransIn = true;

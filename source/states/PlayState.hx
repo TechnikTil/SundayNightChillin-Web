@@ -1713,7 +1713,14 @@ class PlayState extends MusicBeatState
 			if(allowDebugKeys)
 			{
 				if (controls.justPressed('debug_1'))
-					openChartEditor();
+				{
+					#if CHART_BLOCKS
+					if (songName == 'anger-issues' || songName == 'spitting-facts')
+						loadSpittingFacts();
+					else
+					#end
+						openChartEditor();
+				}
 				else if (controls.justPressed('debug_2'))
 					openCharacterEditor();
 			}
@@ -3214,9 +3221,6 @@ class PlayState extends MusicBeatState
 		}
 		super.sectionHit();
 
-		if(!endingSong && !startingSong)
-			checkForAchievement(['black']);
-
 		setOnScripts('curSection', curSection);
 		callOnScripts('onSectionHit');
 	}
@@ -3513,9 +3517,6 @@ class PlayState extends MusicBeatState
 				{
 					case 'jokegb':
 						unlock = (songName == 'spitting-facts' && !usedPractice);
-
-					case 'black':
-						unlock = FlxG.random.bool(1);
 
 					case 'toastie':
 						unlock = (!ClientPrefs.data.cacheOnGPU && !ClientPrefs.data.shaders && ClientPrefs.data.lowQuality && !ClientPrefs.data.antialiasing);

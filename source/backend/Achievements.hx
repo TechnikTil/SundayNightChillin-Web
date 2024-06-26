@@ -29,7 +29,6 @@ class Achievements {
 		createAchievement('gbWeek_nomiss',			{name: "Screw you!", description: "Beat GB Week with no Misses."});
 		createAchievement('jokegb',					{name: "Told you it was easy", description: "Beat the \"Joke GB\" song after trying to access the Anger Issues chart.", hidden: true});
 		createAchievement('toastie',				{name: "Toaster Gamer", description: "Have you tried to run the game on a toaster?"});
-		createAchievement('black',					{name: " ", description: "	", hidden: true});
 
 		_originalLength = _sortID + 1;
 	}
