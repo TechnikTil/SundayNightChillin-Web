@@ -52,7 +52,7 @@ class CreditsState extends MusicBeatState
 			['Sunday Night Chillin\' Team'],
 			['.json',				'gameboy1969',		'Director of Sunday Night Chillin\nArtist + Animator + Charter + Composer', 'https://twitter.com/gameboy1969', 'D52DFF'],
 			['CrusherNotDrip',		'crushernotdrip',	'Artist + Programmer + Cutscene Audio',						 'https://twitter.com/CrusherNotDrip',	'0066FF'],
-			['TechnikTil',			'techniktil',		'Charter + Programmer',										 'https://techniktil.carrd.co/',		'595555'],
+			['TechnikTil',			'techniktil',		'Charter + Programmer + GB Chromatic',										 'https://techniktil.carrd.co/',		'595555'],
 			['shopcart',			'shopcart',			'Artist + Animator',										 'https://twitter.com/UhhUhhh19',		'B24900'],
 			['Pozo',				'poxocrox',			'Artist',													 'https://twitter.com/poxocrox',		'FFFFFF'],
 			['Shade',				'shadE64',			'Composer + OST Artist',									 'https://twitter.com/shadE64YT',		'9933CC'],
