@@ -1,7 +1,7 @@
 name: SNC Compiling
 run-name: Compiling SNC...
 
-on: [ push, pull_request ]
+on: [ workflow_dispatch ]
     
 jobs:
   Windows:
