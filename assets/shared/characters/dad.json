@@ -134,5 +134,11 @@
 	],
 	"sing_duration": 6.1,
 	"scale": 1,
+	"note_colors": [
+		["AF66CE", "FFFFFF", "41264C"],
+		["AF66CE", "FFFFFF", "41264C"],
+		["AF66CE", "FFFFFF", "41264C"],
+		["AF66CE", "FFFFFF", "41264C"]
+	],
 	"_editor_isPlayer": false
 }

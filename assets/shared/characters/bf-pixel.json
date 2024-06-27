@@ -114,5 +114,11 @@
 	],
 	"sing_duration": 4,
 	"scale": 6,
+	"note_colors": [
+		["7BD6F6", "151420", "5A80E4"],
+		["7BD6F6", "151420", "5A80E4"],
+		["7BD6F6", "151420", "5A80E4"],
+		["7BD6F6", "151420", "5A80E4"]
+	],
 	"_editor_isPlayer": true
 }

@@ -1769,7 +1769,9 @@ class PlayState extends MusicBeatState
 
 		if (!ClientPrefs.data.noReset && controls.RESET && canReset && !inCutscene && startedCountdown && !endingSong)
 		{
-			GameOverSubstate.characterName = 'bf-dead-funny';
+			if (health >= 1.94)
+				GameOverSubstate.characterName = 'bf-dead-funny';
+
 			health = 0;
 			trace("RESET = True");
 		}
@@ -2899,6 +2901,10 @@ class PlayState extends MusicBeatState
 		{
 			vocals.volume = 0;
 			opponentVocals.volume = 0;
+
+			if (health >= 1.94)
+				GameOverSubstate.characterName = 'bf-dead-funny';
+
 			doDeathCheck(true);
 		}
 

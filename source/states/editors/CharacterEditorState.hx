@@ -415,7 +415,12 @@ class CharacterEditorState extends MusicBeatState
 				scale: 1,
 				camera_position: [0, 0],
 				position: [0, 0],
-				vocals_file: null
+				vocals_file: null,
+				note_colors: [
+					[0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
+					[0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
+					[0xFF12FA05, 0xFFFFFFFF, 0xFF0A4447],
+					[0xFFF9393F, 0xFFFFFFFF, 0xFF651038]]
 			};
 
 			character.loadCharacterFile(_template);

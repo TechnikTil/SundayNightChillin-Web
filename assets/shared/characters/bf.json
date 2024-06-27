@@ -159,5 +159,11 @@
 	],
 	"sing_duration": 4,
 	"scale": 1,
+	"note_colors": [
+		["31B0D1", "FFFFFF", "12414C"],
+		["31B0D1", "FFFFFF", "12414C"],
+		["31B0D1", "FFFFFF", "12414C"],
+		["31B0D1", "FFFFFF", "12414C"]
+	],
 	"_editor_isPlayer": true
 }

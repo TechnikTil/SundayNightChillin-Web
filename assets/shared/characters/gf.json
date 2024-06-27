@@ -201,5 +201,11 @@
 	],
 	"sing_duration": 4,
 	"scale": 1,
+	"note_colors": [
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"]
+	],
 	"_editor_isPlayer": false
 }

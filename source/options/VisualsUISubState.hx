@@ -109,7 +109,13 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.changeValue = 0.1;
 		option.decimals = 1;
 		addOption(option);
-		
+
+		var option:Option = new Option('Opponent Note Colors',
+			"If unchecked, The notes on the opponents side will be set to your own set note colors.",
+			'opponentNoteColors',
+			'bool');
+		addOption(option);
+
 		#if !mobile
 		var option:Option = new Option('FPS Counter',
 			'If unchecked, hides FPS Counter.',

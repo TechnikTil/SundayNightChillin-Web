@@ -148,10 +148,25 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function defaultRGB()
+	public function defaultRGB(isPlayer:Bool)
 	{
-		var arr:Array<FlxColor> = ClientPrefs.data.arrowRGB[noteData];
-		if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
+		var arr:Array<Dynamic> = [];
+
+		if (isPlayer || !ClientPrefs.data.opponentNoteColors || PlayState.instance == null)
+		{
+			arr = ClientPrefs.data.arrowRGB[noteData];
+			if(PlayState.isPixelStage) arr = ClientPrefs.data.arrowRGBPixel[noteData];
+		}
+		else
+		{
+			for (i in 0...PlayState.instance.dad.noteColors[noteData].length)
+			{
+				if (Std.isOfType(PlayState.instance.dad.noteColors[noteData][i], String))
+					arr.push(FlxColor.fromString('#' + PlayState.instance.dad.noteColors[noteData][i]));
+				else
+					arr.push(PlayState.instance.dad.noteColors[noteData][i]);
+			}
+		}
 
 		if (noteData > -1 && noteData <= arr.length)
 		{
@@ -163,7 +178,7 @@ class Note extends FlxSprite
 
 	private function set_noteType(value:String):String {
 		noteSplashData.texture = PlayState.SONG != null ? PlayState.SONG.splashSkin : 'noteSplashes';
-		defaultRGB();
+		defaultRGB(mustPress);
 
 		if(noteData > -1 && noteType != value) {
 			switch(value) {

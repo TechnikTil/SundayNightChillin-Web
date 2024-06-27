@@ -42,6 +42,7 @@ import flixel.input.gamepad.FlxGamepadInputID;
 	public var pauseMusic:String = 'Breakfast';
 	public var checkForUpdates:Bool = true;
 	public var comboStacking:Bool = true;
+	public var opponentNoteColors:Bool = true;
 	public var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 

@@ -25,6 +25,9 @@ typedef CharacterFile = {
 	var flip_x:Bool;
 	var no_antialiasing:Bool;
 	var vocals_file:String;
+
+	var note_colors:Array<Array<Int>>;
+
 	@:optional var _editor_isPlayer:Null<Bool>;
 }
 
@@ -69,6 +72,8 @@ class Character extends FlxSprite
 
 	public var hasMissAnimations:Bool = false;
 	public var vocalsFile:String = '';
+
+	public var noteColors:Array<Array<Dynamic>> = (!PlayState.isPixelStage) ? ClientPrefs.data.arrowRGB : ClientPrefs.data.arrowRGBPixel;
 
 	public var imageFile:String = '';
 	public var jsonScale:Float = 1;
@@ -167,6 +172,9 @@ class Character extends FlxSprite
 		flipX = (json.flip_x != isPlayer);
 		vocalsFile = json.vocals_file != null ? json.vocals_file : '';
 		originalFlipX = (json.flip_x == true);
+
+		if (json.note_colors != null) noteColors = json.note_colors;
+
 		editorIsPlayer = json._editor_isPlayer;
 
 		noAntialiasing = (json.no_antialiasing == true);
