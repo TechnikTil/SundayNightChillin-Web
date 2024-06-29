@@ -66,8 +66,8 @@
 	"healthicon": "gb-angry",
 	"flip_x": false,
 	"camera_position": [
-		0,
-		0
+		-33,
+		18
 	],
 	"sing_duration": 6.1,
 	"scale": 1,
