@@ -1,7 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
-		"gfVersion": "gf",
+		"song": "Anger Issues",
 		"notes": [
 			{
 				"sectionBeats": 4,
@@ -5316,27 +5315,19 @@
 				"bpm": 160
 			}
 		],
-		"events": [
-			[
-				49500,
-				[
-					[
-						"Change Scroll Speed",
-						"1.1",
-						"0.1"
-					]
-				]
-			]
-		],
-		"player2": "dad",
-		"mania": 3,
-		"splashSkin": "noteSplashes",
-		"song": "Anger Issues",
-		"needsVoices": true,
-		"arrowSkin": "",
-		"stage": "stage",
-		"validScore": true,
+		"events": [],
 		"bpm": 160,
-		"speed": 2.6
+		"credits": {
+			"composer": "gameboy1969",
+			"charter": "gameboy1969"
+		},
+
+		"needsVoices": true,
+		"speed": 2.6,
+
+		"player1": "bf",
+		"player2": "gb",
+		"gfVersion": "gf",
+		"stage": "gbStage"
 	}
 }
