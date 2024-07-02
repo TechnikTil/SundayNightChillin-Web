@@ -1684,8 +1684,8 @@ class PlayState extends MusicBeatState
 	override public function update(elapsed:Float)
 	{
 		if(!inCutscene && !paused && !freezeCamera)
-			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
-		else 
+			FlxG.camera.followLerp = 6 * cameraSpeed * playbackRate;
+		else
 			FlxG.camera.followLerp = 0;
 
 		callOnScripts('onUpdate', [elapsed]);
@@ -1770,7 +1770,13 @@ class PlayState extends MusicBeatState
 		if (!ClientPrefs.data.noReset && controls.RESET && canReset && !inCutscene && startedCountdown && !endingSong)
 		{
 			if (health >= 1.94)
+			{
 				GameOverSubstate.characterName = 'bf-dead-funny';
+
+				#if ACHIEVEMENTS_ALLOWED
+				Achievements.unlock('funny_death');
+				#end
+			}
 
 			health = 0;
 			trace("RESET = True");
@@ -2903,7 +2909,13 @@ class PlayState extends MusicBeatState
 			opponentVocals.volume = 0;
 
 			if (health >= 1.94)
+			{
 				GameOverSubstate.characterName = 'bf-dead-funny';
+
+				#if ACHIEVEMENTS_ALLOWED
+				Achievements.unlock('funny_death');
+				#end
+			}
 
 			doDeathCheck(true);
 		}
@@ -3535,7 +3547,7 @@ class PlayState extends MusicBeatState
 					&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 					unlock = true;
 			}
-			else
+			else if (name != WeekData.getWeekFileName() + '_nomiss')
 			{
 				if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'CHILLIN'
 					&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)

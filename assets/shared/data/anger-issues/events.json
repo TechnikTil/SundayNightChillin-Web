@@ -172,7 +172,7 @@
 					[
 						"Set Property",
 						"cameraSpeed",
-						"99"
+						"3"
 					]
 				]
 			],
@@ -610,7 +610,7 @@
 					[
 						"Set Property",
 						"cameraSpeed",
-						"999"
+						"3"
 					]
 				]
 			],

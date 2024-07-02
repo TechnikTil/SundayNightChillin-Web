@@ -179,8 +179,8 @@ class GBStage extends BaseStage
 			}
 			else
 			{
-				clouds.x = 600;
-				clouds.y = -400;
+				clouds.x = -750;
+				clouds.y = -200;
 				clouds.velocity.x = 0;
 			}
 

@@ -2,36 +2,34 @@
 <TextureAtlas imagePath="shopcart.png">
 	<!-- Created with Adobe Animate version 22.0.0.93 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="shopcart0000" x="40" y="40" width="142" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0001" x="40" y="40" width="142" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0002" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0003" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0004" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0005" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0006" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0007" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0008" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0009" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0010" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0011" x="222" y="40" width="143" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0012" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0013" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0014" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0015" x="405" y="40" width="142" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0016" x="587" y="40" width="145" height="122"/>
-	<SubTexture name="shopcart0017" x="587" y="40" width="145" height="122"/>
-	<SubTexture name="shopcart0018" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0019" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0020" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0021" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0022" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0023" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0024" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0025" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0026" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0027" x="40" y="202" width="144" height="122" frameX="0" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0028" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0029" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0030" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
-	<SubTexture name="shopcart0031" x="224" y="202" width="143" height="122" frameX="-1" frameY="0" frameWidth="145" frameHeight="122"/>
+	<SubTexture name="shopcart0000" x="40" y="40" width="134" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0001" x="40" y="40" width="134" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0002" x="40" y="40" width="134" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0003" x="40" y="40" width="134" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0004" x="40" y="40" width="134" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0005" x="214" y="40" width="134" height="140" frameX="0" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0006" x="214" y="40" width="134" height="140" frameX="0" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0007" x="214" y="40" width="134" height="140" frameX="0" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0008" x="214" y="40" width="134" height="140" frameX="0" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0009" x="214" y="40" width="134" height="140" frameX="0" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0010" x="388" y="40" width="134" height="141" frameX="0" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0011" x="388" y="40" width="134" height="141" frameX="0" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0012" x="388" y="40" width="134" height="141" frameX="0" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0013" x="388" y="40" width="134" height="141" frameX="0" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0014" x="388" y="40" width="134" height="141" frameX="0" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0015" x="562" y="40" width="136" height="140" frameX="-1" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0016" x="562" y="40" width="136" height="140" frameX="-1" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0017" x="562" y="40" width="136" height="140" frameX="-1" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0018" x="562" y="40" width="136" height="140" frameX="-1" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0019" x="562" y="40" width="136" height="140" frameX="-1" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0020" x="40" y="221" width="137" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0021" x="40" y="221" width="137" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0022" x="40" y="221" width="137" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0023" x="40" y="221" width="137" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0024" x="40" y="221" width="137" height="141" frameX="-1" frameY="0" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0025" x="217" y="221" width="136" height="140" frameX="-2" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0026" x="217" y="221" width="136" height="140" frameX="-2" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0027" x="217" y="221" width="136" height="140" frameX="-2" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0028" x="217" y="221" width="136" height="140" frameX="-2" frameY="-1" frameWidth="138" frameHeight="141"/>
+	<SubTexture name="shopcart0029" x="217" y="221" width="136" height="140" frameX="-2" frameY="-1" frameWidth="138" frameHeight="141"/>
 </TextureAtlas>

@@ -116,6 +116,10 @@ class Main extends Sprite
 		}
 		#end
 
+		#if ACHIEVEMENTS_ALLOWED
+		Achievements.unlock('thanks_for_playing');
+		#end
+
 		#if linux
 		var icon = Image.fromFile("icon.png");
 		Lib.current.stage.window.setIcon(icon);
@@ -125,7 +129,7 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
-		
+
 		#if CRASH_HANDLER
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
