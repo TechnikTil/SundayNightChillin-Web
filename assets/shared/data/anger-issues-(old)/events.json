@@ -1,0 +1,511 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.1"
+					]
+				]
+			],
+			[
+				12000,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Change Scroll Speed",
+						"0.9",
+						"0.1"
+					]
+				]
+			],
+			[
+				27000,
+				[
+					[
+						"Change Scroll Speed",
+						"1",
+						"3"
+					]
+				]
+			],
+			[
+				28500,
+				[
+					[
+						"Camera Zoom",
+						"1.3",
+						"0.001"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"69420"
+					]
+				]
+			],
+			[
+				28875,
+				[
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				29250,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				29625,
+				[
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				29812.5,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				30000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.5"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1.5"
+					]
+				]
+			],
+			[
+				42750,
+				[
+					[
+						"Camera Zoom",
+						"1.3",
+						"0.3"
+					]
+				]
+			],
+			[
+				43125,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.4"
+					]
+				]
+			],
+			[
+				43500,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.28"
+					]
+				]
+			],
+			[
+				44250,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.65"
+					]
+				]
+			],
+			[
+				45000,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.28"
+					]
+				]
+			],
+			[
+				45375,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.28"
+					]
+				]
+			],
+			[
+				45750,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.28"
+					]
+				]
+			],
+			[
+				46125,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.28"
+					]
+				]
+			],
+			[
+				46500,
+				[
+					[
+						"Camera Zoom",
+						"1.2",
+						"0.28"
+					]
+				]
+			],
+			[
+				47250,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.65"
+					]
+				]
+			],
+			[
+				48000,
+				[
+					[
+						"Camera Zoom",
+						"1.5",
+						"6"
+					],
+					[
+						"Set Property",
+						"cameraSpeed",
+						"69420"
+					]
+				]
+			],
+			[
+				54000,
+				[
+					[
+						"Camera Zoom",
+						"1.1",
+						"0.3"
+					]
+				]
+			],
+			[
+				54375,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.3"
+					]
+				]
+			],
+			[
+				57000,
+				[
+					[
+						"Camera Zoom",
+						"1.3",
+						"0.2"
+					]
+				]
+			],
+			[
+				57281.25,
+				[
+					[
+						"Camera Zoom",
+						"1.4",
+						"0.1"
+					]
+				]
+			],
+			[
+				58125,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.28"
+					]
+				]
+			],
+			[
+				60000,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"5"
+					]
+				]
+			],
+			[
+				63000,
+				[
+					[
+						"Camera Zoom",
+						"1.3",
+						"0.2"
+					]
+				]
+			],
+			[
+				63281.25,
+				[
+					[
+						"Camera Zoom",
+						"1.4",
+						"0.1"
+					]
+				]
+			],
+			[
+				64125,
+				[
+					[
+						"Camera Zoom",
+						"0.9",
+						"0.28"
+					]
+				]
+			],
+			[
+				65625,
+				[
+					[
+						"Change Scroll Speed",
+						"0.95",
+						"0.27"
+					]
+				]
+			],
+			[
+				66000,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"1.3"
+					]
+				]
+			],
+			[
+				72000,
+				[
+					[
+						"Change Scroll Speed",
+						"0.98",
+						"0.1"
+					]
+				]
+			],
+			[
+				74625,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"5"
+					]
+				]
+			],
+			[
+				75000,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.001"
+					],
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.38"
+					],
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				75375,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				75750,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.001"
+					],
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.38"
+					],
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				76125,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				76500,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.001"
+					],
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.38"
+					],
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				76875,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				77250,
+				[
+					[
+						"Change Scroll Speed",
+						"0.8",
+						"0.001"
+					],
+					[
+						"Change Scroll Speed",
+						"1",
+						"0.38"
+					],
+					[
+						"Camera Follow Pos",
+						"dad",
+						""
+					]
+				]
+			],
+			[
+				77625,
+				[
+					[
+						"Camera Follow Pos",
+						"bf",
+						""
+					]
+				]
+			],
+			[
+				78000,
+				[
+					[
+						"Camera Follow Pos",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				78003.90625,
+				[
+					[
+						"Set Property",
+						"cameraSpeed",
+						"15"
+					]
+				]
+			]
+		]
+	}
+}

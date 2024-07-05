@@ -26,7 +26,7 @@ import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
 
 import states.StoryMenuState;
-import states.FreeplayState;
+import substates.FreeplaySubState;
 import states.editors.ChartingState;
 import states.editors.CharacterEditorState;
 
@@ -2484,7 +2484,7 @@ class PlayState extends MusicBeatState
 					FlxG.save.flush();
 				}
 
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelector());
 				FlxG.sound.playMusic(Paths.music('sncTitle'));
 				changedDifficulty = false;
 			}

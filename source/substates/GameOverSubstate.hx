@@ -5,7 +5,7 @@ import flixel.FlxObject;
 import flixel.FlxSubState;
 
 import states.StoryMenuState;
-import states.FreeplayState;
+import states.FreeplaySelector;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -93,7 +93,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			if (PlayState.isStoryMode)
 				MusicBeatState.switchState(new StoryMenuState());
 			else
-				MusicBeatState.switchState(new FreeplayState());
+				MusicBeatState.switchState(new FreeplaySelector());
 
 			FlxG.sound.playMusic(Paths.music('sncTitle'));
 			PlayState.instance.callOnScripts('onGameOverConfirm', [false]);

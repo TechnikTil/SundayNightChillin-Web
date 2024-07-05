@@ -1,0 +1,28 @@
+{
+	"songs": [
+		[
+			"Chillin' (Really Old)",
+			"gb",
+			[
+				255,
+				0,
+				235
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekBackground": "",
+	"weekBefore": "",
+	"storyName": "",
+	"weekName": "GB Week Older",
+	"startUnlocked": true,
+	"hiddenUntilUnlocked": false,
+	"hideStoryMode": true,
+	"hideFreeplay": false,
+	"difficulties": "Chillin",
+	"album": "old"
+}
