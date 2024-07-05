@@ -134,7 +134,7 @@ class WeekEditorState extends MusicBeatState
 		add(loadWeekButton);
 		
 		var freeplayButton:FlxButton = new FlxButton(0, 650, "Freeplay", function() {
-			MusicBeatState.switchState(new WeekEditorFreeplayState(weekFile));
+			MusicBeatState.switchState(new WeekEditorFreeplaySubState(weekFile));
 			
 		});
 		freeplayButton.screenCenter(X);
@@ -562,7 +562,7 @@ class WeekEditorState extends MusicBeatState
 	}
 }
 
-class WeekEditorFreeplayState extends MusicBeatState
+class WeekEditorFreeplaySubState extends MusicBeatState
 {
 	var weekFile:WeekFile = null;
 	public function new(weekFile:WeekFile = null)
@@ -779,7 +779,7 @@ class WeekEditorFreeplayState extends MusicBeatState
 			super.update(elapsed);
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new WeekEditorFreeplayState(WeekEditorState.loadedWeek));
+			MusicBeatState.switchState(new WeekEditorFreeplaySubState(WeekEditorState.loadedWeek));
 			WeekEditorState.loadedWeek = null;
 			return;
 		}

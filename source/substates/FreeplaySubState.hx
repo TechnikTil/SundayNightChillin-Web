@@ -1,5 +1,8 @@
-package states;
+package substates;
 
+import states.FreeplaySelector;
+import states.MainMenuState;
+import states.StoryMenuState;
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
@@ -12,8 +15,10 @@ import substates.ResetScoreSubState;
 
 import flixel.math.FlxMath;
 
-class FreeplayState extends MusicBeatState
+class FreeplaySubState extends MusicBeatSubstate
 {
+	public var curAlbum:String = 'part1';
+
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -35,7 +40,6 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
-	var bg:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -47,6 +51,14 @@ class FreeplayState extends MusicBeatState
 	var bottomBG:FlxSprite;
 
 	var player:MusicPlayer;
+
+	var daCamera:FlxCamera = new FlxCamera();
+
+	public function new(curAlbum:String)
+	{
+		this.curAlbum = curAlbum;
+		super();
+	}
 
 	override function create()
 	{
@@ -64,6 +76,8 @@ class FreeplayState extends MusicBeatState
 			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
 			var leSongs:Array<String> = [];
 			var leChars:Array<String> = [];
+
+			if(leWeek.album != curAlbum) continue;
 
 			for (j in 0...leWeek.songs.length)
 			{
@@ -83,22 +97,6 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 		Mods.loadTopMod();
-
-		bg = new FlxSprite().loadGraphic(Paths.image('menuBG'));
-		bg.antialiasing = ClientPrefs.data.antialiasing;
-		add(bg);
-		bg.screenCenter();
-
-		if (TitleState.titleJSON.checkerData.enabled)
-		{
-			var checkeredBG:Checkers = new Checkers({
-				size: TitleState.titleJSON.checkerData.size,
-				colors: [0x33FFFFFF, 0x0],
-				speed: TitleState.titleJSON.checkerData.speed,
-				alpha: 1
-			});
-			add(checkeredBG);
-		}
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -152,8 +150,8 @@ class FreeplayState extends MusicBeatState
 		add(missingText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
-		intendedColor = bg.color;
+		FreeplaySelector.bg.color = songs[curSelected].color;
+		intendedColor = FreeplaySelector.bg.color;
 		lerpSelected = curSelected;
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
@@ -176,12 +174,13 @@ class FreeplayState extends MusicBeatState
 		changeSelection();
 		updateTexts();
 		super.create();
-	}
 
-	override function closeSubState() {
-		changeSelection(0, false);
-		persistentUpdate = true;
-		super.closeSubState();
+		daCamera.bgColor.alpha = 0;
+		FlxG.cameras.add(daCamera, false);
+
+		forEach(function(spr:flixel.FlxBasic) {
+			spr.cameras = [daCamera];
+		});
 	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
@@ -304,7 +303,7 @@ class FreeplayState extends MusicBeatState
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
+				close();
 			}
 		}
 
@@ -408,6 +407,12 @@ class FreeplayState extends MusicBeatState
 		super.update(elapsed);
 	}
 
+	override public function close()
+	{
+		FlxG.cameras.remove(daCamera);
+		super.close();
+	}
+
 	public static function destroyFreeplayVocals() {
 		if(vocals != null) {
 			vocals.stop();
@@ -466,7 +471,7 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 			intendedColor = newColor;
-			colorTween = FlxTween.color(bg, 1, bg.color, intendedColor, {
+			colorTween = FlxTween.color(FreeplaySelector.bg, 1, FreeplaySelector.bg.color, intendedColor, {
 				onComplete: function(twn:FlxTween) {
 					colorTween = null;
 				}

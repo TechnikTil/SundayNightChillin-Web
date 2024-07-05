@@ -40,6 +40,7 @@ import objects.Checkers;
 import states.PlayState;
 import states.LoadingState;
 import states.TitleState;
+import substates.FreeplaySubState;
 
 #if flxanimate
 import flxanimate.*;

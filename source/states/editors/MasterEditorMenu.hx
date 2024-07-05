@@ -5,7 +5,7 @@ import backend.WeekData;
 import objects.Character;
 
 import states.MainMenuState;
-import states.FreeplayState;
+import substates.FreeplaySubState;
 
 class MasterEditorMenu extends MusicBeatState
 {
@@ -130,7 +130,7 @@ class MasterEditorMenu extends MusicBeatState
 					MusicBeatState.switchState(new NoteSplashDebugState());
 			}
 			FlxG.sound.music.volume = 0;
-			FreeplayState.destroyFreeplayVocals();
+			FreeplaySubState.destroyFreeplayVocals();
 		}
 		
 		var bullShit:Int = 0;
