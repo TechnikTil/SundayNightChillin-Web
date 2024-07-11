@@ -1058,38 +1058,7 @@ class PlayState extends MusicBeatState
 			{
 				characterBopper(tmr.loopsLeft);
 
-				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
-				var introImagesArray:Array<String> = switch(stageUI) {
-					case "pixel": ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
-					case "normal": ["ready", "set" ,"go"];
-					default: ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
-				}
-				introAssets.set(stageUI, introImagesArray);
-
-				var introAlts:Array<String> = introAssets.get(stageUI);
-				var antialias:Bool = (ClientPrefs.data.antialiasing && !isPixelStage);
-				var tick:Countdown = THREE;
-
-				switch (swagCounter)
-				{
-					case 0:
-						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
-						tick = THREE;
-					case 1:
-						countdownReady = createCountdownSprite(introAlts[0], antialias);
-						FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
-						tick = TWO;
-					case 2:
-						countdownSet = createCountdownSprite(introAlts[1], antialias);
-						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
-						tick = ONE;
-					case 3:
-						countdownGo = createCountdownSprite(introAlts[2], antialias);
-						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
-						tick = GO;
-					case 4:
-						tick = START;
-				}
+				showCountdownSprite(swagCounter);
 
 				notes.forEachAlive(function(note:Note) {
 					if(ClientPrefs.data.opponentStrums || note.mustPress)
@@ -1100,6 +1069,22 @@ class PlayState extends MusicBeatState
 							note.alpha *= 0.35;
 					}
 				});
+
+				var tick:Countdown = null;
+				
+				switch(swagCounter)
+				{
+					case 0:
+						tick = THREE;
+					case 1:
+						tick = TWO;
+					case 2:
+						tick = ONE;
+					case 3:
+						tick = GO;
+					case 4:
+						tick = START;
+				}
 
 				stagesFunc(function(stage:BaseStage) stage.countdownTick(tick, swagCounter));
 				callOnLuas('onCountdownTick', [swagCounter]);
@@ -1133,6 +1118,36 @@ class PlayState extends MusicBeatState
 			}
 		});
 		return spr;
+	}
+
+	public function showCountdownSprite(swagCounter:Int, ?playSound:Bool = true)
+	{
+		var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+		var introImagesArray:Array<String> = switch(stageUI) {
+			case "pixel": ['${stageUI}UI/ready-pixel', '${stageUI}UI/set-pixel', '${stageUI}UI/date-pixel'];
+			case "normal": ["ready", "set" ,"go"];
+			default: ['${stageUI}UI/ready', '${stageUI}UI/set', '${stageUI}UI/go'];
+		}
+		introAssets.set(stageUI, introImagesArray);
+
+		var introAlts:Array<String> = introAssets.get(stageUI);
+		var antialias:Bool = (ClientPrefs.data.antialiasing && !isPixelStage);
+		var tick:Countdown = THREE;
+
+		switch (swagCounter)
+		{
+			case 0:
+				if(playSound) FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+			case 1:
+				countdownReady = createCountdownSprite(introAlts[0], antialias);
+				if(playSound) FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
+			case 2:
+				countdownSet = createCountdownSprite(introAlts[1], antialias);
+				if(playSound) FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
+			case 3:
+				countdownGo = createCountdownSprite(introAlts[2], antialias);
+				if(playSound) FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+		}
 	}
 
 	public function addBehindGF(obj:FlxBasic)
@@ -2290,6 +2305,9 @@ class PlayState extends MusicBeatState
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
 				FlxG.sound.play(Paths.sound(value1), flValue2);
+
+			case "Countdown":
+				showCountdownSprite(Std.int(flValue1), (value2 == 'true'));
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
