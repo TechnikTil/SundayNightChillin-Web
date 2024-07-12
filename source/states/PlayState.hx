@@ -2952,10 +2952,12 @@ class PlayState extends MusicBeatState
 
 		if(char != null && (note == null || !note.noMissAnimation) && char.hasMissAnimations)
 		{
-			var suffix:String = '';
-			if(note != null) suffix = note.animSuffix;
+			var missAnim:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, direction)))] + 'miss';
 
-			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, direction)))] + 'miss' + suffix;
+			var suffix:String = '';
+			if(note != null && char.animOffsets.exists(missAnim + note.animSuffix)) suffix = note.animSuffix;
+
+			var animToPlay:String = missAnim + suffix;
 			char.playAnim(animToPlay, true);
 
 			if(char != gf && lastCombo > 5 && gf != null && gf.animation.exists('sad'))

@@ -1,8 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
-		"player2": "gb",
-		"events": [],
+		"song": "Chillin' (Really Old)",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -2800,15 +2798,19 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
-		"player3": null,
-		"splashSkin": "noteSplashes",
-		"song": "Chillin'",
-		"stage": "stage",
-		"validScore": true,
-		"arrowSkin": "",
+		"events": [],
+		"bpm": 123,
+		"credits": {
+			"composer": "gameboy1969",
+			"charter": "TechnikTil"
+		},
+
 		"needsVoices": true,
 		"speed": 1.5,
-		"bpm": 123
+
+		"player1": "bf",
+		"player2": "gb-older",
+		"gfVersion": "gf",
+		"stage": "stage"
 	}
 }

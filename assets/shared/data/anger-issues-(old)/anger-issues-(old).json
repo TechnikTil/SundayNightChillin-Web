@@ -1,8 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
-		"player2": "gb-old",
-		"events": [],
+		"song": "Anger Issues (Old)",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -4166,15 +4164,19 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
-		"player3": null,
-		"splashSkin": "noteSplashes",
-		"song": "Anger Issues (Old)",
-		"stage": "stage",
-		"validScore": true,
-		"arrowSkin": "",
+		"events": [],
+		"bpm": 160,
+		"credits": {
+			"composer": "gameboy1969",
+			"charter": "TechnikTil"
+		},
+
 		"needsVoices": true,
 		"speed": 2.7,
-		"bpm": 160
+
+		"player1": "bf",
+		"player2": "gb-old",
+		"gfVersion": "gf",
+		"stage": "stage"
 	}
 }

@@ -100,23 +100,30 @@
 			"name": "br"
 		}
 	],
-	"no_antialiasing": false,
 	"image": "characters/gameboy_LEGS",
+	"scale": 1,
+	"sing_duration": 6.1,
+	"healthicon": "gb",
+
 	"position": [
 		40,
 		210
-	],
-	"healthicon": "gb",
-	"flip_x": false,
-	"healthbar_colors": [
-		167,
-		0,
-		230
 	],
 	"camera_position": [
 		0,
 		0
 	],
-	"sing_duration": 6.1,
-	"scale": 1.00000000000002
+
+	"flip_x": false,
+	"no_antialiasing": false,
+	"vocals_file": "gb",
+
+	"note_colors": [
+		["FF00EB", "FFFFFF", "4C0047"],
+		["A14DD9", "FFFFFF", "381B4C"],
+		["FF00EB", "FFFFFF", "4C0047"],
+		["A14DD9", "FFFFFF", "381B4C"]
+	],
+
+	"_editor_isPlayer": false
 }

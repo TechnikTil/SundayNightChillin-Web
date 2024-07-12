@@ -1,14 +1,10 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
 			"anim": "danceLeft",
-			"fps": 24,
 			"name": "GF IDLE",
+			"fps": 24,
+			"loop": false,
 			"indices": [
 				30,
 				0,
@@ -26,17 +22,17 @@
 				12,
 				13,
 				14
-			]
-		},
-		{
-			"loop": false,
+			],
 			"offsets": [
 				0,
 				0
-			],
+			]
+		},
+		{
 			"anim": "danceRight",
-			"fps": 24,
 			"name": "GF IDLE",
+			"fps": 24,
+			"loop": false,
 			"indices": [
 				15,
 				16,
@@ -53,39 +49,37 @@
 				27,
 				28,
 				29
-			]
-		},
-		{
-			"loop": false,
+			],
 			"offsets": [
 				0,
 				0
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "GF IDLE",
-			"indices": []
+			]
 		}
 	],
-	"no_antialiasing": true,
 	"image": "characters/gfPixel",
+	"scale": 6,
+	"sing_duration": 4,
+	"healthicon": "gf",
+
 	"position": [
 		0,
 		0
 	],
-	"healthicon": "gf",
-	"flip_x": false,
 	"camera_position": [
 		-20,
 		80
 	],
-	"sing_duration": 4,
-	"scale": 6,
+
+	"flip_x": false,
+	"no_antialiasing": true,
+	"vocals_file": "",
+
 	"note_colors": [
 		["A5004D", "FFFFFF", "4C0024"],
 		["A5004D", "FFFFFF", "4C0024"],
 		["A5004D", "FFFFFF", "4C0024"],
 		["A5004D", "FFFFFF", "4C0024"]
 	],
+
 	"_editor_isPlayer": false
 }

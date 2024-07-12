@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf",
+		"song": "Chillin'",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -3014,16 +3014,18 @@
 			}
 		],
 		"events": [],
-		"player2": "gb",
-		"gfVersion": "gf",
+		"bpm": 110,
 		"credits": {
 			"composer": "gameboy1969",
 			"charter": "TechnikTil"
 		},
-		"song": "Chillin'",
+
 		"needsVoices": true,
-		"stage": "gbStage",
 		"speed": 2,
-		"bpm": 110
+
+		"player1": "bf",
+		"player2": "gb",
+		"gfVersion": "gf",
+		"stage": "gbStage"
 	}
 }

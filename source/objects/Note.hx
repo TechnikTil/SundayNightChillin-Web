@@ -205,7 +205,7 @@ class Note extends FlxSprite
 				case 'No Animation':
 					noAnimation = true;
 					noMissAnimation = true;
-	
+
 				case 'GF Sing':
 					gfNote = true;
 			}

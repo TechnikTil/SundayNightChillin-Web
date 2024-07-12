@@ -5326,7 +5326,7 @@
 		"speed": 2.6,
 
 		"player1": "bf",
-		"player2": "gb",
+		"player2": "gb-annoyed",
 		"gfVersion": "gf",
 		"stage": "gbStage"
 	}

@@ -1,0 +1,96 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				35,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				11,
+				-23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				8,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-19,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"name": "pissed trans",
+			"anim": "transition",
+            "fps": 24,
+			"loop": false,
+			"indices": [],
+            "offsets": [
+				3,
+				-5
+			]
+		}
+	],
+    "image": "characters/gameboy_annoyed",
+    "scale": 1,
+    "sing_duration": 6.1,
+    "healthicon": "gb-angry",
+
+	"position": [
+		36,
+		170
+	],
+    "camera_position": [
+		-29,
+		-4
+	],
+
+	"flip_x": false,
+	"no_antialiasing": false,
+	"vocals_file": "gb",
+
+	"note_colors": [
+		["FF00EB", "FFFFFF", "4C0047"],
+		["A14DD9", "FFFFFF", "381B4C"],
+		["FF00EB", "FFFFFF", "4C0047"],
+		["A14DD9", "FFFFFF", "381B4C"]
+	],
+
+	"_editor_isPlayer": false
+}

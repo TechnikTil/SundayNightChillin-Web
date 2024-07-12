@@ -56,26 +56,30 @@
 			"name": "a"
 		}
 	],
-	"vocals_file": "",
-	"no_antialiasing": false,
 	"image": "characters/jokeGB",
+	"scale": 1,
+	"sing_duration": 6,
+	"healthicon": "gb-joke",
+
 	"position": [
 		0,
 		0
 	],
-	"healthicon": "gb-joke",
-	"flip_x": false,
 	"camera_position": [
 		0,
 		0
 	],
-	"sing_duration": 5.99999999999999,
-	"scale": 1,
+
+	"flip_x": false,
+	"no_antialiasing": false,
+	"vocals_file": "gb-joke",
+
 	"note_colors": [
 		["006EFF", "9F74B2", "146321"],
 		["FFAE00", "9EACFF", "00AF0B"],
 		["FF00D0", "FFCFBA", "AD3400"],
 		["FF004C", "C6FFC9", "526000"]
 	],
+
 	"_editor_isPlayer": false
 }

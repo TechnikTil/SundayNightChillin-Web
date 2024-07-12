@@ -25,20 +25,23 @@ class SystemUtil
 	@:noCompletion
 	public static function _darkTitle(mode:Int) {}
 
-	public static function darkTitle(isDark:Bool) 
+	public static function darkTitle(isDark:Bool)
     {
         _darkTitle((isDark) ? 1 : 0);
     }
 
     /**
      * Tweens the window opacity to 0 then closes the game.
-     * 
+     *
      * @param time How long it takes to tween the window opacity.
      */
     public static function tweenClose(time:Float = 1):Void
     {
-        windowOpacityTween = FlxTween.tween(FlxG.stage.window, { opacity: 0 }, time, { ease: FlxEase.sineOut, onComplete: function (twn:FlxTween) {
-            Sys.exit(0);
-        }});
+        if (windowOpacityTween != null && !windowOpacityTween.active)
+        {
+            windowOpacityTween = FlxTween.tween(FlxG.stage.window, { opacity: 0 }, time, { ease: FlxEase.sineOut, onComplete: function (twn:FlxTween) {
+                Sys.exit(0);
+            }});
+        }
     }
 }

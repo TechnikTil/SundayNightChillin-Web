@@ -12,14 +12,15 @@ class FreeplaySelector extends MusicBeatState
 {
 	public static var curSelected:Int = 0;
 
-	var menuItems:FlxTypedGroup<FlxSprite>;
+	var freeplayItems:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String> = [
-		'part1',
-        'part2',
-        'part3',
-        'extra',
-        'old'
+	var freeplayOptions:Array<Array<Dynamic>> = [
+		// Name, Unlocked
+		['part1', true],
+        ['part2', false],
+        ['part3', false],
+        ['extra', false],
+        ['old', true]
 	];
 
 	public static var bg:FlxSprite;
@@ -65,15 +66,15 @@ class FreeplaySelector extends MusicBeatState
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 
-		menuItems = new FlxTypedGroup<FlxSprite>();
-		add(menuItems);
+		freeplayItems = new FlxTypedGroup<FlxSprite>();
+		add(freeplayItems);
 
-		for (i in 0...optionShit.length)
+		for (i in 0...freeplayOptions.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite().loadGraphic(Paths.image('freeplay/' + optionShit[i]));
-            menuItem.screenCenter();
-            menuItem.y += (FlxG.height * i);
-            menuItems.add(menuItem);
+			var freeplayItem:FlxSprite = new FlxSprite().loadGraphic(Paths.image('freeplay/' + freeplayOptions[i][0]));
+            freeplayItem.screenCenter();
+            freeplayItem.y += (FlxG.height * i);
+            freeplayItems.add(freeplayItem);
 		}
 
 		changeItem();
@@ -83,15 +84,14 @@ class FreeplaySelector extends MusicBeatState
 		FlxG.camera.follow(camFollow, null, 8);
 
         subStateClosed.add(function(_) {
-            FlxTween.tween(bg, {x: bg.x - 40}, 0.4, {ease: FlxEase.cubeIn});
             selectedSomethin = false;
 
-            for (i in menuItems.members)
+            for (i in freeplayItems.members)
             {
                 FlxTween.tween(i, {alpha: 1}, 0.4, {ease: FlxEase.quadIn});
             }
 
-            FlxTween.tween(menuItems.members[curSelected], {alpha: 1}, 0.4, {ease: FlxEase.quadIn});
+            FlxTween.tween(freeplayItems.members[curSelected], {alpha: 1}, 0.4, {ease: FlxEase.quadIn});
         });
 	}
 
@@ -103,6 +103,7 @@ class FreeplaySelector extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * elapsed;
+
 			if (FreeplaySubState.vocals != null)
 				FreeplaySubState.vocals.volume += 0.5 * elapsed;
 		}
@@ -118,11 +119,18 @@ class FreeplaySelector extends MusicBeatState
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new TitleState());
+				MusicBeatState.switchState(new MainMenuState());
 			}
 
 			if (controls.ACCEPT)
 			{
+				if (!freeplayOptions[curSelected][1])
+				{
+					var buzzer:FlxSound = FlxG.sound.play(Paths.sound('buzzer'));
+					FlxG.camera.shake(0.0015, buzzer.length / 1000);
+					return;
+				}
+
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
 				selectedSomethin = true;
@@ -140,21 +148,20 @@ class FreeplaySelector extends MusicBeatState
 					}, Std.int(1.1 / 0.15));
 				}
 
-				FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
+				FlxFlicker.flicker(freeplayItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 				{
-                    menuItems.members[curSelected].visible = true;
-                    menuItems.members[curSelected].alpha = 0;
+                    freeplayItems.members[curSelected].visible = true;
+                    freeplayItems.members[curSelected].alpha = 0;
 
-                    FlxTween.tween(bg, {x: bg.x + 40}, 0.4, {ease: FlxEase.cubeOut});
-					openSubState(new FreeplaySubState(optionShit[curSelected]));
+					openSubState(new FreeplaySubState(freeplayOptions[curSelected][0]));
 				});
 
-                for (i in 0...menuItems.members.length)
+                for (i in 0...freeplayItems.members.length)
 				{
 					if (i == curSelected)
 						continue;
 
-					FlxTween.tween(menuItems.members[i], {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
+					FlxTween.tween(freeplayItems.members[i], {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
 				}
 			}
 		}
@@ -167,13 +174,13 @@ class FreeplaySelector extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 
         curSelected += huh;
-		
-        if (curSelected >= menuItems.length)
+
+        if (curSelected >= freeplayItems.length)
 			curSelected = 0;
 		if (curSelected < 0)
-			curSelected = menuItems.length - 1;
+			curSelected = freeplayItems.length - 1;
 
-        var point = menuItems.members[curSelected].getGraphicMidpoint();
+        var point = freeplayItems.members[curSelected].getGraphicMidpoint();
 		camFollow.setPosition(point.x, point.y);
 	}
 }

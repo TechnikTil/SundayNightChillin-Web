@@ -1,58 +1,63 @@
 {
 	"animations": [
 		{
+			"anim": "deathConfirm",
+			"name": "RETRY CONFIRM",
+			"fps": 24,
 			"loop": false,
+			"indices": [],
 			"offsets": [
 				-26,
 				-12
-			],
-			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "RETRY CONFIRM"
+			]
 		},
 		{
+			"anim": "deathLoop",
+			"name": "Retry Loop",
+			"fps": 24,
 			"loop": true,
+			"indices": [],
 			"offsets": [
 				-30,
 				-12
-			],
-			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "Retry Loop"
+			]
 		},
 		{
+			"anim": "firstDeath",
+			"name": "BF Dies pixel",
+			"fps": 24,
 			"loop": false,
+			"indices": [],
 			"offsets": [
 				0,
 				0
-			],
-			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "BF Dies pixel"
+			]
 		}
 	],
-	"no_antialiasing": true,
 	"image": "characters/bfPixelsDEAD",
+	"scale": 6,
+	"sing_duration": 4,
+	"healthicon": "bf-pixel",
+
 	"position": [
 		0,
 		350
 	],
-	"healthicon": "bf-pixel",
-	"flip_x": true,
 	"camera_position": [
 		50,
 		-60
 	],
-	"sing_duration": 4,
-	"scale": 6,
+
+	"flip_x": true,
+	"no_antialiasing": true,
+	"vocals_file": "bf",
+
 	"note_colors": [
 		["7BD6F6", "151420", "5A80E4"],
 		["7BD6F6", "151420", "5A80E4"],
 		["7BD6F6", "151420", "5A80E4"],
 		["7BD6F6", "151420", "5A80E4"]
 	],
+
 	"_editor_isPlayer": true
 }
