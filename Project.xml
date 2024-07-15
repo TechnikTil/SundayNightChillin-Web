@@ -71,9 +71,9 @@
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
-	<haxelib name="flixel" />
-	<haxelib name="flixel-ui" />
-	<haxelib name="flixel-addons" />
+	<haxelib name="flixel" version="5.6.1" />
+	<haxelib name="flixel-ui" version="2.5.0" />
+	<haxelib name="flixel-addons" version="3.2.1" />
 	<haxelib name="tjson" />
 
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
