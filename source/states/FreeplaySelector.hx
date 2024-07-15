@@ -26,6 +26,9 @@ class FreeplaySelector extends MusicBeatState
 	public static var bg:FlxSprite;
 	var camFollow:FlxObject;
 
+	public static var arrowUp:FlxSprite;
+	public static var arrowDown:FlxSprite;
+
 	override function create()
 	{
 		#if MODS_ALLOWED
@@ -77,6 +80,30 @@ class FreeplaySelector extends MusicBeatState
             freeplayItems.add(freeplayItem);
 		}
 
+		arrowUp = new FlxSprite();
+		arrowUp.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+		arrowUp.animation.addByPrefix('idle', 'arrow left');
+		arrowUp.animation.addByPrefix('pressed', 'arrow push left');
+		arrowUp.animation.play('idle');
+		arrowUp.updateHitbox();
+		arrowUp.angle = 90;
+		arrowUp.scrollFactor.set();
+		arrowUp.screenCenter(X);
+		arrowUp.y = 10;
+		add(arrowUp);
+		
+		arrowDown = new FlxSprite();
+		arrowDown.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+		arrowDown.animation.addByPrefix('idle', 'arrow right');
+		arrowDown.animation.addByPrefix('pressed', 'arrow push right');
+		arrowDown.animation.play('idle');
+		arrowDown.updateHitbox();
+		arrowDown.angle = 90;
+		arrowDown.scrollFactor.set();
+		arrowDown.screenCenter(X);
+		arrowDown.y = FlxG.height - arrowDown.height - 10;
+		add(arrowDown);
+
 		changeItem();
 
 		super.create();
@@ -85,6 +112,9 @@ class FreeplaySelector extends MusicBeatState
 
         subStateClosed.add(function(_) {
             selectedSomethin = false;
+
+			FlxTween.tween(arrowUp, {alpha: 1}, 0.2, {ease: FlxEase.quadIn});
+			FlxTween.tween(arrowDown, {alpha: 1}, 0.2, {ease: FlxEase.quadIn});
 
             for (i in freeplayItems.members)
             {
@@ -115,6 +145,20 @@ class FreeplaySelector extends MusicBeatState
 
 			if (controls.UI_DOWN_P)
 				changeItem(1);
+
+			if (controls.UI_UP_P)
+				arrowUp.animation.play('pressed');
+	
+			if (controls.UI_DOWN_P)
+				arrowDown.animation.play('pressed');
+
+			if(controls.UI_UP_R)
+				arrowUp.animation.play('idle');
+	
+			if(controls.UI_DOWN_R)
+				arrowDown.animation.play('idle');
+
+			arrowUp.angle = arrowDown.angle = 90;
 
 			if (controls.BACK)
 			{
@@ -155,6 +199,9 @@ class FreeplaySelector extends MusicBeatState
 
 					openSubState(new FreeplaySubState(freeplayOptions[curSelected][0]));
 				});
+
+				FlxTween.tween(arrowUp, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
+				FlxTween.tween(arrowDown, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
 
                 for (i in 0...freeplayItems.members.length)
 				{

@@ -9,7 +9,7 @@ import states.stages.objects.*;
 class GBStage extends BaseStage
 {
 	var rainShader:FlxRuntimeShader;
-	var usingRainShader:Bool = false;
+	var isRaining:Bool = false;
 
 	var bg:FlxSprite;
 	var clouds:BGSprite;
@@ -82,10 +82,10 @@ class GBStage extends BaseStage
 
 	override public function update(elapsed:Float):Void
 	{
-		if (ClientPrefs.data.shaders && usingRainShader && rainShader != null)
+		if (ClientPrefs.data.shaders && isRaining && rainShader != null)
 			rainShader.setFloat('uTime', rainShader.getFloat('uTime') + elapsed);
 
-        if (game.health <= 0 && rainShader != null && usingRainShader)
+        if (game.health <= 0 && rainShader != null && isRaining)
             removeRainShader();
 	}
 
@@ -136,7 +136,7 @@ class GBStage extends BaseStage
 
 				if (ClientPrefs.data.shaders && rainShader != null)
 				{
-					if (value1.toLowerCase() == 'rain' && !usingRainShader)
+					if (value1.toLowerCase() == 'rain' && !isRaining)
 					{
                         rainShaderFilter = new ShaderFilter(rainShader);
 
@@ -145,9 +145,9 @@ class GBStage extends BaseStage
                         else
                             FlxG.camera.filters.push(rainShaderFilter);
 
-						usingRainShader = true;
+						isRaining = true;
 					}
-                    else if (value1.toLowerCase() != 'rain' && usingRainShader)
+                    else if (value1.toLowerCase() != 'rain' && isRaining)
                         removeRainShader();
 				}
 		}
@@ -157,7 +157,7 @@ class GBStage extends BaseStage
     {
         rainShader = null;
         FlxG.camera.filters.remove(rainShaderFilter);
-        usingRainShader = false;
+        isRaining = false;
     }
 
 	function reloadSprites(type:String):Void
