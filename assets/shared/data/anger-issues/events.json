@@ -6,668 +6,13 @@
 				[
 					[
 						"Set Property",
-						"camZooming",
-						"false"
-					]
-				]
-			],
-			[
-				38437.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38468.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38500,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38531.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38562.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38593.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38695.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38765.625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38835.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				38906.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				39937.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				39968.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40000,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40031.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40062.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40093.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40195.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40265.625,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40335.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				40406.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				41437.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41468.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41500,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41531.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41562.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41593.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41695.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41765.625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41835.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				41906.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				42937.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				42968.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43000,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43031.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43062.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43093.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43195.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43265.625,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43335.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				43406.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				44437.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44468.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44500,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44531.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44562.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44593.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44695.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44765.625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44835.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				44906.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				45937.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				45968.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46000,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46031.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46062.5,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46093.75,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46195.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46265.625,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46335.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
-					]
-				]
-			],
-			[
-				46406.25,
-				[
-					[
-						"Add Camera Zoom",
-						"-0.015",
-						"-0.03"
+						"camHUDAlphaLerp",
+						"0"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -678,116 +23,6 @@
 						"Play Animation",
 						"transition",
 						"dad"
-					]
-				]
-			],
-			[
-				47437.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47468.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47500,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47531.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47562.5,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47593.75,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47695.3125,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47765.625,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47835.9375,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
-					]
-				]
-			],
-			[
-				47906.25,
-				[
-					[
-						"Add Camera Zoom",
-						"",
-						""
 					]
 				]
 			],
@@ -805,9 +40,9 @@
 						"gb-angry"
 					],
 					[
-						"Add Camera Zoom",
-						"-0.165",
-						"-0.33"
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
 					]
 				]
 			],
@@ -848,6 +83,21 @@
 						"Add Camera Zoom",
 						"",
 						""
+					],
+					[
+						"Set Property",
+						"camHUDAlphaLerp",
+						"1"
+					]
+				]
+			],
+			[
+				51000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
 					]
 				]
 			],
@@ -907,7 +157,107 @@
 					[
 						"Set Property",
 						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				88500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.05"
+					]
+				]
+			],
+			[
+				89250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				89718.75,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.15"
+					]
+				]
+			],
+			[
+				90000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
 						"1.2"
+					]
+				]
+			],
+			[
+				91500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				93000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.05"
+					]
+				]
+			],
+			[
+				94500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				95250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.15"
+					]
+				]
+			],
+			[
+				96000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				97500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
 					]
 				]
 			],
@@ -917,7 +267,7 @@
 					[
 						"Set Property",
 						"defaultCamZoom",
-						"0.7"
+						"0.6"
 					]
 				]
 			],
@@ -928,6 +278,11 @@
 						"Set Property",
 						"defaultCamZoom",
 						"0.65"
+					],
+					[
+						"Duet Camera",
+						"",
+						"550"
 					]
 				]
 			],
@@ -935,9 +290,34 @@
 				147000,
 				[
 					[
-						"Camera Follow Pos",
-						"750",
-						"550"
+						"Set Property",
+						"camHUDAlphaLerp",
+						"0"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				159000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.6"
+					]
+				]
+			],
+			[
+				174000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.5"
 					]
 				]
 			]

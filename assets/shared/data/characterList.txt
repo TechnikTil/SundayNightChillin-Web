@@ -3,8 +3,11 @@ dad
 gf
 bf-pixel
 gf-pixel
-peaker-bf
-peaker-gf
 gb
+gb-annoyed
 gb-angry
+gb-angrier
 gb-joke
+gb-old
+gb-older
+gb-cooler

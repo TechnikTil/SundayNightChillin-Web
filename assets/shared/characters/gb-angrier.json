@@ -18,8 +18,8 @@
 			"loop": false,
 			"indices": [],
 			"offsets": [
-				17,
-				-3
+				29,
+				-2
 			]
 		},
 		{
@@ -29,8 +29,8 @@
 			"loop": false,
 			"indices": [],
 			"offsets": [
-				-3,
-				-20
+				-22,
+				-22
 			]
 		},
 		{
@@ -40,8 +40,8 @@
 			"loop": false,
 			"indices": [],
 			"offsets": [
-				-15,
-				14
+				14,
+				23
 			]
 		},
 		{
@@ -51,22 +51,22 @@
 			"loop": false,
 			"indices": [],
 			"offsets": [
-				-40,
-				-2
+				-27,
+				-1
 			]
 		}
 	],
-	"image": "characters/ANGRYgb",
+	"image": "characters/gameboy_really_angry",
 	"scale": 1,
 	"sing_duration": 6.1,
 	"healthicon": "gb-angry",
 
 	"position": [
-		16,
+		21,
 		170
 	],
 	"camera_position": [
-		-34,
+		-40,
 		-3
 	],
 

@@ -58,7 +58,9 @@ class CreditsState extends MusicBeatState
 			['Shade',				'shadE64',			'Composer + OST Artist',									 'https://twitter.com/shadE64YT',		'9933CC'],
 			[''],
 			['SNC Socials!'],
-			['Discord',				'discord',			'Join the official Sunday Night Chillin\' Discord!',		 'https://discord.gg/eBQb5UFKs7',		'5165F6'],
+			['SNC Discord',			'discord',			'',		 													 'https://discord.gg/eBQb5UFKs7',		'5165F6'],
+			['SNC Twitter',			'twitter',			'',															 'https://twitter.com/SNCifitwasabird', '0000FF'],
+			['SNC YouTube',			'youtube',			'',		 										   'https://www.youtube.com/@Sunday_Night_Chillin', 'FF0000'],
 			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer and Head of Psych Engine',					 'https://ko-fi.com/shadowmario',		'444444'],
@@ -280,6 +282,11 @@ class CreditsState extends MusicBeatState
 
 		descText.text = creditsStuff[curSelected][2];
 		descText.y = FlxG.height - descText.height + offsetThing - 60;
+
+		if (descText.text == '')
+			descBox.visible = false;
+		else
+			descBox.visible = true;
 
 		if(moveTween != null) moveTween.cancel();
 		moveTween = FlxTween.tween(descText, {y : descText.y + 75}, 0.25, {ease: FlxEase.sineOut});

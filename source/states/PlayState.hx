@@ -205,6 +205,8 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
+	public var camHUDAlphaLerp:Float = 1;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -1778,6 +1780,8 @@ class PlayState extends MusicBeatState
 			camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, Math.exp(-elapsed * 3.125 * camZoomingDecay * playbackRate));
 		}
 
+		camHUD.alpha = FlxMath.lerp(camHUDAlphaLerp, camHUD.alpha, Math.exp(-elapsed * 3.125 * playbackRate));
+
 		FlxG.watch.addQuick("secShit", curSection);
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
@@ -2308,6 +2312,28 @@ class PlayState extends MusicBeatState
 
 			case "Countdown":
 				showCountdownSprite(Std.int(flValue1), (value2 == 'true'));
+
+			case "Duet Camera":
+				if(camFollow == null)
+					return;
+
+				if(value1 != "true")
+				{
+					isCameraOnForcedPos = true;
+
+					var dadPos:Float = (dad.getMidpoint().x + 150) + (dad.cameraPosition[0] + opponentCameraOffset[0]);
+					var bfPos:Float = (boyfriend.getMidpoint().x - 100) + (boyfriend.cameraPosition[0] - boyfriendCameraOffset[0]);
+
+					camFollow.x = (dadPos + bfPos) / 2.5;
+
+					if (flValue2 != null)
+						camFollow.y = flValue2;
+				}
+				else
+				{
+					isCameraOnForcedPos = false;
+					moveCameraSection();
+				}
 		}
 
 		stagesFunc(function(stage:BaseStage) stage.eventCalled(eventName, value1, value2, flValue1, flValue2, strumTime));
@@ -3002,7 +3028,7 @@ class PlayState extends MusicBeatState
 		if(opponentVocals.length <= 0) vocals.volume = 1;
 		strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
 		note.hitByOpponent = true;
-	
+
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
 

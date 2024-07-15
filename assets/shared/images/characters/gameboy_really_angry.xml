@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="ANGRIERgb.png">
-	<!-- Created with Adobe Animate version 23.0.0.407 -->
+<TextureAtlas imagePath="gameboy_really_angry.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Idle0000" x="0" y="0" width="402" height="600" frameX="-16" frameY="-12" frameWidth="418" frameHeight="612"/>
 	<SubTexture name="Idle0001" x="0" y="0" width="402" height="600" frameX="-16" frameY="-12" frameWidth="418" frameHeight="612"/>
