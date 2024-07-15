@@ -1918,6 +1918,7 @@ class PlayState extends MusicBeatState
 		deathCounter = 0;
 		seenCutscene = false;
 		storyWeek = WeekData.weeksList.indexOf('jokegbWeek');
+		FlxTransitionableState.skipNextTransIn = true;
 		LoadingState.loadAndSwitchState(new PlayState(), true);
 		Difficulty.loadFromWeek();
 	}
@@ -3034,8 +3035,8 @@ class PlayState extends MusicBeatState
 
 		if (songName == 'anger-issues' && curSection >= 32)
 		{
-			if (health - 0.013 * healthGain >= 0)
-				health -= 0.013 * healthGain;
+			if (health - 0.017 * healthGain >= 0)
+				health -= 0.017 * healthGain;
 			else
 				health = 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001;
 		}

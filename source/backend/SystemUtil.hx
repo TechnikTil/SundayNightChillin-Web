@@ -11,9 +11,9 @@ package backend;
 
 class SystemUtil
 {
-    // This is here because I need to access it from a PlayState function so it doesn't stop even when a substate is opened.
-    public static var windowOpacityTween:FlxTween;
+    public static var windowOpacityTween:FlxTween = null;
 
+    #if windows
     @:functionCode('
         int isDark = mode;
         HWND window = GetActiveWindow();
@@ -22,6 +22,7 @@ class SystemUtil
         }
         UpdateWindow(window);
     ')
+    #end
 	@:noCompletion
 	public static function _darkTitle(mode:Int) {}
 
@@ -37,7 +38,7 @@ class SystemUtil
      */
     public static function tweenClose(time:Float = 1):Void
     {
-        if (windowOpacityTween != null && !windowOpacityTween.active)
+        if (windowOpacityTween == null || !windowOpacityTween.active)
         {
             windowOpacityTween = FlxTween.tween(FlxG.stage.window, { opacity: 0 }, time, { ease: FlxEase.sineOut, onComplete: function (twn:FlxTween) {
                 Sys.exit(0);

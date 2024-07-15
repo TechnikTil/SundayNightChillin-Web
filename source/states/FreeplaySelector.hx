@@ -91,7 +91,7 @@ class FreeplaySelector extends MusicBeatState
 		arrowUp.screenCenter(X);
 		arrowUp.y = 10;
 		add(arrowUp);
-		
+
 		arrowDown = new FlxSprite();
 		arrowDown.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		arrowDown.animation.addByPrefix('idle', 'arrow right');
@@ -148,13 +148,13 @@ class FreeplaySelector extends MusicBeatState
 
 			if (controls.UI_UP_P)
 				arrowUp.animation.play('pressed');
-	
+
 			if (controls.UI_DOWN_P)
 				arrowDown.animation.play('pressed');
 
 			if(controls.UI_UP_R)
 				arrowUp.animation.play('idle');
-	
+
 			if(controls.UI_DOWN_R)
 				arrowDown.animation.play('idle');
 
@@ -218,6 +218,9 @@ class FreeplaySelector extends MusicBeatState
 
 	function changeItem(huh:Int = 0)
 	{
+		if (selectedSomethin)
+			return;
+
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 
         curSelected += huh;

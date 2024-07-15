@@ -167,10 +167,10 @@ class FreeplaySubState extends MusicBeatSubstate
 		bottomText.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, CENTER);
 		bottomText.scrollFactor.set();
 		add(bottomText);
-		
+
 		player = new MusicPlayer(this);
 		add(player);
-		
+
 		changeSelection();
 		updateTexts();
 		super.create();
@@ -214,7 +214,7 @@ class FreeplaySubState extends MusicBeatSubstate
 		if(ratingSplit.length < 2) {
 			ratingSplit.push('');
 		}
-		
+
 		while(ratingSplit[1].length < 2) {
 			ratingSplit[1] += '0';
 		}
@@ -226,20 +226,20 @@ class FreeplaySubState extends MusicBeatSubstate
 		{
 			scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 			positionHighscore();
-			
+
 			if(songs.length > 1)
 			{
 				if(FlxG.keys.justPressed.HOME)
 				{
 					curSelected = 0;
 					changeSelection();
-					holdTime = 0;	
+					holdTime = 0;
 				}
 				else if(FlxG.keys.justPressed.END)
 				{
 					curSelected = songs.length - 1;
 					changeSelection();
-					holdTime = 0;	
+					holdTime = 0;
 				}
 				if (controls.UI_UP_P)
 				{
@@ -296,7 +296,7 @@ class FreeplaySubState extends MusicBeatSubstate
 				FlxG.sound.playMusic(Paths.music('sncTitle'), 0);
 				FlxTween.tween(FlxG.sound.music, {volume: 1}, 1);
 			}
-			else 
+			else
 			{
 				persistentUpdate = false;
 				if(colorTween != null) {

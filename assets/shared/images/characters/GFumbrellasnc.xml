@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFumbrellasnc.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Dancing Beat0000" x="40" y="40" width="807" height="928" frameX="-25" frameY="-38" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0001" x="887" y="40" width="809" height="928" frameX="-23" frameY="-38" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0002" x="1736" y="40" width="833" height="959" frameX="-5" frameY="-7" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0003" x="2609" y="40" width="833" height="959" frameX="-5" frameY="-7" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0004" x="3482" y="40" width="841" height="966" frameX="0" frameY="0" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0005" x="4363" y="40" width="841" height="966" frameX="0" frameY="0" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0006" x="5244" y="40" width="833" height="965" frameX="-9" frameY="-1" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0007" x="6117" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0008" x="6117" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0009" x="6117" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0010" x="6975" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0011" x="6975" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0012" x="6975" y="40" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0013" x="40" y="1046" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0014" x="898" y="1046" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0015" x="1756" y="1046" width="855" height="926" frameX="-25" frameY="-40" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0016" x="2651" y="1046" width="857" height="926" frameX="-23" frameY="-40" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0017" x="3548" y="1046" width="886" height="947" frameX="-23" frameY="-19" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0018" x="4474" y="1046" width="884" height="947" frameX="-25" frameY="-19" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0019" x="5398" y="1046" width="892" height="956" frameX="-25" frameY="-10" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0020" x="6330" y="1046" width="892" height="956" frameX="-25" frameY="-10" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0021" x="7262" y="1046" width="880" height="952" frameX="-25" frameY="-14" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0022" x="40" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0023" x="40" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0024" x="40" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0025" x="898" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0026" x="898" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0027" x="898" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0028" x="1756" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF Dancing Beat0029" x="2614" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
+	<SubTexture name="GF FEAR 0000" x="3472" y="2042" width="835" height="907" frameX="0" frameY="-5" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF FEAR 0001" x="4347" y="2042" width="832" height="905" frameX="0" frameY="-7" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF FEAR 0002" x="5219" y="2042" width="844" height="912"/>
+	<SubTexture name="GF FEAR 0003" x="6103" y="2042" width="835" height="909" frameX="0" frameY="-3" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF Transition0000" x="6978" y="2042" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0001" x="40" y="3002" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0002" x="784" y="3002" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0003" x="1524" y="3002" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0004" x="2264" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0005" x="3004" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0006" x="3744" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0007" x="3744" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0008" x="3744" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0009" x="4484" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0010" x="5224" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0011" x="5964" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0012" x="6704" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0013" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0014" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0015" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0016" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0017" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0018" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0019" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0020" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0021" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0022" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0023" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0024" x="7444" y="3002" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0025" x="40" y="3686" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0026" x="784" y="3686" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0027" x="1528" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0028" x="2268" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0029" x="3008" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0030" x="3748" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0031" x="4488" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0032" x="5228" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0033" x="5228" y="3686" width="700" height="644" frameX="-2" frameY="-376" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0034" x="5968" y="3686" width="700" height="642" frameX="-2" frameY="-378" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0035" x="5968" y="3686" width="700" height="642" frameX="-2" frameY="-378" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0036" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0037" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0038" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0039" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0040" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0041" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0042" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0043" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0044" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0045" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0046" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0047" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0048" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0049" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0050" x="7448" y="3686" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0051" x="7448" y="3686" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0052" x="40" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0053" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0054" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0055" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0056" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0057" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0058" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0059" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0060" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0061" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0062" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0063" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0064" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0065" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0066" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0067" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0068" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0069" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0070" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0071" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0072" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0073" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0074" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0075" x="7448" y="3686" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0076" x="7448" y="3686" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0077" x="40" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0078" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0079" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0080" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0081" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0082" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0083" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0084" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0085" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0086" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0087" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0088" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0089" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0090" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0091" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0092" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0093" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0094" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0095" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0096" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0097" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0098" x="6708" y="3686" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0099" x="780" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0100" x="1520" y="4370" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0101" x="2264" y="4370" width="704" height="643" frameX="0" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0102" x="3008" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0103" x="3748" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0104" x="3748" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0105" x="4488" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0106" x="4488" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0107" x="5228" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0108" x="5968" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0109" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0110" x="7448" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0111" x="40" y="5053" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0112" x="780" y="5053" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0113" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0114" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0115" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0116" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0117" x="6708" y="4370" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0118" x="1520" y="5053" width="900" height="836" frameX="-2" frameY="-184" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0119" x="2460" y="5053" width="885" height="858" frameX="-2" frameY="-162" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0120" x="3385" y="5053" width="799" height="1020" frameX="-2" frameY="0" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0121" x="4224" y="5053" width="814" height="999" frameX="-2" frameY="-21" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0122" x="5078" y="5053" width="855" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0123" x="5973" y="5053" width="856" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0124" x="5078" y="5053" width="855" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0125" x="6869" y="5053" width="858" height="937" frameX="0" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0126" x="40" y="6113" width="857" height="937" frameX="0" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0127" x="937" y="6113" width="856" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0128" x="5078" y="5053" width="855" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0129" x="5973" y="5053" width="856" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0130" x="5078" y="5053" width="855" height="937" frameX="-2" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0131" x="1833" y="6113" width="858" height="937" frameX="0" frameY="-83" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0132" x="2731" y="6113" width="827" height="909" frameX="0" frameY="-111" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0133" x="3598" y="6113" width="825" height="909" frameX="-2" frameY="-111" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0134" x="4463" y="6113" width="825" height="900" frameX="-2" frameY="-120" frameWidth="902" frameHeight="1020"/>
+	<SubTexture name="GF Transition0135" x="4463" y="6113" width="825" height="900" frameX="-2" frameY="-120" frameWidth="902" frameHeight="1020"/>
+</TextureAtlas>
