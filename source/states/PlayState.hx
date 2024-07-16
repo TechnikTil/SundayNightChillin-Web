@@ -294,7 +294,7 @@ class PlayState extends MusicBeatState
 				textFont = 'comic.ttf';
 			else
 				textFont = 'DigitalDisco.ttf';
-		} 
+		}
 
 		camGame = initPsychCamera();
 		camHUD = new FlxCamera();
@@ -863,6 +863,10 @@ class PlayState extends MusicBeatState
 	}
 
 	public var videoCutscene:VideoSprite = null;
+
+	public var skipBG:FlxSprite = null;
+	public var skipTxt:FlxText = null;
+
 	public function startVideo(name:String, forMidSong:Bool = false, canSkip:Bool = true, loop:Bool = false, playOnLoad:Bool = true)
 	{
 		#if VIDEOS_ALLOWED
@@ -881,9 +885,6 @@ class PlayState extends MusicBeatState
 		if (foundFile)
 		{
 			var cutscene:VideoSprite = new VideoSprite(fileName, forMidSong, canSkip, loop);
-			var skipBG:FlxSprite = null;
-			var skipTxt:FlxText = null;
-			// ^ - These are null to prevent warnings :)
 
 			// Finish callback
 			if (!forMidSong)
@@ -903,6 +904,11 @@ class PlayState extends MusicBeatState
 				// Skip callback
 				cutscene.onSkip = function()
 				{
+					if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+					{
+						moveCameraSection();
+						FlxG.camera.snapToTarget();
+					}
 					skipBG.destroy();
 					skipTxt.destroy();
 					startAndEnd();
@@ -1351,7 +1357,7 @@ class PlayState extends MusicBeatState
 			{
 				var playerVocals = Paths.voices(songData.song, (boyfriend.vocalsFile == null || boyfriend.vocalsFile.length < 1) ? 'Player' : boyfriend.vocalsFile);
 				vocals.loadEmbedded(playerVocals != null ? playerVocals : Paths.voices(songData.song));
-				
+
 				var oppVocals = Paths.voices(songData.song, (dad.vocalsFile == null || dad.vocalsFile.length < 1) ? 'Opponent' : dad.vocalsFile);
 				if(oppVocals != null) opponentVocals.loadEmbedded(oppVocals);
 			}
@@ -1773,6 +1779,9 @@ class PlayState extends MusicBeatState
 			if(ClientPrefs.data.timeBarType != 'Song Name')
 				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 		}
+
+		if (FlxG.camera.zoom != defaultCamZoom)
+			stagesFunc(function(stage:BaseStage) stage.camZoomChange(FlxG.camera.zoom));
 
 		if (camZooming)
 		{

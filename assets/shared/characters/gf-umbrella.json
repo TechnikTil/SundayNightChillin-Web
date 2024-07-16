@@ -1,0 +1,106 @@
+{
+	"animations": [
+		{
+			"anim": "danceLeft",
+			"name": "GF Dancing Beat",
+			"fps": 24,
+			"loop": false,
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"offsets": [
+				0,
+				-9
+			]
+		},
+		{
+			"anim": "danceRight",
+			"name": "GF Dancing Beat",
+			"fps": 24,
+			"loop": false,
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"offsets": [
+				0,
+				-9
+			]
+		},
+		{
+			"anim": "scared",
+			"name": "GF FEAR",
+			"fps": 24,
+			"loop": true,
+			"indices": [],
+			"offsets": [
+				-25,
+				-63
+			]
+		},
+		{
+			"anim": "transition",
+			"name": "GF Transition",
+			"fps": 24,
+			"loop": false,
+			"indices": [],
+			"offsets": [
+				-22,
+				45
+			]
+		}
+	],
+	"image": "characters/GFumbrellasnc",
+	"scale": 1,
+	"sing_duration": 4,
+	"healthicon": "gf",
+
+	"position": [
+		-23,
+		-318
+	],
+	"camera_position": [
+		-84,
+		161
+	],
+
+	"flip_x": false,
+	"no_antialiasing": false,
+	"vocals_file": "",
+
+	"note_colors": [
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"],
+		["A5004D", "FFFFFF", "4C0024"]
+	],
+
+	"_editor_isPlayer": false
+}

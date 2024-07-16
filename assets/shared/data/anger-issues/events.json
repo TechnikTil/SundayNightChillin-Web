@@ -17,6 +17,21 @@
 				]
 			],
 			[
+				43130,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf-umbrella"
+					],
+					[
+						"Play Animation",
+						"transition",
+						"gf"
+					]
+				]
+			],
+			[
 				46500,
 				[
 					[
@@ -275,6 +290,11 @@
 				123000,
 				[
 					[
+						"Change Character",
+						"dad",
+						"gb-angrier"
+					],
+					[
 						"Set Property",
 						"defaultCamZoom",
 						"0.65"
@@ -308,16 +328,6 @@
 						"Set Property",
 						"defaultCamZoom",
 						"0.6"
-					]
-				]
-			],
-			[
-				174000,
-				[
-					[
-						"Set Property",
-						"defaultCamZoom",
-						"0.5"
 					]
 				]
 			]

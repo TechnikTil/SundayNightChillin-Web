@@ -1,10 +1,8 @@
 package states.stages;
 
-import substates.GameOverSubstate;
-import flixel.FlxSubState;
+import cutscenes.DialogueBoxPsych;
 import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.ShaderFilter;
-import states.stages.objects.*;
 
 class GBStage extends BaseStage
 {
@@ -56,10 +54,42 @@ class GBStage extends BaseStage
             {
                 case 'chillin':
                     setStartCallback(function () {
-                        game.startVideo('chillin-start');
+                        game.videoCutscene = game.startVideo('chillin-start', false, true, false, true);
+						game.videoCutscene.finishCallback = function ()
+						{
+							if (game.generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !game.endingSong && !game.isCameraOnForcedPos)
+							{
+								game.moveCameraSection();
+								camGame.snapToTarget();
+							}
+							game.skipBG.destroy();
+							game.skipTxt.destroy();
+							game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
+						};
+
+						game.videoCutscene.onSkip = function ()
+						{
+							if (game.generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !game.endingSong && !game.isCameraOnForcedPos)
+							{
+								game.moveCameraSection();
+								camGame.snapToTarget();
+							}
+							game.skipBG.destroy();
+							game.skipTxt.destroy();
+							game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
+						};
                     });
 
+				case 'serenity':
+					setStartCallback(function () {
+						game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
+					});
+
                 case 'anger-issues':
+					setStartCallback(function () {
+						game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(Paths.formatToSongPath(PlayState.SONG.song) + '/dialogue')));
+					});
+
                     setEndCallback(function () {
                         // All because I saw a frame of the actual game at the end.
                         var black:FlxSprite = new FlxSprite(-1000, -500).makeGraphic(FlxG.width * 5, FlxG.height * 5, FlxColor.BLACK);
@@ -73,7 +103,7 @@ class GBStage extends BaseStage
                             black.alpha = 1;
                         });
 
-                        game.startVideo('anger-issues-end');
+                        game.videoCutscene = game.startVideo('anger-issues-end', false, true, false, true);
                         game.endingSong = true;
                     });
             }
@@ -85,8 +115,14 @@ class GBStage extends BaseStage
 		if (ClientPrefs.data.shaders && isRaining && rainShader != null)
 			rainShader.setFloat('uTime', rainShader.getFloat('uTime') + elapsed);
 
-        if (game.health <= 0 && rainShader != null && isRaining)
+        if (game.isDead && rainShader != null && isRaining)
             removeRainShader();
+	}
+
+	override public function camZoomChange(zoom:Float):Void
+	{
+		if (ClientPrefs.data.shaders && isRaining && rainShader != null)
+			rainShader.setFloatArray('uCameraBounds', [camGame.viewLeft / zoom, camGame.viewTop / zoom, camGame.viewRight / zoom, camGame.viewBottom / zoom]);
 	}
 
 	override public function stepHit():Void
@@ -117,10 +153,10 @@ class GBStage extends BaseStage
 				{
 					rainShader = game.createRuntimeShader('rain');
 					rainShader.setFloatArray('uScreenResolution', [FlxG.width, FlxG.height]);
-					rainShader.setFloatArray('uCameraBounds', [camGame.viewLeft, camGame.viewTop, camGame.viewRight, camGame.viewBottom]);
+					rainShader.setFloatArray('uCameraBounds', [camGame.viewLeft / game.defaultCamZoom, camGame.viewTop / game.defaultCamZoom, camGame.viewRight / game.defaultCamZoom, camGame.viewBottom / game.defaultCamZoom]);
 					rainShader.setFloat('uTime', 1);
 					rainShader.setFloat('uIntensity', 0.2);
-					rainShader.setFloat('uScale', FlxG.height / 200);
+					rainShader.setFloat('uScale', FlxG.height / 500);
 				}
 		}
 	}

@@ -1,60 +1,60 @@
 {
 	"dialogue": [
 		{
+			"portrait": "bf",
 			"expression": "pissed",
 			"text": "I am shiner than you :)",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "bf"
+			"sound": ""
 		},
 		{
+			"portrait": "joke-gb",
 			"expression": "1",
 			"text": "Bro who asked. Just shut up.",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "joke-gb"
+			"sound": ""
 		},
 		{
+			"portrait": "bf",
 			"expression": "excited",
 			"text": "But I am :)",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "bf"
+			"sound": ""
 		},
 		{
+			"portrait": "joke-gb",
 			"expression": "2",
 			"text": "Who gives a fuck.",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "joke-gb"
+			"sound": ""
 		},
 		{
+			"portrait": "bf",
 			"expression": "pissed",
 			"text": "I am shiner-",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "bf"
+			"sound": ""
 		},
 		{
+			"portrait": "joke-gb",
 			"expression": "3",
 			"text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.015,
-			"portrait": "joke-gb"
+			"sound": ""
 		},
 		{
+			"portrait": "bf",
 			"expression": "confused",
 			"text": "the hell?",
 			"boxState": "normal",
-			"sound": "",
 			"speed": 0.05,
-			"portrait": "bf"
+			"sound": ""
 		}
 	]
 }
