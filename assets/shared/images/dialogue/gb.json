@@ -1,0 +1,65 @@
+{
+	"image": "GB_Dialogue",
+	"dialogue_pos": "left",
+	"no_antialiasing": false,
+
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_name": "Gb talking normal",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Gb talking normal0005",
+			"idle_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"anim": "jorking",
+			"loop_name": "JORKING",
+			"loop_offsets": [
+				5,
+				-13
+			],
+			"idle_name": "JORKING0003",
+			"idle_offsets": [
+				5,
+				-13
+			]
+		},
+		{
+			"anim": "confused",
+			"loop_name": "SNKAKE",
+			"loop_offsets": [
+				5,
+				-13
+			],
+			"idle_name": "SNKAKE0003",
+			"idle_offsets": [
+				5,
+				-13
+			]
+		},
+		{
+			"anim": "miss",
+			"loop_name": "UHH",
+			"loop_offsets": [
+				5,
+				-2
+			],
+			"idle_name": "UHH0003",
+			"idle_offsets": [
+				5,
+				-2
+			]
+		}
+	],
+	"position": [
+		150,
+		-60
+	],
+	"scale": 1.2
+}

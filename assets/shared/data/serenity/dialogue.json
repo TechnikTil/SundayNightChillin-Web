@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"portrait": "gb",
+			"expression": "talk",
+			"text": "Hey, You did pretty good!",
+			"boxState": "normal",
+			"speed": 0.06,
+			"sound": ""
+		},
+		{
+			"portrait": "bf",
+			"expression": "excited",
+			"text": "Beep!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"portrait": "gb",
+			"expression": "talk",
+			"text": "Bro... can you even speak english?",
+			"boxState": "normal",
+			"speed": 0.06,
+			"sound": ""
+		},
+		{
+			"portrait": "bf",
+			"expression": "talk",
+			"text": "I speaked it before you actual duma- I mean... Beep Boop!",
+			"boxState": "normal",
+			"speed": 0.055,
+			"sound": ""
+		},
+		{
+			"portrait": "gf",
+			"expression": "talk",
+			"text": "Boyfriend... your stupid. Just talk like a normal hu-",
+			"boxState": "normal",
+			"speed": 0.075,
+			"sound": ""
+		},
+		{
+			"portrait": "bf",
+			"expression": "pissed",
+			"text": "YO DJ CAN WE PUH LEASE GO TO THE NEXT SONG! ASAP NO ROCKY!",
+			"boxState": "angry",
+			"speed": 0.055,
+			"sound": ""
+		}
+	]
+}

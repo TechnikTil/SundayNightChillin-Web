@@ -1,10 +1,6 @@
 {
 	"song": {
-		"speed": 2.4,
-		"stage": "stage",
-		"player1": "bf",
-		"player2": "gb-ancient",
-		"events": [],
+		"song": "Chillin (Ancient)",
 		"notes": [
 			{
 				"gfSection": false,
@@ -3658,13 +3654,19 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"events": [],
 		"bpm": 150,
-		"needsVoices": true,
 		"credits": {
 			"composer": "Unknown",
 			"charter": "Unknown"
 		},
-		"song": "Chillin (Ancient)"
+
+		"needsVoices": true,
+		"speed": 2.4,
+
+		"player1": "bf",
+		"player2": "gb-ancient",
+		"gfVersion": "gf",
+		"stage": "stage"
 	}
 }

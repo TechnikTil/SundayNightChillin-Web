@@ -1,0 +1,44 @@
+{
+	"dialogue": [
+		{
+			"portrait": "gb",
+			"expression": "miss",
+			"text": "DUDE, WHAT THE FUCK!",
+			"boxState": "angry",
+			"speed": 0.06,
+			"sound": ""
+		},
+		{
+			"portrait": "bf",
+			"expression": "confused",
+			"text": "boobies",
+			"boxState": "normal",
+			"speed": 0.15,
+			"sound": ""
+		},
+		{
+			"portrait": "gb",
+			"expression": "miss",
+			"text": "OKAY LISTEN, IM GONNA BEAT THE ABSOLUTE SHIT OUT OF YOU, FUCKING BITCH!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"portrait": "bf",
+			"expression": "excited",
+			"text": "akgjbieos fuck you!",
+			"boxState": "normal",
+			"speed": 0.14,
+			"sound": ""
+		},
+		{
+			"portrait": "gb",
+			"expression": "miss",
+			"text": "FUCK YOU TOO YOU LITTLE SHIT!!!",
+			"boxState": "angry",
+			"speed": 0.05,
+			"sound": ""
+		}
+	]
+}

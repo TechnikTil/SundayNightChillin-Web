@@ -32,10 +32,10 @@
 	<SubTexture name="GF Dancing Beat0027" x="898" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
 	<SubTexture name="GF Dancing Beat0028" x="1756" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
 	<SubTexture name="GF Dancing Beat0029" x="2614" y="2042" width="818" height="920" frameX="-25" frameY="-46" frameWidth="917" frameHeight="966"/>
-	<SubTexture name="GF FEAR 0000" x="3472" y="2042" width="835" height="907" frameX="0" frameY="-5" frameWidth="844" frameHeight="912"/>
-	<SubTexture name="GF FEAR 0001" x="4347" y="2042" width="832" height="905" frameX="0" frameY="-7" frameWidth="844" frameHeight="912"/>
-	<SubTexture name="GF FEAR 0002" x="5219" y="2042" width="844" height="912"/>
-	<SubTexture name="GF FEAR 0003" x="6103" y="2042" width="835" height="909" frameX="0" frameY="-3" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF FEAR0000" x="3472" y="2042" width="835" height="907" frameX="0" frameY="-5" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF FEAR0001" x="4347" y="2042" width="832" height="905" frameX="0" frameY="-7" frameWidth="844" frameHeight="912"/>
+	<SubTexture name="GF FEAR0002" x="5219" y="2042" width="844" height="912"/>
+	<SubTexture name="GF FEAR0003" x="6103" y="2042" width="835" height="909" frameX="0" frameY="-3" frameWidth="844" frameHeight="912"/>
 	<SubTexture name="GF Transition0000" x="6978" y="2042" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
 	<SubTexture name="GF Transition0001" x="40" y="3002" width="704" height="644" frameX="0" frameY="-376" frameWidth="902" frameHeight="1020"/>
 	<SubTexture name="GF Transition0002" x="784" y="3002" width="700" height="643" frameX="-2" frameY="-377" frameWidth="902" frameHeight="1020"/>

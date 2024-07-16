@@ -53,7 +53,7 @@ class BaseStage extends FlxBasic
 			FlxG.log.warn('Invalid state for the stage added!');
 			destroy();
 		}
-		else 
+		else
 		{
 			this.game.stages.push(this);
 			super();
@@ -64,6 +64,8 @@ class BaseStage extends FlxBasic
 	public function create() {}
 	public function createPost() {}
 	public function countdownTick(count:Countdown, num:Int) {}
+
+	public function camZoomChange(zoom:Float) {}
 
 	// FNF steps, beats and sections
 	public var curBeat:Int = 0;
