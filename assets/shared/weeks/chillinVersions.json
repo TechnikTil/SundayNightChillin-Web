@@ -1,6 +1,13 @@
 {
 	"songs": [
 		[
+			"Chillin' (Ancient)",
+			"gb",
+			[
+				255,
+				0,
+				235
+			],
 			"Chillin' (Really Old)",
 			"gb",
 			[
@@ -8,6 +15,7 @@
 				0,
 				235
 			]
+			
 		]
 	],
 	"weekCharacters": [
@@ -18,7 +26,7 @@
 	"weekBackground": "",
 	"weekBefore": "",
 	"storyName": "",
-	"weekName": "GB Week Older",
+	"weekName": "Old Chillin Songs",
 	"startUnlocked": true,
 	"hiddenUntilUnlocked": false,
 	"hideStoryMode": true,

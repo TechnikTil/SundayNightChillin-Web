@@ -1,0 +1,75 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-2
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				28
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				2
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "GB",
+			"indices": []
+		}
+	],
+	"vocals_file": "gb",
+	"no_antialiasing": true,
+	"image": "characters/gb in his 70s",
+	"position": [
+		120,
+		340
+	],
+	"healthicon": "gb",
+	"flip_x": false,
+	"camera_position": [
+		-120,
+		-230
+	],
+	"sing_duration": 6.1,
+	"scale": 2.1,
+	"_editor_isPlayer": false
+}
