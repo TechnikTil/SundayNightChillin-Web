@@ -42,7 +42,7 @@ class HealthIcon extends FlxSprite
 		if(this.char != char) {
 			var name:String = 'icons/' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char;
-			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face';
+			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/face';
 
 			#if MODS_ALLOWED
 			healthFile = Json.parse(File.getContent(Paths.getSharedPath('images/$name.json')));
