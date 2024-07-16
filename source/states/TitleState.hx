@@ -452,9 +452,9 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('sncTitle'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['A Team of dumbasses']);
+					createCoolText(['Chillin\' Studios']);
 				case 4:
-					addMoreText('present');
+					addMoreText('presents');
 				case 5:
 					deleteCoolText();
 				case 6:
