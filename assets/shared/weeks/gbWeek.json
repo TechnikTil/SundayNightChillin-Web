@@ -34,10 +34,10 @@
 		"gf"
 	],
 	"weekBackground": "buttfuck",
-	"weekBefore": "",
+	"weekBefore": "tutorial",
 	"storyName": "Grassy Plains",
 	"weekName": "GB Week",
-	"startUnlocked": true,
+	"startUnlocked": false,
 	"hiddenUntilUnlocked": false,
 	"hideStoryMode": false,
 	"hideFreeplay": false,

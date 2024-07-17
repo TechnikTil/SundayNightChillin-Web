@@ -1,0 +1,28 @@
+{
+    "songs": [
+        [
+            "tutorial",
+            "gf",
+            [
+                0,
+                0,
+                0
+            ]
+        ]
+    ],
+    "weekCharacters": [
+        "",
+        "bf",
+        "gf"
+    ],
+    "weekBackground": "",
+    "weekBefore": "",
+    "storyName": "Tutorial",
+    "weekName": "Tutorial",
+    "startUnlocked": true,
+    "hiddenUntilUnlocked": false,
+    "hideStoryMode": false,
+    "hideFreeplay": false,
+    "difficulties": "Chillin",
+    "album": "part1"
+}
