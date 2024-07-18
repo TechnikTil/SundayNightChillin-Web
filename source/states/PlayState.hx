@@ -1627,7 +1627,7 @@ class PlayState extends MusicBeatState
 	override function closeSubState()
 	{
 		super.closeSubState();
-		
+
 		stagesFunc(function(stage:BaseStage) stage.closeSubState());
 		if (paused)
 		{
@@ -1747,6 +1747,12 @@ class PlayState extends MusicBeatState
 				else if (controls.justPressed('debug_2'))
 					openCharacterEditor();
 			}
+		}
+
+		if (FlxG.keys.justPressed.NINE)
+		{
+			iconP1.switchOldIcon(boyfriend.healthIcon);
+			reloadHealthBarColors();
 		}
 
 		if (healthBar.bounds.max != null && health > healthBar.bounds.max)

@@ -37,6 +37,12 @@ class HealthIcon extends FlxSprite
 			setPosition(sprTracker.x + sprTracker.width + sprOffsetX, sprTracker.y + sprOffsetY);
 	}
 
+	public function switchOldIcon(currentChar:String):Void
+	{
+		changeIcon(isOldIcon ? 'bf-old' : currentChar);
+		isOldIcon = !isOldIcon;
+	}
+
 	private var iconOffsets:Array<Float> = [0, 0];
 	public function changeIcon(char:String, ?allowGPU:Bool = true) {
 		if(this.char != char) {
