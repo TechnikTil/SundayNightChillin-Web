@@ -3580,17 +3580,20 @@ class PlayState extends MusicBeatState
 						unlock = (!ClientPrefs.data.cacheOnGPU && !ClientPrefs.data.shaders && ClientPrefs.data.lowQuality && !ClientPrefs.data.antialiasing);
 				}
 			}
-			else if (name != WeekData.getWeekFileName() + '_complete')
+			else if (name == WeekData.getWeekFileName() + '_complete' || name == WeekData.getWeekFileName() + '_nomiss')
 			{
-				if(isStoryMode && Difficulty.getString().toUpperCase() == 'CHILLIN'
-					&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
-					unlock = true;
-			}
-			else if (name != WeekData.getWeekFileName() + '_nomiss')
-			{
-				if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'CHILLIN'
-					&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
-					unlock = true;
+				if (name == WeekData.getWeekFileName() + '_complete')
+				{
+					if(isStoryMode && Difficulty.getString().toUpperCase() == 'CHILLIN'
+						&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						unlock = true;
+				}
+				if (name == WeekData.getWeekFileName() + '_nomiss')
+				{
+					if(isStoryMode && campaignMisses + songMisses < 1 && Difficulty.getString().toUpperCase() == 'CHILLIN'
+						&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						unlock = true;
+				}
 			}
 
 			if(unlock) Achievements.unlock(name);
