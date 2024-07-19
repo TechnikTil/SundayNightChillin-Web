@@ -9,6 +9,10 @@ class GBStage extends BaseStage
 	var rainShader:FlxRuntimeShader;
 	var isRaining:Bool = false;
 
+	var lightning:FlxSprite;
+	var secondsUntilStrike:Float = 9;
+	var isLightning:Bool = false;
+
 	var bg:FlxSprite;
 	var clouds:BGSprite;
 	var mountain3:BGSprite;
@@ -54,20 +58,8 @@ class GBStage extends BaseStage
             {
                 case 'chillin':
                     setStartCallback(function () {
-                        game.videoCutscene = game.startVideo('chillin-start', false, true, false, true);
-						game.videoCutscene.finishCallback = function ()
-						{
-							if (game.generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !game.endingSong && !game.isCameraOnForcedPos)
-							{
-								game.moveCameraSection();
-								camGame.snapToTarget();
-							}
-							game.skipBG.destroy();
-							game.skipTxt.destroy();
-							game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
-						};
-
-						game.videoCutscene.onSkip = function ()
+						game.videoCutscene = game.startVideo('chillin-start', false, true, false, true);
+						game.videoCutscene.finishCallback = game.videoCutscene.onSkip = function ()
 						{
 							if (game.generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !game.endingSong && !game.isCameraOnForcedPos)
 							{
@@ -87,7 +79,7 @@ class GBStage extends BaseStage
 
                 case 'anger-issues':
 					setStartCallback(function () {
-						game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(Paths.formatToSongPath(PlayState.SONG.song) + '/dialogue')));
+						game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
 					});
 
                     setEndCallback(function () {
@@ -117,6 +109,17 @@ class GBStage extends BaseStage
 
         if (game.isDead && rainShader != null && isRaining)
             removeRainShader();
+
+		if(!isLightning && ClientPrefs.data.flashing && isRaining)
+		{
+			secondsUntilStrike -= elapsed;
+
+			if(secondsUntilStrike <= 0)
+			{
+				secondsUntilStrike = FlxG.random.int(7, 24);
+				applyLightning();
+			}
+		}
 	}
 
 	override public function camZoomChange(zoom:Float):Void
@@ -125,10 +128,40 @@ class GBStage extends BaseStage
 			rainShader.setFloatArray('uCameraBounds', [camGame.viewLeft / zoom, camGame.viewTop / zoom, camGame.viewRight / zoom, camGame.viewBottom / zoom]);
 	}
 
-	override public function stepHit():Void
+	public function applyLightning():Void
 	{
-		if (ClientPrefs.data.flashing && curStep == 511 && songName == 'anger-issues')
-			camGame.flash();
+		isLightning = true;
+
+		if(ClientPrefs.data.lowQuality)
+		{
+			camGame.flash(FlxColor.WHITE, 1, function() {
+				isLightning = false;
+			});
+		}
+		else
+		{
+			lightning.alpha = 1;
+
+			lightning.x = FlxG.random.float(-350.0005, 1350.0005);
+
+			new FlxTimer().start((1/24)*2, function(_) {
+				lightning.alpha = 0;
+
+				new FlxTimer().start((1/24)*1, function(_) {
+					lightning.alpha = 1;
+
+					camGame.flash();
+					FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
+
+					boyfriend.playAnim('scared', true);
+					gf.playAnim('scared', true);
+
+					FlxTween.tween(lightning, {alpha: 0}, 1.8, {onComplete: function(_) {
+						isLightning = false;
+					}});
+				});
+			});
+		}
 	}
 
 	override public function eventPushed(event:objects.Note.EventNote):Void
@@ -145,6 +178,7 @@ class GBStage extends BaseStage
 					Paths.image('$value1/mountainback3', null, true);
 					Paths.image('$value1/mountainback2', null, true);
 					Paths.image('$value1/mountainback1', null, true);
+					Paths.image('$value1/lightning', null, true);
 				}
 
 				Paths.image('$value1/ground', null, true);
@@ -182,6 +216,8 @@ class GBStage extends BaseStage
                             FlxG.camera.filters.push(rainShaderFilter);
 
 						isRaining = true;
+
+						applyLightning();
 					}
                     else if (value1.toLowerCase() != 'rain' && isRaining)
                         removeRainShader();
@@ -227,6 +263,18 @@ class GBStage extends BaseStage
 
 		ground.loadGraphic(Paths.image('$typeLowercase/ground'));
 		ground.setGraphicSize(Std.int(ground.width * 1.2));
+
+		if (typeLowercase == 'rain' && !ClientPrefs.data.lowQuality) // was acting up if i didnt do this
+		{
+			remove(lightning);
+
+			lightning = new FlxSprite(0, -200);
+			lightning.frames = Paths.getSparrowAtlas('rain/lightning');
+			lightning.animation.addByPrefix('strike', 'Lightning w effect', 24, true);
+			lightning.animation.play('strike');
+			insert(members.indexOf(ground), lightning);
+			lightning.alpha = 0;
+		}
 	}
 
 	function grabBGColor(type:String):FlxColor

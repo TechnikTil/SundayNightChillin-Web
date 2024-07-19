@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lightning.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Lightning w effect0000" x="0" y="0" width="377" height="1274" frameX="0" frameY="0" frameWidth="377" frameHeight="1275"/>
+	<SubTexture name="Lightning w effect0001" x="377" y="0" width="377" height="1275"/>
+</TextureAtlas>
