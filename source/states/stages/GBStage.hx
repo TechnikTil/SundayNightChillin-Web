@@ -153,8 +153,14 @@ class GBStage extends BaseStage
 					camGame.flash();
 					FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 
-					boyfriend.playAnim('scared', true);
-					gf.playAnim('scared', true);
+					if(boyfriend.animOffsets.exists('scared'))
+						boyfriend.playAnim('scared', true);
+			
+					if(dad.animOffsets.exists('scared'))
+						dad.playAnim('scared', true);
+			
+					if(gf != null && gf.animOffsets.exists('scared'))
+						gf.playAnim('scared', true);
 
 					FlxTween.tween(lightning, {alpha: 0}, 1.8, {onComplete: function(_) {
 						isLightning = false;
