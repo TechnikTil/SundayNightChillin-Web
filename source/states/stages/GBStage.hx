@@ -242,6 +242,12 @@ class GBStage extends BaseStage
 		}
 	}
 
+	override public function gameOver()
+	{
+		if (rainShader != null && isRaining)
+            removeRainShader();
+	}
+
     function removeRainShader():Void
     {
         rainShader = null;

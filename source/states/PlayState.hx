@@ -2059,6 +2059,8 @@ class PlayState extends MusicBeatState
 				modchartTweens.clear();
 				#end
 
+				stagesFunc(function(stage:BaseStage) stage.gameOver());
+
 				openSubState(new GameOverSubstate());
 
 				#if DISCORD_ALLOWED
