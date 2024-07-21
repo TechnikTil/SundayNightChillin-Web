@@ -42,12 +42,62 @@
 				]
 			],
 			[
+				39500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
 				39875,
 				[
 					[
 						"Hey!",
 						"GF",
 						""
+					]
+				]
+			],
+			[
+				40000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				43000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				43500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				44000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
 					]
 				]
 			],

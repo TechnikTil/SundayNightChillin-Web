@@ -1,8 +1,6 @@
-package substates;
+package states;
 
-import states.FreeplaySelector;
-import states.MainMenuState;
-import states.StoryMenuState;
+import objects.Character;
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
@@ -14,11 +12,12 @@ import substates.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
 
 import flixel.math.FlxMath;
+import flixel.addons.transition.FlxTransitionableState;
 
-class FreeplaySubState extends MusicBeatSubstate
+class FreeplayState extends MusicBeatState
 {
-	public var curAlbum:String = 'part1';
-
+	var curAlbum:String = 'album1';
+	
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -40,6 +39,7 @@ class FreeplaySubState extends MusicBeatSubstate
 
 	private var iconArray:Array<HealthIcon> = [];
 
+	var bg:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
@@ -51,8 +51,6 @@ class FreeplaySubState extends MusicBeatSubstate
 	var bottomBG:FlxSprite;
 
 	var player:MusicPlayer;
-
-	var daCamera:FlxCamera = new FlxCamera();
 
 	public function new(curAlbum:String)
 	{
@@ -97,6 +95,22 @@ class FreeplaySubState extends MusicBeatSubstate
 			}
 		}
 		Mods.loadTopMod();
+
+		bg = new FlxSprite().loadGraphic(Paths.image('menuBG'));
+		bg.antialiasing = ClientPrefs.data.antialiasing;
+		add(bg);
+		bg.screenCenter();
+
+		if (TitleState.titleJSON.checkerData.enabled)
+		{
+			var checkeredBG:Checkers = new Checkers({
+				size: TitleState.titleJSON.checkerData.size,
+				colors: [0x33FFFFFF, 0x0],
+				speed: TitleState.titleJSON.checkerData.speed,
+				alpha: 1
+			});
+			add(checkeredBG);
+		}
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -150,8 +164,8 @@ class FreeplaySubState extends MusicBeatSubstate
 		add(missingText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		FreeplaySelector.bg.color = songs[curSelected].color;
-		intendedColor = FreeplaySelector.bg.color;
+		bg.color = songs[curSelected].color;
+		intendedColor = bg.color;
 		lerpSelected = curSelected;
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
@@ -167,20 +181,19 @@ class FreeplaySubState extends MusicBeatSubstate
 		bottomText.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, CENTER);
 		bottomText.scrollFactor.set();
 		add(bottomText);
-
+		
 		player = new MusicPlayer(this);
 		add(player);
-
+		
 		changeSelection();
 		updateTexts();
 		super.create();
+	}
 
-		daCamera.bgColor.alpha = 0;
-		FlxG.cameras.add(daCamera, false);
-
-		forEach(function(spr:flixel.FlxBasic) {
-			spr.cameras = [daCamera];
-		});
+	override function closeSubState() {
+		changeSelection(0, false);
+		persistentUpdate = true;
+		super.closeSubState();
 	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
@@ -195,6 +208,7 @@ class FreeplaySubState extends MusicBeatSubstate
 
 	var instPlaying:Int = -1;
 	public static var vocals:FlxSound = null;
+	public static var opponentVocals:FlxSound = null;
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
@@ -214,7 +228,7 @@ class FreeplaySubState extends MusicBeatSubstate
 		if(ratingSplit.length < 2) {
 			ratingSplit.push('');
 		}
-
+		
 		while(ratingSplit[1].length < 2) {
 			ratingSplit[1] += '0';
 		}
@@ -226,20 +240,20 @@ class FreeplaySubState extends MusicBeatSubstate
 		{
 			scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 			positionHighscore();
-
+			
 			if(songs.length > 1)
 			{
 				if(FlxG.keys.justPressed.HOME)
 				{
 					curSelected = 0;
 					changeSelection();
-					holdTime = 0;
+					holdTime = 0;	
 				}
 				else if(FlxG.keys.justPressed.END)
 				{
 					curSelected = songs.length - 1;
 					changeSelection();
-					holdTime = 0;
+					holdTime = 0;	
 				}
 				if (controls.UI_UP_P)
 				{
@@ -296,14 +310,16 @@ class FreeplaySubState extends MusicBeatSubstate
 				FlxG.sound.playMusic(Paths.music('sncTitle'), 0);
 				FlxTween.tween(FlxG.sound.music, {volume: 1}, 1);
 			}
-			else
+			else 
 			{
 				persistentUpdate = false;
 				if(colorTween != null) {
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				close();
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+				MusicBeatState.switchState(new FreeplaySelector(true));
 			}
 		}
 
@@ -322,26 +338,53 @@ class FreeplaySubState extends MusicBeatSubstate
 				Mods.currentModDirectory = songs[curSelected].folder;
 				var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
 				PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
-				if (PlayState.SONG.needsVoices)
-				{
-					vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song));
-					FlxG.sound.list.add(vocals);
-					vocals.persist = true;
-					vocals.looped = true;
-				}
-				else if (vocals != null)
-				{
-					vocals.stop();
-					vocals.destroy();
-					vocals = null;
-				}
 
-				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
+				vocals = new FlxSound();
+				opponentVocals = new FlxSound();
+				try
+				{
+					if (PlayState.SONG.needsVoices)
+					{
+						var vocalsFilePlayer:String = Character.loadCharacterJson(PlayState.SONG.player1).vocals_file;
+						var vocalsFileOpp:String = Character.loadCharacterJson(PlayState.SONG.player2).vocals_file;
+
+						var playerVocals = Paths.voices(PlayState.SONG.song, (vocalsFilePlayer == null || vocalsFilePlayer.length < 1) ? 'Player' : vocalsFilePlayer);
+						vocals.loadEmbedded(playerVocals != null ? playerVocals : Paths.voices(PlayState.SONG.song));
+			
+						var oppVocals = Paths.voices(PlayState.SONG.song, (vocalsFileOpp == null || vocalsFileOpp.length < 1) ? 'Opponent' : vocalsFileOpp);
+
+						if(oppVocals != null) 
+							opponentVocals.loadEmbedded(oppVocals);
+						else 
+							opponentVocals = null;
+					}
+					else
+						destroyFreeplayVocals();
+				}
+				catch(e:Dynamic) {}
+
 				if(vocals != null)
 				{
+					vocals.persist = true;
+					vocals.looped = true;
+					FlxG.sound.list.add(vocals);
+
 					vocals.play();
 					vocals.volume = 0.8;
 				}
+
+				if(opponentVocals != null)
+				{
+					opponentVocals.persist = true;
+					opponentVocals.looped = true;
+					FlxG.sound.list.add(opponentVocals);
+
+					opponentVocals.play();
+					opponentVocals.volume = 0.8;
+				}
+
+				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
+		
 				instPlaying = curSelected;
 
 				player.playingMusic = true;
@@ -387,6 +430,8 @@ class FreeplaySubState extends MusicBeatSubstate
 				super.update(elapsed);
 				return;
 			}
+			FlxTransitionableState.skipNextTransIn = false;
+			FlxTransitionableState.skipNextTransOut = false;
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			FlxG.sound.music.volume = 0;
@@ -407,18 +452,18 @@ class FreeplaySubState extends MusicBeatSubstate
 		super.update(elapsed);
 	}
 
-	override public function close()
-	{
-		FlxG.cameras.remove(daCamera);
-		super.close();
-	}
-
 	public static function destroyFreeplayVocals() {
 		if(vocals != null) {
 			vocals.stop();
 			vocals.destroy();
 		}
 		vocals = null;
+
+		if(opponentVocals != null) {
+			opponentVocals.stop();
+			opponentVocals.destroy();
+		}
+		opponentVocals = null;
 	}
 
 	function changeDiff(change:Int = 0)
@@ -471,7 +516,7 @@ class FreeplaySubState extends MusicBeatSubstate
 				colorTween.cancel();
 			}
 			intendedColor = newColor;
-			colorTween = FlxTween.color(FreeplaySelector.bg, 1, FreeplaySelector.bg.color, intendedColor, {
+			colorTween = FlxTween.color(bg, 1, bg.color, intendedColor, {
 				onComplete: function(twn:FlxTween) {
 					colorTween = null;
 				}

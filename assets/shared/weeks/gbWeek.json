@@ -29,15 +29,15 @@
 		]
 	],
 	"weekCharacters": [
-		"gb",
-		"bf",
-		"gf"
+		"",
+		"",
+		""
 	],
 	"weekBackground": "buttfuck",
 	"weekBefore": "tutorial",
 	"storyName": "Grassy Plains",
 	"weekName": "GB Week",
-	"startUnlocked": false,
+	"startUnlocked": true,
 	"hiddenUntilUnlocked": false,
 	"hideStoryMode": false,
 	"hideFreeplay": false,

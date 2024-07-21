@@ -114,6 +114,8 @@ class GBStage extends BaseStage
 		{
 			secondsUntilStrike -= elapsed;
 
+			FlxG.watch.addQuick('strikeShit', secondsUntilStrike);
+
 			if(secondsUntilStrike <= 0)
 			{
 				secondsUntilStrike = FlxG.random.int(7, 24);
@@ -130,10 +132,14 @@ class GBStage extends BaseStage
 
 	public function applyLightning():Void
 	{
+		if(!ClientPrefs.data.flashing)
+			return;
+
 		isLightning = true;
 
 		if(ClientPrefs.data.lowQuality)
 		{
+			FlxG.sound.play(Paths.soundRandom('thunder_', 1, 2));
 			camGame.flash(FlxColor.WHITE, 1, function() {
 				isLightning = false;
 			});
@@ -141,8 +147,13 @@ class GBStage extends BaseStage
 		else
 		{
 			lightning.alpha = 1;
-
 			lightning.x = FlxG.random.float(-350.0005, 1350.0005);
+			remove(lightning);
+
+			// i hate myself
+			var spriteBehindMyAss:FlxSprite = FlxG.random.getObject([mountain3, mountain2, mountain1, ground]);
+			insert(members.indexOf(spriteBehindMyAss), lightning);
+			lightning.scrollFactor.set(spriteBehindMyAss.scrollFactor.x, spriteBehindMyAss.scrollFactor.y);
 
 			new FlxTimer().start((1/24)*2, function(_) {
 				lightning.alpha = 0;

@@ -26,7 +26,7 @@ import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
 
 import states.StoryMenuState;
-import substates.FreeplaySubState;
+import states.FreeplayState;
 import states.editors.ChartingState;
 import states.editors.CharacterEditorState;
 

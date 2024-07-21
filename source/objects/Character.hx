@@ -93,37 +93,48 @@ class Character extends FlxSprite
 		switch (curCharacter)
 		{
 			default:
-				var characterPath:String = 'characters/$curCharacter.json';
+				var charFile = loadCharacterJson(curCharacter);
 
-				var path:String = Paths.getPath(characterPath, TEXT, null, true);
-				#if MODS_ALLOWED
-				if (!FileSystem.exists(path))
-				#else
-				if (!Assets.exists(path))
-				#end
+				if(charFile == null)
 				{
-					path = Paths.getSharedPath('characters/' + DEFAULT_CHARACTER + '.json');
+					loadCharacterJson(DEFAULT_CHARACTER);
+
+					// confronting yourself
 					color = FlxColor.BLACK;
 					alpha = 0.6;
 				}
+					
 
-				try
-				{
-					#if MODS_ALLOWED
-					loadCharacterFile(Json.parse(File.getContent(path)));
-					#else
-					loadCharacterFile(Json.parse(Assets.getText(path)));
-					#end
-				}
-				catch(e:Dynamic)
-				{
-					trace('Error loading character file of "$character": $e');
-				}
+				if(charFile != null)
+					loadCharacterFile(charFile);
+				else
+					throw "Massive Error while trying to load character. Is the default broken?";
 		}
 
 		if(animOffsets.exists('singLEFTmiss') || animOffsets.exists('singDOWNmiss') || animOffsets.exists('singUPmiss') || animOffsets.exists('singRIGHTmiss')) hasMissAnimations = true;
 		recalculateDanceIdle();
 		dance();
+	}
+
+	public static function loadCharacterJson(curCharacter:String):Null<Dynamic>
+	{
+		var characterPath:String = 'characters/$curCharacter.json';
+
+		var path:String = Paths.getPath(characterPath, TEXT, null, true);
+
+		try
+		{
+			#if MODS_ALLOWED
+			return Json.parse(File.getContent(path));
+			#else
+			return Json.parse(Assets.getText(path));
+			#end
+		}
+		catch(e:Dynamic)
+		{
+			trace('Error loading character file of "$curCharacter": $e');
+			return null;
+		}
 	}
 
 	public function loadCharacterFile(json:Dynamic)

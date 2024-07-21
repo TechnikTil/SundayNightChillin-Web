@@ -1,6 +1,6 @@
 package states;
 
-import substates.FreeplaySubState;
+import states.FreeplayState;
 import flixel.FlxObject;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
@@ -11,6 +11,7 @@ import states.editors.MasterEditorMenu;
 class FreeplaySelector extends MusicBeatState
 {
 	public static var curSelected:Int = 0;
+	public var comingFromFreeplay:Bool = false;
 
 	var freeplayItems:FlxTypedGroup<FlxSprite>;
 
@@ -29,6 +30,12 @@ class FreeplaySelector extends MusicBeatState
 	public static var arrowUp:FlxSprite;
 	public static var arrowDown:FlxSprite;
 
+	public function new(?comingFromFreeplay:Bool = false)
+	{
+		this.comingFromFreeplay = comingFromFreeplay;
+		super();
+	}
+
 	override function create()
 	{
 		#if MODS_ALLOWED
@@ -45,12 +52,10 @@ class FreeplaySelector extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		bg = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
+		bg = new FlxSprite().loadGraphic(Paths.image('menuBG'));
 		bg.antialiasing = ClientPrefs.data.antialiasing;
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
-		bg.scrollFactor.set(0, 0);
 		bg.color = 0xFFFDE871;
-		bg.updateHitbox();
+		bg.scrollFactor.set();
 		bg.screenCenter();
 		add(bg);
 
@@ -109,20 +114,20 @@ class FreeplaySelector extends MusicBeatState
 		super.create();
 
 		FlxG.camera.follow(camFollow, null, 8);
+		FlxG.camera.snapToTarget();
 
-        subStateClosed.add(function(_) {
-            selectedSomethin = false;
-
+		if(comingFromFreeplay)
+		{
+            arrowUp.alpha = arrowDown.alpha = 0;
 			FlxTween.tween(arrowUp, {alpha: 1}, 0.2, {ease: FlxEase.quadIn});
 			FlxTween.tween(arrowDown, {alpha: 1}, 0.2, {ease: FlxEase.quadIn});
 
             for (i in freeplayItems.members)
             {
+				i.alpha = 0;
                 FlxTween.tween(i, {alpha: 1}, 0.4, {ease: FlxEase.quadIn});
             }
-
-            FlxTween.tween(freeplayItems.members[curSelected], {alpha: 1}, 0.4, {ease: FlxEase.quadIn});
-        });
+        }
 	}
 
 	var selectedSomethin:Bool = false;
@@ -134,8 +139,8 @@ class FreeplaySelector extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * elapsed;
 
-			if (FreeplaySubState.vocals != null)
-				FreeplaySubState.vocals.volume += 0.5 * elapsed;
+			if (FreeplayState.vocals != null)
+				FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
 
 		if (!selectedSomethin)
@@ -197,7 +202,9 @@ class FreeplaySelector extends MusicBeatState
                     freeplayItems.members[curSelected].visible = true;
                     freeplayItems.members[curSelected].alpha = 0;
 
-					openSubState(new FreeplaySubState(freeplayOptions[curSelected][0]));
+					FlxTransitionableState.skipNextTransIn = true;
+					FlxTransitionableState.skipNextTransOut = true;
+					FlxG.switchState(new FreeplayState(freeplayOptions[curSelected][0]));
 				});
 
 				FlxTween.tween(arrowUp, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
