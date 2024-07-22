@@ -12,12 +12,12 @@
     ],
     "weekCharacters": [
         "",
-        "bf",
-        "gf"
+        "",
+        ""
     ],
-    "weekBackground": "",
+    "weekBackground": "tutorial",
     "weekBefore": "",
-    "storyName": "Tutorial",
+    "storyName": "Thats how you do it!",
     "weekName": "Tutorial",
     "startUnlocked": true,
     "hiddenUntilUnlocked": false,

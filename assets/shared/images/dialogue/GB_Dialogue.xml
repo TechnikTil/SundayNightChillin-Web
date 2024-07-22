@@ -1,23 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="GB_Dialogue.png">
-	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Gb talking normal0000" x="0" y="0" width="371" height="628" frameX="-6" frameY="0" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="Gb talking normal0001" x="0" y="0" width="371" height="628" frameX="-6" frameY="0" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="Gb talking normal0002" x="371" y="0" width="377" height="614" frameX="-2" frameY="-14" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="Gb talking normal0003" x="748" y="0" width="377" height="614" frameX="-2" frameY="-14" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="Gb talking normal0004" x="1125" y="0" width="380" height="611" frameX="0" frameY="-16" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="Gb talking normal0005" x="1125" y="0" width="380" height="611" frameX="0" frameY="-16" frameWidth="380" frameHeight="628"/>
-	<SubTexture name="JORKING0000" x="1505" y="0" width="347" height="612"/>
-	<SubTexture name="JORKING0001" x="0" y="628" width="347" height="612"/>
-	<SubTexture name="JORKING0002" x="347" y="628" width="347" height="612"/>
-	<SubTexture name="JORKING0003" x="694" y="628" width="347" height="612"/>
-	<SubTexture name="SNKAKE0000" x="1041" y="628" width="383" height="612" frameX="0" frameY="0" frameWidth="384" frameHeight="612"/>
-	<SubTexture name="SNKAKE0001" x="1041" y="628" width="383" height="612" frameX="0" frameY="0" frameWidth="384" frameHeight="612"/>
-	<SubTexture name="SNKAKE0002" x="1424" y="628" width="384" height="612"/>
-	<SubTexture name="SNKAKE0003" x="1424" y="628" width="384" height="612"/>
-	<SubTexture name="UHH0000" x="0" y="1240" width="347" height="625"/>
-	<SubTexture name="UHH0001" x="0" y="1240" width="347" height="625"/>
-	<SubTexture name="UHH0002" x="347" y="1240" width="347" height="625"/>
-	<SubTexture name="UHH0003" x="347" y="1240" width="347" height="625"/>
+	<SubTexture name="Gb jerking off0000" x="0" y="0" width="347" height="612"/>
+	<SubTexture name="Gb jerking off0001" x="347" y="0" width="347" height="612"/>
+	<SubTexture name="Gb jerking off0002" x="694" y="0" width="347" height="612"/>
+	<SubTexture name="Gb jerking off0003" x="1041" y="0" width="347" height="612"/>
+	<SubTexture name="Gb missed0000" x="1388" y="0" width="347" height="625"/>
+	<SubTexture name="Gb missed0001" x="1388" y="0" width="347" height="625"/>
+	<SubTexture name="Gb missed0002" x="1735" y="0" width="347" height="625"/>
+	<SubTexture name="Gb missed0003" x="1735" y="0" width="347" height="625"/>
+	<SubTexture name="Gb talking confused0000" x="2082" y="0" width="383" height="612" frameX="0" frameY="0" frameWidth="384" frameHeight="612"/>
+	<SubTexture name="Gb talking confused0001" x="2082" y="0" width="383" height="612" frameX="0" frameY="0" frameWidth="384" frameHeight="612"/>
+	<SubTexture name="Gb talking confused0002" x="2465" y="0" width="384" height="612"/>
+	<SubTexture name="Gb talking confused0003" x="2465" y="0" width="384" height="612"/>
+	<SubTexture name="Gb talking end confused0000" x="2465" y="0" width="384" height="612"/>
+	<SubTexture name="Gb talking end confused0001" x="2465" y="0" width="384" height="612"/>
+	<SubTexture name="Gb talking end normal0000" x="2849" y="0" width="379" height="612"/>
+	<SubTexture name="Gb talking end normal0001" x="2849" y="0" width="379" height="612"/>
+	<SubTexture name="Gb talking end pissed0000" x="3228" y="0" width="354" height="611"/>
+	<SubTexture name="Gb talking end pissed0001" x="3228" y="0" width="354" height="611"/>
+	<SubTexture name="Gb talking normal0000" x="3582" y="0" width="371" height="628" frameX="-6" frameY="0" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking normal0001" x="3582" y="0" width="371" height="628" frameX="-6" frameY="0" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking normal0002" x="0" y="628" width="377" height="614" frameX="-2" frameY="-14" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking normal0003" x="377" y="628" width="377" height="614" frameX="-2" frameY="-14" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking normal0004" x="754" y="628" width="380" height="611" frameX="0" frameY="-16" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking normal0005" x="754" y="628" width="380" height="611" frameX="0" frameY="-16" frameWidth="380" frameHeight="628"/>
+	<SubTexture name="Gb talking pissed0000" x="1134" y="628" width="350" height="613" frameX="-2" frameY="0" frameWidth="354" frameHeight="613"/>
+	<SubTexture name="Gb talking pissed0001" x="1134" y="628" width="350" height="613" frameX="-2" frameY="0" frameWidth="354" frameHeight="613"/>
+	<SubTexture name="Gb talking pissed0002" x="1484" y="628" width="352" height="611" frameX="-1" frameY="-2" frameWidth="354" frameHeight="613"/>
+	<SubTexture name="Gb talking pissed0003" x="1484" y="628" width="352" height="611" frameX="-1" frameY="-2" frameWidth="354" frameHeight="613"/>
+	<SubTexture name="Gb talking pissed0004" x="1836" y="628" width="354" height="611" frameX="0" frameY="-2" frameWidth="354" frameHeight="613"/>
+	<SubTexture name="Gb talking pissed0005" x="1836" y="628" width="354" height="611" frameX="0" frameY="-2" frameWidth="354" frameHeight="613"/>
 </TextureAtlas>

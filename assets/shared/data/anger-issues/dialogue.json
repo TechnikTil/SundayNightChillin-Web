@@ -2,7 +2,7 @@
 	"dialogue": [
 		{
 			"portrait": "gb",
-			"expression": "miss",
+			"expression": "angry",
 			"text": "DUDE, WHAT THE FUCK!",
 			"boxState": "angry",
 			"speed": 0.06,
@@ -18,7 +18,7 @@
 		},
 		{
 			"portrait": "gb",
-			"expression": "miss",
+			"expression": "angry",
 			"text": "OKAY LISTEN, IM GONNA BEAT THE ABSOLUTE SHIT OUT OF YOU, FUCKING BITCH!",
 			"boxState": "angry",
 			"speed": 0.05,
@@ -34,7 +34,7 @@
 		},
 		{
 			"portrait": "gb",
-			"expression": "miss",
+			"expression": "angry",
 			"text": "FUCK YOU TOO YOU LITTLE SHIT!!!",
 			"boxState": "angry",
 			"speed": 0.05,

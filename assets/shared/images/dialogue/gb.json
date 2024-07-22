@@ -1,65 +1,77 @@
 {
-	"image": "GB_Dialogue",
-	"dialogue_pos": "left",
-	"no_antialiasing": false,
-
-	"animations": [
-		{
-			"anim": "talk",
-			"loop_name": "Gb talking normal",
-			"loop_offsets": [
-				0,
-				0
-			],
-			"idle_name": "Gb talking normal0005",
-			"idle_offsets": [
-				0,
-				0
-			]
-		},
-		{
-			"anim": "jorking",
-			"loop_name": "JORKING",
-			"loop_offsets": [
-				5,
-				-13
-			],
-			"idle_name": "JORKING0003",
-			"idle_offsets": [
-				5,
-				-13
-			]
-		},
-		{
-			"anim": "confused",
-			"loop_name": "SNKAKE",
-			"loop_offsets": [
-				5,
-				-13
-			],
-			"idle_name": "SNKAKE0003",
-			"idle_offsets": [
-				5,
-				-13
-			]
-		},
-		{
-			"anim": "miss",
-			"loop_name": "UHH",
-			"loop_offsets": [
-				5,
-				-2
-			],
-			"idle_name": "UHH0003",
-			"idle_offsets": [
-				5,
-				-2
-			]
-		}
-	],
 	"position": [
 		150,
 		-60
 	],
-	"scale": 1.2
+	"dialogue_pos": "left",
+	"scale": 1.2,
+	"no_antialiasing": false,
+	"image": "GB_Dialogue",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-13
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"loop_name": "Gb talking normal",
+			"idle_name": "Gb talking end normal"
+		},
+		{
+			"idle_offsets": [
+				5,
+				-13
+			],
+			"loop_offsets": [
+				5,
+				-13
+			],
+			"anim": "jorking",
+			"loop_name": "Gb jerking off",
+			"idle_name": "Gb jerking off"
+		},
+		{
+			"idle_offsets": [
+				5,
+				-13
+			],
+			"loop_offsets": [
+				5,
+				-13
+			],
+			"anim": "confused",
+			"loop_name": "Gb talking confused",
+			"idle_name": "Gb talking end confused"
+		},
+		{
+			"idle_offsets": [
+				5,
+				-2
+			],
+			"loop_offsets": [
+				5,
+				-2
+			],
+			"anim": "miss",
+			"loop_name": "Gb missed",
+			"idle_name": "Gb missed"
+		},
+		{
+			"loop_name": "Gb talking pissed",
+			"idle_offsets": [
+				-6,
+				-12
+			],
+			"idle_name": "Gb talking end pissed",
+			"anim": "angry",
+			"loop_offsets": [
+				-6,
+				-11
+			]
+		}
+	]
 }
