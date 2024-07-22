@@ -284,6 +284,9 @@ class PlayState extends MusicBeatState
 		cpuControlled = (ClientPrefs.getGameplaySetting('botplay') && Paths.formatToSongPath(SONG.song) != 'spitting-facts');
 		guitarHeroSustains = ClientPrefs.data.guitarHeroSustains;
 
+		if(Paths.formatToSongPath(SONG.song) == 'anger-issues')
+			guitarHeroSustains = false;
+
 		var barcodeFont:Bool = FlxG.random.bool(0.1);
 
 		if (barcodeFont && textFont != 'LibreBarcode128Text-Regular.ttf')

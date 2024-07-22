@@ -291,7 +291,7 @@ class GBStage extends BaseStage
 		{
 			remove(lightning);
 
-			lightning = new FlxSprite(0, -200);
+			lightning = new FlxSprite(0, -250);
 			lightning.frames = Paths.getSparrowAtlas('rain/lightning');
 			lightning.animation.addByPrefix('strike', 'Lightning w effect', 24, true);
 			lightning.animation.play('strike');
