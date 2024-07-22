@@ -1,5 +1,6 @@
 package states;
 
+import openfl.Lib;
 import backend.Highscore;
 import backend.StageData;
 import backend.WeekData;
@@ -649,6 +650,9 @@ class PlayState extends MusicBeatState
 
 		startCallback();
 		RecalculateRating();
+
+		if(['anger-issues'].contains(Paths.formatToSongPath(SONG.song)) && FlxG.random.bool(0.5)) // shhhh dont tell json
+			Lib.application.window.title = Lib.application.window.title.replace('Chillin\'', 'Pissin\'');
 
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
 		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
@@ -2467,6 +2471,9 @@ class PlayState extends MusicBeatState
 				openChartEditor();
 				return false;
 			}
+
+			if(Lib.application.window.title.contains('Pissin\''))
+				Lib.application.window.title = Lib.application.window.title.replace('Pissin\'', 'Chillin\'');
 
 			if (isStoryMode)
 			{
