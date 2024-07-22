@@ -1898,7 +1898,7 @@ class PlayState extends MusicBeatState
 				KillNotes();
 				FlxG.sound.music.onComplete();
 			}
-			if(FlxG.keys.justPressed.TWO) {
+			if(FlxG.keys.justPressed.PAGEUP) {
 				setSongTime(Conductor.songPosition + 10000);
 				clearNotesBefore(Conductor.songPosition);
 			}
