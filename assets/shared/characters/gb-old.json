@@ -103,7 +103,7 @@
 	"image": "characters/gameboy_LEGS",
 	"scale": 1,
 	"sing_duration": 6.1,
-	"healthicon": "gb",
+	"healthicon": "gb-old",
 
 	"position": [
 		40,

@@ -1968,9 +1968,9 @@
 		"needsVoices": true,
 		"speed": 1.5,
 
-		"player1": "bf",
+		"player1": "bf-og",
 		"player2": "gb-old",
-		"gfVersion": "gf",
+		"gfVersion": "gf-og",
 		"stage": "stage"
 	}
 }

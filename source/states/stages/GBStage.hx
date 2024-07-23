@@ -147,7 +147,7 @@ class GBStage extends BaseStage
 		else
 		{
 			lightning.alpha = 1;
-			lightning.x = FlxG.random.float(-350.0005, 1350.0005);
+			lightning.x = FlxG.random.float(camFollow.x - (FlxG.width / 2), camFollow.x + (FlxG.width / 2));
 			remove(lightning);
 
 			// i hate myself
@@ -297,6 +297,8 @@ class GBStage extends BaseStage
 			lightning.animation.play('strike');
 			insert(members.indexOf(ground), lightning);
 			lightning.alpha = 0;
+
+			FlxG.debugger.track(lightning);
 		}
 	}
 

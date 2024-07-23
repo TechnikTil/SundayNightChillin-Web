@@ -3664,9 +3664,9 @@
 		"needsVoices": true,
 		"speed": 2.4,
 
-		"player1": "bf",
+		"player1": "bf-og",
 		"player2": "gb-ancient",
-		"gfVersion": "gf",
+		"gfVersion": "gf-og",
 		"stage": "stage"
 	}
 }
