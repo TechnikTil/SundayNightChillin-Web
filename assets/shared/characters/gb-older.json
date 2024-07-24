@@ -1,61 +1,62 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				129,
 				26
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "z"
+			"fps": 24,
+			"name": "z",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				47,
 				-4
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "v"
+			"fps": 24,
+			"name": "v",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				94,
 				58
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "c"
+			"fps": 24,
+			"name": "c",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				25
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "x"
+			"fps": 24,
+			"name": "x",
+			"indices": []
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/gameboy-mspaint",
 	"position": [
@@ -65,9 +66,10 @@
 	"healthicon": "gb-old",
 	"flip_x": false,
 	"camera_position": [
-		-170,
+		-100,
 		-260
 	],
 	"sing_duration": 6.1,
-	"scale": 2.2
+	"scale": 2.2,
+	"_editor_isPlayer": false
 }
