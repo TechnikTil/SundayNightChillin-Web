@@ -7,7 +7,7 @@ typedef CheckerData =
 {
     @:optional var enabled:Bool;
 	var size:Array<Int>;
-	var colors:Array<Dynamic>;
+	var colors:Array<FlxColor>;
 	var speed:Array<Float>;
 	var alpha:Float;
 }
