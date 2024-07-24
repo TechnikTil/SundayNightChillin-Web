@@ -1,0 +1,11 @@
+{
+	"image": "Menu_GF",
+	"scale": 1,
+	"position": [
+		-125,
+		-10
+	],
+	"idle_anim": "M GF Idle",
+	"confirm_anim": "M GF Idle",
+	"flipX": false
+}

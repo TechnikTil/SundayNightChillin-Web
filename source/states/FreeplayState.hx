@@ -17,7 +17,7 @@ import flixel.addons.transition.FlxTransitionableState;
 class FreeplayState extends MusicBeatState
 {
 	var curAlbum:String = 'album1';
-	
+
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -181,10 +181,10 @@ class FreeplayState extends MusicBeatState
 		bottomText.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, CENTER);
 		bottomText.scrollFactor.set();
 		add(bottomText);
-		
+
 		player = new MusicPlayer(this);
 		add(player);
-		
+
 		changeSelection();
 		updateTexts();
 		super.create();
@@ -228,7 +228,7 @@ class FreeplayState extends MusicBeatState
 		if(ratingSplit.length < 2) {
 			ratingSplit.push('');
 		}
-		
+
 		while(ratingSplit[1].length < 2) {
 			ratingSplit[1] += '0';
 		}
@@ -240,7 +240,7 @@ class FreeplayState extends MusicBeatState
 		{
 			scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 			positionHighscore();
-			
+
 			if(songs.length > 1)
 			{
 				if(FlxG.keys.justPressed.HOME)
@@ -350,12 +350,12 @@ class FreeplayState extends MusicBeatState
 
 						var playerVocals = Paths.voices(PlayState.SONG.song, (vocalsFilePlayer == null || vocalsFilePlayer.length < 1) ? 'Player' : vocalsFilePlayer);
 						vocals.loadEmbedded(playerVocals != null ? playerVocals : Paths.voices(PlayState.SONG.song));
-			
+
 						var oppVocals = Paths.voices(PlayState.SONG.song, (vocalsFileOpp == null || vocalsFileOpp.length < 1) ? 'Opponent' : vocalsFileOpp);
 
-						if(oppVocals != null) 
+						if(oppVocals != null)
 							opponentVocals.loadEmbedded(oppVocals);
-						else 
+						else
 							opponentVocals = null;
 					}
 					else
@@ -384,7 +384,7 @@ class FreeplayState extends MusicBeatState
 				}
 
 				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
-		
+
 				instPlaying = curSelected;
 
 				player.playingMusic = true;
@@ -435,7 +435,7 @@ class FreeplayState extends MusicBeatState
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			FlxG.sound.music.volume = 0;
-					
+
 			destroyFreeplayVocals();
 			#if (MODS_ALLOWED && DISCORD_ALLOWED)
 			DiscordClient.loadModRPC();
@@ -509,7 +509,7 @@ class FreeplayState extends MusicBeatState
 			curSelected = songs.length - 1;
 		if (curSelected >= songs.length)
 			curSelected = 0;
-			
+
 		var newColor:Int = songs[curSelected].color;
 		if(newColor != intendedColor) {
 			if(colorTween != null) {
@@ -539,11 +539,11 @@ class FreeplayState extends MusicBeatState
 			if (item.targetY == curSelected)
 				item.alpha = 1;
 		}
-		
+
 		Mods.currentModDirectory = songs[curSelected].folder;
 		PlayState.storyWeek = songs[curSelected].week;
 		Difficulty.loadFromWeek();
-		
+
 		var savedDiff:String = songs[curSelected].lastDifficulty;
 		var lastDiff:Int = Difficulty.list.indexOf(lastDifficultyName);
 		if(savedDiff != null && !lastList.contains(savedDiff) && Difficulty.list.contains(savedDiff))
@@ -610,7 +610,7 @@ class FreeplayState extends MusicBeatState
 		FlxG.autoPause = ClientPrefs.data.autoPause;
 		if (!FlxG.sound.music.playing)
 			FlxG.sound.playMusic(Paths.music('sncTitle'));
-	}	
+	}
 }
 
 class SongMetadata

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_GF.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="M GF Idle0000" x="5" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0001" x="5" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0002" x="166" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0003" x="166" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0004" x="327" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0005" x="327" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0006" x="488" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0007" x="488" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0008" x="649" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0009" x="649" y="5" width="156" height="325" frameX="0" frameY="0" frameWidth="156" frameHeight="326"/>
+	<SubTexture name="M GF Idle0010" x="810" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0011" x="810" y="5" width="156" height="326"/>
+	<SubTexture name="M GF Idle0012" x="5" y="336" width="156" height="326"/>
+	<SubTexture name="M GF Idle0013" x="5" y="336" width="156" height="326"/>
+</TextureAtlas>

@@ -2,8 +2,8 @@
 <TextureAtlas imagePath="titleEnter.png">
 	<!-- Created with Adobe Animate version 24.0.3.19 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="ENTER FREEZE0000" x="0" y="0" width="1184" height="94"/>
-	<SubTexture name="ENTER IDLE0000" x="0" y="94" width="1184" height="94"/>
-	<SubTexture name="ENTER PRESSED0000" x="0" y="0" width="1184" height="94"/>
-	<SubTexture name="ENTER PRESSED0001" x="0" y="188" width="1184" height="94"/>
+	<SubTexture name="ENTER FREEZE0000" x="5" y="5" width="1185" height="94"/>
+	<SubTexture name="ENTER IDLE0000" x="5" y="104" width="1185" height="94"/>
+	<SubTexture name="ENTER PRESSED0000" x="5" y="5" width="1185" height="94"/>
+	<SubTexture name="ENTER PRESSED0001" x="5" y="203" width="1185" height="94"/>
 </TextureAtlas>

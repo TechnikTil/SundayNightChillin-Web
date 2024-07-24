@@ -166,10 +166,10 @@ class GBStage extends BaseStage
 
 					if(boyfriend.animOffsets.exists('scared'))
 						boyfriend.playAnim('scared', true);
-			
+
 					if(dad.animOffsets.exists('scared'))
 						dad.playAnim('scared', true);
-			
+
 					if(gf != null && gf.animOffsets.exists('scared'))
 						gf.playAnim('scared', true);
 
@@ -181,6 +181,9 @@ class GBStage extends BaseStage
 		}
 	}
 
+	var precacheImageList:Array<String> = ['clouds', 'mountainback3', 'mountainback2', 'mountainback1', 'lightning'];
+	var precacheImageListLowQuality:Array<String> = ['ground'];
+
 	override public function eventPushed(event:objects.Note.EventNote):Void
 	{
 		var value1:String = event.value1.toLowerCase();
@@ -188,17 +191,22 @@ class GBStage extends BaseStage
 		switch (event.event)
 		{
 			case 'Change GB Stage Setting':
-                // Precaching all images before hand to avoid frame drops upon changing.
+				// Precaching all images before hand to avoid frame drops upon changing.
+				var precache:Array<String> = precacheImageListLowQuality;
+
 				if (!ClientPrefs.data.lowQuality)
 				{
-					Paths.image('$value1/clouds', null, true);
-					Paths.image('$value1/mountainback3', null, true);
-					Paths.image('$value1/mountainback2', null, true);
-					Paths.image('$value1/mountainback1', null, true);
-					Paths.image('$value1/lightning', null, true);
+					for (i in precacheImageList)
+					{
+						precache.push(i);
+					}
 				}
 
-				Paths.image('$value1/ground', null, true);
+				for (image in precache)
+				{
+					if (Paths.fileExists('$value1/$image', IMAGE))
+						Paths.image('$value1/$image', null, true);
+				}
 
 				if (ClientPrefs.data.shaders && value1.toLowerCase() == 'rain' && rainShader == null)
 				{
