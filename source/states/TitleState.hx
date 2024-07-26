@@ -151,17 +151,15 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if (FlxG.save.data.sawWelcomeState == null && !WelcomeState.leftState)
+		if (FlxG.save.data.sawWelcomeState == null && !WelcomeState.leftState || FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new WelcomeState());
-		}
-		else if(FlxG.save.data.flashing == null && !FlashingState.leftState)
-		{
-			FlxTransitionableState.skipNextTransIn = true;
-			FlxTransitionableState.skipNextTransOut = true;
-			MusicBeatState.switchState(new FlashingState());
+
+			if (FlxG.save.data.sawWelcomeState == null && !WelcomeState.leftState)
+				MusicBeatState.switchState(new WelcomeState());
+			else if (FlxG.save.data.flashing == null && !FlashingState.leftState)
+				MusicBeatState.switchState(new FlashingState());
 		}
 		else
 		{
