@@ -71,5 +71,13 @@
 	],
 	"sing_duration": 6.1,
 	"scale": 2.2,
+
+	"note_colors": [
+		["2F1A67", "FFFFFF", "150C33"],
+		["A700E6", "FFFFFF", "470066"],
+		["2F1A67", "FFFFFF", "150C33"],
+		["A700E6", "FFFFFF", "470066"]
+	],
+
 	"_editor_isPlayer": false
 }

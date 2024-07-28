@@ -75,10 +75,10 @@
 	"vocals_file": "gb",
 
 	"note_colors": [
-		["FF00EB", "FFFFFF", "4C0047"],
-		["A14DD9", "FFFFFF", "381B4C"],
-		["FF00EB", "FFFFFF", "4C0047"],
-		["A14DD9", "FFFFFF", "381B4C"]
+		["CB1FCF", "FFFFFF", "630F66"],
+		["7F7F7F", "FFFFFF", "4C4C4C"],
+		["CB1FCF", "FFFFFF", "630F66"],
+		["7F7F7F", "FFFFFF", "4C4C4C"]
 	],
 
 	"_editor_isPlayer": false
