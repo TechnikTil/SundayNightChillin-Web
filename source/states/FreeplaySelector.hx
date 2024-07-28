@@ -175,7 +175,7 @@ class FreeplaySelector extends MusicBeatState
 			{
 				if (!freeplayOptions[curSelected][1])
 				{
-					var buzzer:FlxSound = FlxG.sound.play(Paths.sound('buzzer'), 0.4);
+					var buzzer:FlxSound = FlxG.sound.play(Paths.sound('buzzer'), 0.1);
 					FlxG.camera.shake(0.0015, buzzer.length / 1000);
 					return;
 				}

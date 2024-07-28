@@ -205,6 +205,15 @@ class GBStage extends BaseStage
 						Paths.image('$value1/$image', null, true);
 				}
 
+				// Also precaching thunder sound for rain
+				// Fun Facts with CrusherNotDrip: idk what causes the lag spike we did allw e could GO HOME
+
+				if (value1.toLowerCase() == 'rain')
+				{
+					Paths.sound('thunder_1');
+					Paths.sound('thunder_2');
+				}
+
 				if (ClientPrefs.data.shaders && value1.toLowerCase() == 'rain' && rainShader == null)
 				{
 					rainShader = game.createRuntimeShader('rain');
