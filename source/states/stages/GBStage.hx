@@ -170,9 +170,6 @@ class GBStage extends BaseStage
 					if(dad.animOffsets.exists('scared'))
 						dad.playAnim('scared', true);
 
-					if(gf != null && gf.animOffsets.exists('scared'))
-						gf.playAnim('scared', true);
-
 					FlxTween.tween(lightning, {alpha: 0}, 1.8, {onComplete: function(_) {
 						isLightning = false;
 					}});
