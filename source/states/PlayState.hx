@@ -576,6 +576,7 @@ class PlayState extends MusicBeatState
 		healthOppTxt.y = healthBar.y + (healthBar.height - healthOppTxt.height) / 2;
 		healthOppTxt.setFormat(textFont, 16, 0xFFFF0000, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		healthOppTxt.text = '[Health: ${FlxMath.roundDecimal((healthBar.bounds.max * 50) - (health * 50), 2)}%]';
+		healthOppTxt.visible = !ClientPrefs.data.hideHud;
 		healthOppTxt.scrollFactor.set();
 		healthOppTxt.borderSize = 2;
 		uiGroup.add(healthOppTxt);
@@ -584,6 +585,7 @@ class PlayState extends MusicBeatState
 		healthPlayerTxt.y = healthBar.y + (healthBar.height - healthPlayerTxt.height) / 2;
 		healthPlayerTxt.setFormat(textFont, 16, 0xFF66FF33, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		healthPlayerTxt.text = '[Health: ${FlxMath.roundDecimal(health * 50, 2)}%]';
+		healthPlayerTxt.visible = !ClientPrefs.data.hideHud;
 		healthPlayerTxt.scrollFactor.set();
 		healthPlayerTxt.borderSize = 2;
 		uiGroup.add(healthPlayerTxt);
