@@ -50,7 +50,7 @@ class CreditsState extends MusicBeatState
 
 		var defaultList:Array<Array<String>> = [
 			['Sunday Night Chillin\' Team'],
-			['.json',				'gameboy1969',		'Director of Sunday Night Chillin\nArtist + Animator + Charter + Composer', 'https://twitter.com/gameboy1969', 'D52DFF'],
+			['.json',				'gameboy1969',		'Director of Sunday Night Chillin\nArtist + Animator + Charter + Composer', 'https://twitter.com/gameboy1969', 'FF5AF5'],
 			['CrusherNotDrip',		'crushernotdrip',	'Artist + Programmer + Chart Tweaker + Cutscene Audio',		 'https://twitter.com/CrusherNotDrip',	'0066FF'],
 			['TechnikTil',			'techniktil',		'Charter + Chromatic + Cutscene Camera + Programmer',		 'https://techniktil.carrd.co/',		'595555'],
 			['shopcart',			'shopcart',			'Artist + Animator',										 'https://twitter.com/shoppingcart_r',	'B24900'],
