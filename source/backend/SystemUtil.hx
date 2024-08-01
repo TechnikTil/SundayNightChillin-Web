@@ -87,15 +87,6 @@ class SystemUtil
 
         return Shell_NotifyIcon(NIM_MODIFY, &m_NID);
     ')
-    #elseif linux
-    @:functionCode('
-        std::string cmd = "notify-send -u normal \'";
-        cmd += title.c_str();
-        cmd += "\' \'";
-        cmd += desc.c_str();
-        cmd += "\'";
-        system(cmd.c_str());
-    ')
     #end
     public static function sendWindowsNotification(title:String = "", desc:String = "", res:Int = 0)
     {
