@@ -2504,6 +2504,7 @@ class PlayState extends MusicBeatState
 						FlxG.save.flush();
 					}
 					changedDifficulty = false;
+
 				}
 				else
 				{
