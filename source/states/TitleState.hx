@@ -132,7 +132,7 @@ class TitleState extends MusicBeatState
 
 		Highscore.load();
 
-		titleJSON = tjson.TJSON.parse(Paths.getTextFromFile('data/titleScreen.json'));
+		titleJSON = haxe.Json.parse(Paths.getTextFromFile('data/titleScreen.json'));
 
 		if(!initialized)
 		{

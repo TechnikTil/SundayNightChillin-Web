@@ -59,9 +59,24 @@ class WeekData {
 	}
 
 	public function new(weekFile:WeekFile, fileName:String) {
+		#if html5
+		songs = weekFile.songs;
+		weekCharacters = weekFile.weekCharacters;
+		weekBackground = weekFile.weekBackground;
+		weekBefore = weekFile.weekBefore;
+		storyName = weekFile.storyName;
+		weekName = weekFile.weekName;
+		startUnlocked = weekFile.startUnlocked;
+		hiddenUntilUnlocked = weekFile.hideStoryMode;
+		hideStoryMode = weekFile.hideStoryMode;
+		hideFreeplay = weekFile.hideFreeplay;
+		difficulties = weekFile.difficulties;
+		album = weekFile.album;
+		#else
 		for (field in Reflect.fields(weekFile))
 			if(Reflect.fields(this).contains(field))
 				Reflect.setProperty(this, field, Reflect.getProperty(weekFile, field));
+		#end
 
 		this.fileName = fileName;
 	}
@@ -168,7 +183,7 @@ class WeekData {
 		#end
 
 		if(rawJson != null && rawJson.length > 0) {
-			return cast tjson.TJSON.parse(rawJson);
+			return cast haxe.Json.parse(rawJson);
 		}
 		return null;
 	}

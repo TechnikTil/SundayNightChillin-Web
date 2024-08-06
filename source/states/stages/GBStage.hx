@@ -106,8 +106,10 @@ class GBStage extends BaseStage
 
 	override public function update(elapsed:Float):Void
 	{
+		#if (!flash && sys)
 		if (ClientPrefs.data.shaders && isRaining && rainShader != null)
 			rainShader.setFloat('uTime', rainShader.getFloat('uTime') + elapsed);
+		#end
 
         if (game.isDead && rainShader != null && isRaining)
             removeRainShader();
@@ -128,8 +130,10 @@ class GBStage extends BaseStage
 
 	override public function camZoomChange(zoom:Float):Void
 	{
+		#if (!flash && sys)
 		if (ClientPrefs.data.shaders && isRaining && rainShader != null)
 			rainShader.setFloatArray('uCameraBounds', [camGame.viewLeft / zoom, camGame.viewTop / zoom, camGame.viewRight / zoom, camGame.viewBottom / zoom]);
+		#end
 	}
 
 	public function applyLightning():Void
@@ -216,6 +220,7 @@ class GBStage extends BaseStage
 					Paths.sound('thunder_2');
 				}
 
+				#if (!flash && sys)
 				if (ClientPrefs.data.shaders && value1.toLowerCase() == 'rain' && rainShader == null)
 				{
 					rainShader = game.createRuntimeShader('rain');
@@ -225,6 +230,7 @@ class GBStage extends BaseStage
 					rainShader.setFloat('uIntensity', 0.2);
 					rainShader.setFloat('uScale', FlxG.height / 500);
 				}
+				#end
 		}
 	}
 
@@ -237,6 +243,7 @@ class GBStage extends BaseStage
 			case 'Change GB Stage Setting':
 				reloadSprites(value1);
 
+				#if (!flash && sys)
 				if (ClientPrefs.data.shaders && rainShader != null)
 				{
 					if (value1.toLowerCase() == 'rain' && !isRaining)
@@ -255,6 +262,7 @@ class GBStage extends BaseStage
                     else if (value1.toLowerCase() != 'rain' && isRaining)
                         removeRainShader();
 				}
+				#end
 		}
 	}
 

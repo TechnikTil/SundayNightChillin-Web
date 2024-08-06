@@ -201,7 +201,7 @@ class Achievements {
 		if(FileSystem.exists(path)) {
 			try {
 				var rawJson:String = File.getContent(path).trim();
-				if(rawJson != null && rawJson.length > 0) retVal = tjson.TJSON.parse(rawJson);
+				if(rawJson != null && rawJson.length > 0) retVal = haxe.Json.parse(rawJson);
 				
 				if(addMods && retVal != null)
 				{
