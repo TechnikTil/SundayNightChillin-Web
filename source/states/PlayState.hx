@@ -468,7 +468,7 @@ class PlayState extends MusicBeatState
 		Conductor.songPosition = -5000 / Conductor.songPosition;
 		var showTime:Bool = (ClientPrefs.data.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(textFont, 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font(textFont), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -504,7 +504,7 @@ class PlayState extends MusicBeatState
 			}
 
 			var hahaTxt:FlxText = new FlxText(5, 0, 0, hahaText, 12);
-			hahaTxt.setFormat(textFont, 12, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			hahaTxt.setFormat(Paths.font(textFont), 12, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			hahaTxt.scrollFactor.set();
 			hahaTxt.screenCenter(Y);
 			hahaTxt.borderSize = 2;
@@ -574,7 +574,7 @@ class PlayState extends MusicBeatState
 
 		healthOppTxt = new FlxText((-healthBar.x + -healthBar.width) + -50, 0, FlxG.width, "", 16);
 		healthOppTxt.y = healthBar.y + (healthBar.height - healthOppTxt.height) / 2;
-		healthOppTxt.setFormat(textFont, 16, 0xFFFF0000, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		healthOppTxt.setFormat(Paths.font(textFont), 16, 0xFFFF0000, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		healthOppTxt.text = '[Health: ${FlxMath.roundDecimal((healthBar.bounds.max * 50) - (health * 50), 2)}%]';
 		healthOppTxt.visible = !ClientPrefs.data.hideHud;
 		healthOppTxt.scrollFactor.set();
@@ -583,7 +583,7 @@ class PlayState extends MusicBeatState
 
 		healthPlayerTxt = new FlxText((healthBar.x + healthBar.width) + 50, 0, FlxG.width, "", 16);
 		healthPlayerTxt.y = healthBar.y + (healthBar.height - healthPlayerTxt.height) / 2;
-		healthPlayerTxt.setFormat(textFont, 16, 0xFF66FF33, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		healthPlayerTxt.setFormat(Paths.font(textFont), 16, 0xFF66FF33, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		healthPlayerTxt.text = '[Health: ${FlxMath.roundDecimal(health * 50, 2)}%]';
 		healthPlayerTxt.visible = !ClientPrefs.data.hideHud;
 		healthPlayerTxt.scrollFactor.set();
@@ -593,7 +593,7 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
-		scoreTxt.setFormat(textFont, 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font(textFont), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.data.hideHud;
@@ -601,7 +601,7 @@ class PlayState extends MusicBeatState
 		uiGroup.add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(textFont, 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font(textFont), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -937,7 +937,7 @@ class PlayState extends MusicBeatState
 					add(skipBG);
 
 					skipTxt = new FlxText(0, skipBG.y, 0, "Hold ACCEPT to skip this cutscene!", 24);
-					skipTxt.setFormat(textFont, 24, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
+					skipTxt.setFormat(Paths.font(textFont), 24, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
 					skipTxt.borderSize = 2;
 					skipTxt.camera = camOther;
 					add(skipTxt);
