@@ -39,6 +39,9 @@ class CoolUtil
 
 	inline public static function listFromString(string:String):Array<String>
 	{
+		if(string == null)
+			return [];
+		
 		var daList:Array<String> = [];
 		daList = string.trim().split('\n');
 
