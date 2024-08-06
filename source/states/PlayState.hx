@@ -2314,6 +2314,16 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'Set Property':
+				#if html5
+				switch(value1) // fuck you reflect for not working
+				{
+					case 'defaultCamZoom':
+						defaultCamZoom = flValue2;
+
+					case 'camHUDAlphaLerp':
+						camHUDAlphaLerp = flValue2;
+				}
+				#else
 				try
 				{
 					var split:Array<String> = value1.split('.');
@@ -2333,6 +2343,7 @@ class PlayState extends MusicBeatState
 					FlxG.log.warn('ERROR ("Set Property" Event) - ' + e.message.substr(0, len));
 					#end
 				}
+				#end
 
 			case 'Play Sound':
 				if(flValue2 == null) flValue2 = 1;
