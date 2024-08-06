@@ -53,7 +53,7 @@ class HealthIcon extends FlxSprite
 			#if MODS_ALLOWED
 			healthFile = Json.parse(File.getContent(Paths.getSharedPath('images/$name.json')));
 			#else
-			healthFile = Json.parse(Assets.getText(Paths.getSharedPath('images/$name.json')));
+			healthFile = Json.parse(openfl.utils.Assets.getText(Paths.getSharedPath('images/$name.json')));
 			#end
 
 			var graphic = Paths.image(name, allowGPU);

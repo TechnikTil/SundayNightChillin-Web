@@ -81,7 +81,7 @@
 	<haxelib name="SScript" if="HSCRIPT_ALLOWED"/>
 	<haxelib name="hxvlc" if="VIDEOS_ALLOWED"/>
 	<haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED"/>
-	<haxelib name="flxanimate" />
+	<haxelib name="flxanimate" if="sys"/>
 
 	<haxedef name="DISCORD_DISABLE_IO_THREAD" if="hxdiscord_rpc" />
 	<haxedef name="NO_PRECOMPILED_HEADERS" if="linux" />

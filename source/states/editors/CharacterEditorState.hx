@@ -24,8 +24,10 @@ class CharacterEditorState extends MusicBeatState
 {
 	var character:Character;
 	var ghost:FlxSprite;
+	#if flxanimate
 	var animateGhost:FlxAnimate;
 	var animateGhostImage:String;
+	#end
 	var cameraFollowPointer:FlxSprite;
 	var isAnimateSprite:Bool = false;
 
@@ -296,8 +298,10 @@ class CharacterEditorState extends MusicBeatState
 					ghost.animation.play(character.animation.curAnim.name, true, false, character.animation.curAnim.curFrame);
 					ghost.animation.pause();
 				}
+				#if flxanimate
 				else if(myAnim != null)
 				{
+					
 					if(animateGhost == null)
 					{
 						animateGhost = new FlxAnimate(ghost.x, ghost.y);
@@ -319,8 +323,9 @@ class CharacterEditorState extends MusicBeatState
 
 					animateGhostImage = character.imageFile;
 				}
+				#end
 				
-				var spr:FlxSprite = !character.isAnimateAtlas ? ghost : animateGhost;
+				var spr:FlxSprite = #if flxanimate !character.isAnimateAtlas ? ghost : animateGhost #else ghost #end;
 				if(spr != null)
 				{
 					spr.setPosition(character.x, character.y);
@@ -334,7 +339,7 @@ class CharacterEditorState extends MusicBeatState
 					spr.offset.set(character.offset.x, character.offset.y);
 					spr.visible = true;
 
-					var otherSpr:FlxSprite = (spr == animateGhost) ? ghost : animateGhost;
+					var otherSpr:FlxSprite = #if flxanimate (spr == animateGhost) ? ghost : animateGhost #else ghost #end;
 					if(otherSpr != null) otherSpr.visible = false;
 				}
 				trace('created ghost image');
@@ -348,12 +353,14 @@ class CharacterEditorState extends MusicBeatState
 			ghost.colorTransform.redOffset = value;
 			ghost.colorTransform.greenOffset = value;
 			ghost.colorTransform.blueOffset = value;
+			#if flxanimate
 			if(animateGhost != null)
 			{
 				animateGhost.colorTransform.redOffset = value;
 				animateGhost.colorTransform.greenOffset = value;
 				animateGhost.colorTransform.blueOffset = value;
 			}
+			#end
 		};
 
 		var ghostAlphaSlider:FlxUISlider = new FlxUISlider(this, 'ghostAlpha', 10, makeGhostButton.y + 25, 0, 1, 210, null, 5, FlxColor.WHITE, FlxColor.BLACK);
@@ -361,7 +368,9 @@ class CharacterEditorState extends MusicBeatState
 		ghostAlphaSlider.decimals = 2;
 		ghostAlphaSlider.callback = function(relativePos:Float) {
 			ghost.alpha = ghostAlpha;
-			if(animateGhost != null) animateGhost.alpha = ghostAlpha;
+			#if flxanimate 
+			if(animateGhost != null) animateGhost.alpha = ghostAlpha; 
+			#end
 		};
 		ghostAlphaSlider.value = ghostAlpha;
 
@@ -524,7 +533,7 @@ class CharacterEditorState extends MusicBeatState
 					if(character.animOffsets.exists(animationInputText.text))
 					{
 						if(!character.isAnimateAtlas) character.animation.remove(animationInputText.text);
-						else @:privateAccess character.atlas.anim.animsMap.remove(animationInputText.text);
+						#if flxanimate else @:privateAccess character.atlas.anim.animsMap.remove(animationInputText.text); #end
 					}
 					character.animationsArray.remove(anim);
 				}
@@ -552,7 +561,7 @@ class CharacterEditorState extends MusicBeatState
 					if(character.animOffsets.exists(anim.anim))
 					{
 						if(!character.isAnimateAtlas) character.animation.remove(anim.anim);
-						else @:privateAccess character.atlas.anim.animsMap.remove(anim.anim);
+						#if flxanimate else @:privateAccess character.atlas.anim.animsMap.remove(anim.anim); #end
 						character.animOffsets.remove(anim.anim);
 						character.animationsArray.remove(anim);
 					}
@@ -734,11 +743,14 @@ class CharacterEditorState extends MusicBeatState
 		var lastAnim:String = character.getAnimationName();
 		var anims:Array<AnimArray> = character.animationsArray.copy();
 
-		character.destroyAtlas();
+		#if flxanimate 
+		character.destroyAtlas(); 
+		#end
 		character.isAnimateAtlas = false;
 		character.color = FlxColor.WHITE;
 		character.alpha = 1;
 
+		#if flxanimate
 		if(Paths.fileExists('images/' + character.imageFile + '/Animation.json', TEXT))
 		{
 			character.atlas = new FlxAnimate();
@@ -753,7 +765,9 @@ class CharacterEditorState extends MusicBeatState
 			}
 			character.isAnimateAtlas = true;
 		}
-		else if(Paths.fileExists('images/' + character.imageFile + '.txt', TEXT)) character.frames = Paths.getPackerAtlas(character.imageFile);
+		else 
+		#end
+		if(Paths.fileExists('images/' + character.imageFile + '.txt', TEXT)) character.frames = Paths.getPackerAtlas(character.imageFile);
 		else if(Paths.fileExists('images/' + character.imageFile + '.json', TEXT)) character.frames = Paths.getAsepriteAtlas(character.imageFile);
 		else character.frames = Paths.getSparrowAtlas(character.imageFile);
 
@@ -946,11 +960,13 @@ class CharacterEditorState extends MusicBeatState
 				frames = character.animation.curAnim.curFrame;
 				length = character.animation.curAnim.numFrames;
 			}
+			#if flxanimate
 			else
 			{
 				frames = character.atlas.anim.curFrame;
 				length = character.atlas.anim.length;
 			}
+			#end
 
 			if(FlxG.keys.justPressed.A || FlxG.keys.justPressed.D || holdingFrameTime > 0.5)
 			{
@@ -962,7 +978,7 @@ class CharacterEditorState extends MusicBeatState
 				{
 					frames = FlxMath.wrap(frames + Std.int(isLeft ? -shiftMult : shiftMult), 0, length-1);
 					if(!character.isAnimateAtlas) character.animation.curAnim.curFrame = frames;
-					else character.atlas.anim.curFrame = frames;
+					#if flxanimate else character.atlas.anim.curFrame = frames; #end
 					holdingFrameElapsed -= 0.1;
 				}
 			}
@@ -1115,6 +1131,7 @@ class CharacterEditorState extends MusicBeatState
 			else
 				character.animation.addByPrefix(anim, name, fps, loop);
 		}
+		#if flxnimate
 		else
 		{
 			if(indices != null && indices.length > 0)
@@ -1122,6 +1139,7 @@ class CharacterEditorState extends MusicBeatState
 			else
 				character.atlas.anim.addBySymbol(anim, name, fps, loop);
 		}
+		#end
 
 		if(!character.animOffsets.exists(anim))
 			character.addOffset(anim, 0, 0);
@@ -1142,6 +1160,8 @@ class CharacterEditorState extends MusicBeatState
 	var characterList:Array<String> = [];
 	function reloadCharacterDropDown() {
 		characterList = Mods.mergeAllTextsNamed('data/characterList.txt', Paths.getSharedPath());
+
+		#if sys
 		var foldersToCheck:Array<String> = Mods.directoriesWithFile(Paths.getSharedPath(), 'characters/');
 		for (folder in foldersToCheck)
 			for (file in FileSystem.readDirectory(folder))
@@ -1151,6 +1171,7 @@ class CharacterEditorState extends MusicBeatState
 					if(!characterList.contains(charToCheck))
 						characterList.push(charToCheck);
 				}
+		#end
 
 		if(characterList.length < 1) characterList.push('');
 		charDropDown.setData(FlxUIDropDownMenu.makeStrIdLabelArray(characterList, true));

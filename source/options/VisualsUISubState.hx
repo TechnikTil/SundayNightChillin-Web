@@ -3,6 +3,7 @@ package options;
 import objects.Note;
 import objects.StrumNote;
 import objects.Alphabet;
+import options.Option;
 
 class VisualsUISubState extends BaseOptionsMenu
 {

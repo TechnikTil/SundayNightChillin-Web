@@ -51,7 +51,11 @@ class SystemUtil
         if (windowOpacityTween == null || !windowOpacityTween.active)
         {
             windowOpacityTween = FlxTween.tween(FlxG.stage.window, { opacity: 0 }, time, { ease: FlxEase.sineOut, onComplete: function (twn:FlxTween) {
+                #if sys
                 Sys.exit(0);
+                #elseif html5
+                js.Browser.window.close();
+                #end
             }});
         }
     }
