@@ -39,7 +39,7 @@ jobs:
           sudo apt update
           sudo apt install libvlc-dev libvlccore-dev vlc-bin vlc libc6 libc6-dev -q -y
       - name: Download HMM
-        run: haxelib install -q hmm 
+        run: haxelib install --quiet hmm 
       - name: Use HMM to install dependencies
         run: haxelib run hmm install -q
       - name: Compile The Game
