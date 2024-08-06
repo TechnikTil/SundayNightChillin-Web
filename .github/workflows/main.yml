@@ -1,83 +1,55 @@
-name: SNC Compiling
-run-name: Compiling SNC...
+# Simple workflow for deploying static content to GitHub Pages
+name: Update Website
+run-name: Updating SNC Website...
 
-on: [ workflow_dispatch ]
-    
+on: 
+  push:
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  Windows:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Haxe environment
-        uses: krdlab/setup-haxe@master
-        with:
-          haxe-version: 4.3.4
-      - name: Download HMM
-        run: haxelib install --quiet hmm
-      - name: Use HMM to install dependencies.
-        run: |
-            cd ${{ github.workspace }}
-            haxelib run hmm install
-      - name: Skip SScript setup mode
-        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
-      - name: Compile The Game
-        run: haxelib run lime build windows
-      - name: Upload Game Executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: WindowsGame
-          path: ${{ github.workspace }}/export/release/windows/bin/
-  Linux:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - name: "Checkout"
+        uses: actions/checkout@v4
       - name: Setup Haxe environment
-        uses: krdlab/setup-haxe@master
+        uses: krdlab/setup-haxe@v1.5.1
         with:
           haxe-version: 4.3.4
       - name: Install Linux dependencies.
         run: |
-            sudo apt update
-            sudo apt install libvlc-dev libvlccore-dev vlc-bin vlc libc6 libc6-dev -y
+          sudo apt update
+          sudo apt install libvlc-dev libvlccore-dev vlc-bin vlc libc6 libc6-dev -y -q
       - name: Download HMM
-        run: haxelib install --quiet hmm
-      - name: Use HMM to install dependencies.
-        run: |
-            cd ${{ github.workspace }}
-            haxelib run hmm install
-      - name: Skip SScript setup mode
-        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
+        run: haxelib install --quiet hmm 
+      - name: Use HMM to install dependencies
+        run: haxelib run hmm install -q
       - name: Compile The Game
-        run: haxelib run lime build linux
-      - name: Wait for 1.5 seconds
-        run: sleep 1.5
-      - name: Upload Game Executable
-        uses: actions/upload-artifact@v4
+        run: haxelib run lime build html5
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: LinuxGame
-          path: ${{ github.workspace }}/export/release/linux/bin/
-  MacOS:
-    runs-on: macos-12
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Haxe environment
-        uses: krdlab/setup-haxe@master
-        with:
-          haxe-version: 4.3.4
-      - name: Download HMM
-        run: haxelib install --quiet hmm
-      - name: Use HMM to install dependencies.
-        run: |
-            cd ${{ github.workspace }}
-            haxelib run hmm install
-      - name: Skip SScript setup mode
-        run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
-      - name: Compile The Game
-        run: haxelib run lime build mac
-      - name: Wait for 1.5 seconds
-        run: sleep 1.5
-      - name: Upload Game Executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: MacOSGame
-          path: ${{ github.workspace }}/export/release/macos/bin/
+          path: ${{ github.workspace }}/export/release/html5/bin/
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
