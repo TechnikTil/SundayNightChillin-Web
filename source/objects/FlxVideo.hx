@@ -1,8 +1,7 @@
-package funkin.graphics.video;
+package objects;
 
 import flixel.util.FlxColor;
 import flixel.util.FlxSignal.FlxTypedSignal;
-import funkin.audio.FunkinSound;
 import openfl.display3D.textures.TextureBase;
 import openfl.events.NetStatusEvent;
 import openfl.media.SoundTransform;
@@ -12,8 +11,8 @@ import openfl.net.NetStream;
 
 /**
  * Plays a video via a NetStream. Only works on HTML5.
- * This does NOT replace hxCodec, nor does hxCodec replace this.
- * hxCodec only works on desktop and does not work on HTML5!
+ * This does NOT replace hxvlc, nor does hxvlc replace this.
+ * hxvlc only works on desktop and does not work on HTML5!
  */
 class FlxVideo extends FlxSprite
 {
@@ -76,7 +75,7 @@ class FlxVideo extends FlxSprite
   var videoAvailable:Bool = false;
   var frameTimer:Float;
 
-  static final FRAME_RATE:Float = 60;
+  static final FRAME_RATE:Float = 24; // all of them run at 24 i believe? (also if i didnt do this the fps in the game would be doodoo)
 
   public override function update(elapsed:Float):Void
   {
@@ -87,7 +86,7 @@ class FlxVideo extends FlxSprite
       frameTimer = 0;
       // TODO: We just draw the video buffer to the sprite 60 times a second.
       // Can we copy the video buffer instead somehow?
-      pixels.draw(video);
+      pixels.draw(video, null, null, null, null, ClientPrefs.data.antialiasing);
     }
 
     if (videoAvailable) frameTimer += elapsed;
@@ -125,6 +124,8 @@ class FlxVideo extends FlxSprite
       if (FlxG.game.contains(video)) FlxG.game.removeChild(video);
     }
 
+    FlxG.sound.volumeHandler = null;
+
     super.destroy();
   }
 
@@ -146,7 +147,7 @@ class FlxVideo extends FlxSprite
 
     videoAvailable = true;
 
-    FlxG.sound.onVolumeChanged.add(onVolumeChanged);
+    FlxG.sound.volumeHandler = onVolumeChanged;
     onVolumeChanged(FlxG.sound.muted ? 0 : FlxG.sound.volume);
 
     makeGraphic(Std.int(video.width), Std.int(video.height), FlxColor.TRANSPARENT);

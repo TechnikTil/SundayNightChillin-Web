@@ -878,7 +878,7 @@ class PlayState extends MusicBeatState
 
 	public function startVideo(name:String, forMidSong:Bool = false, canSkip:Bool = true, loop:Bool = false, playOnLoad:Bool = true)
 	{
-		#if VIDEOS_ALLOWED
+		#if (hxvlc || html5)
 		inCutscene = true;
 
 		var foundFile:Bool = false;
@@ -887,9 +887,11 @@ class PlayState extends MusicBeatState
 		#if sys
 		if (FileSystem.exists(fileName))
 		#else
-		if (OpenFlAssets.exists(fileName))
+		if (/*OpenFlAssets.exists(fileName, BINARY)*/true)
 		#end
 		foundFile = true;
+
+		trace('Found file? $foundFile');
 
 		if (foundFile)
 		{
@@ -898,20 +900,7 @@ class PlayState extends MusicBeatState
 			// Finish callback
 			if (!forMidSong)
 			{
-				cutscene.finishCallback = function()
-				{
-					if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
-					{
-						moveCameraSection();
-						FlxG.camera.snapToTarget();
-					}
-					skipBG.destroy();
-					skipTxt.destroy();
-					startAndEnd();
-				};
-
-				// Skip callback
-				cutscene.onSkip = function()
+				cutscene.finishCallback = cutscene.onSkip = function()
 				{
 					if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
 					{
@@ -927,7 +916,9 @@ class PlayState extends MusicBeatState
 
 			if (playOnLoad)
 			{
+				#if hxvlc
 				cutscene.videoSprite.play();
+				#end
 
 				if (!loop)
 				{

@@ -7,13 +7,16 @@ import hxvlc.flixel.FlxVideoSprite;
 #end
 
 class VideoSprite extends FlxSpriteGroup {
-	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
 	public var onSkip:Void->Void = null;
 
 	final _timeToSkip:Float = 1;
 	public var holdingTime:Float = 0;
+	#if hxvlc
 	public var videoSprite:FlxVideoSprite;
+	#elseif html5
+	public var videoSprite:FlxVideo;
+	#end
 	public var skipSprite:FlxPieDial;
 	public var cover:FlxSprite;
 	public var canSkip(default, set):Bool = false;
@@ -41,15 +44,20 @@ class VideoSprite extends FlxSpriteGroup {
 		}
 
 		// initialize sprites
+		#if hxvlc
 		videoSprite = new FlxVideoSprite();
 		videoSprite.antialiasing = ClientPrefs.data.antialiasing;
 		add(videoSprite);
+		#elseif html5
+		videoSprite = new FlxVideo(videoName);
+		add(videoSprite);
+		#end
 		if(canSkip) this.canSkip = true;
 
 		// callbacks
 		if(!shouldLoop)
 		{
-			videoSprite.bitmap.onEndReached.add(function() {
+			var endFunction:Void->Void = function() {
 				if(alreadyDestroyed) return;
 
 				trace('Video destroyed');
@@ -62,16 +70,24 @@ class VideoSprite extends FlxSpriteGroup {
 				FlxG.state.remove(this);
 				destroy();
 				alreadyDestroyed = true;
-			});
-		}
+			};
 
+			#if hxvlc
+			videoSprite.bitmap.onEndReached.add(endFunction);
+			#elseif html5
+			videoSprite.finishCallback = endFunction;
+			#end
+		}
+		#if html5
+		else
+			FlxG.log.error('Looping isn\'t available yet!');
+		#end
+
+		#if hxvlc
 		videoSprite.bitmap.onFormatSetup.add(function()
 		{
-			#if hxcodec
-			#elseif hxvlc
 			var wd:Int = videoSprite.bitmap.formatWidth;
 			var hg:Int = videoSprite.bitmap.formatHeight;
-			#end
 			trace('Video Resolution: ${wd}x${hg}');
 			videoSprite.scale.set(FlxG.width / wd, FlxG.height / hg);
 			videoSprite.updateHitbox();
@@ -80,6 +96,7 @@ class VideoSprite extends FlxSpriteGroup {
 
 		// start video and adjust resolution to screen size
 		videoSprite.load(videoName, shouldLoop ? ['input-repeat=65545'] : null);
+		#end
 	}
 
 	var alreadyDestroyed:Bool = false;
@@ -124,7 +141,11 @@ class VideoSprite extends FlxSpriteGroup {
 			{
 				if(onSkip != null) onSkip();
 				finishCallback = null;
+				#if hxvlc
 				videoSprite.bitmap.onEndReached.dispatch();
+				#elseif html5
+				videoSprite.finishCallback();
+				#end
 				FlxG.state.remove(this);
 				trace('Skipped video');
 				return;
@@ -165,7 +186,6 @@ class VideoSprite extends FlxSpriteGroup {
 		skipSprite.alpha = FlxMath.remapToRange(skipSprite.amount, 0.025, 1, 0, 1);
 	}
 
-	public function resume() videoSprite?.resume();
-	public function pause() videoSprite?.pause();
-	#end
+	public function resume() #if hxvlc videoSprite?.resume() #elseif html5 videoSprite?.resumeVideo() #end;
+	public function pause() #if hxvlc videoSprite?.pause() #elseif html5 videoSprite?.pauseVideo() #end;
 }

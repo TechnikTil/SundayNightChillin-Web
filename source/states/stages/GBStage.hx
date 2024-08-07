@@ -59,6 +59,10 @@ class GBStage extends BaseStage
                 case 'chillin':
                     setStartCallback(function () {
 						game.videoCutscene = game.startVideo('chillin-start', false, true, false, true);
+
+						if(game.videoCutscene == null)
+							game.startDialogue(DialogueBoxPsych.parseDialogue(Paths.json(songName + '/dialogue')));
+
 						game.videoCutscene.finishCallback = game.videoCutscene.onSkip = function ()
 						{
 							if (game.generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !game.endingSong && !game.isCameraOnForcedPos)

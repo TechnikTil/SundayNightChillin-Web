@@ -19,7 +19,7 @@
 	<define name="HSCRIPT_ALLOWED" if="desktop" />
 	<define name="MODS_ALLOWED" if="desktop" />
 	<define name="LUA_ALLOWED" if="desktop" />
-	<define name="VIDEOS_ALLOWED" if="windows || linux || android" unless="32bits"/>
+	<define name="VIDEOS_ALLOWED" if="cpp" unless="32bits"/>
 
 	<!-- ____________________________ Window Settings ___________________________ -->
 
@@ -46,7 +46,7 @@
 	<assets path="assets/shared"        exclude="*.ogg" if="web"/>
 	<assets path="assets/shared"        exclude="*.mp3" unless="web"/>
 
-	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
+	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED || html5"/>
 
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
@@ -60,7 +60,7 @@
 		<assets path="extras/unused/assets/week_assets" rename="unused_assets" />
 	</section>
 
-	<library name="videos"        preload="true" if="VIDEOS_ALLOWED"/>
+	<library name="videos"        preload="true" if="VIDEOS_ALLOWED || html5"/>
 	<library name="songs"         preload="true" />
 	<library name="week_assets"   preload="true" />
 
